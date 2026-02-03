@@ -1,0 +1,570 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Milano seyahat rehberi - .\Italya'da gezilecek yerler, tarihi mekanlar ve seyahat ipuçları.">
+    <meta name="keywords" content="milano, .\italya, seyahat, gezi">
+    <meta name="author" content="Gidiniz Blog">
+    <meta property="og:title" content="Milano Seyahat Rehberi - Gidiniz Blog">
+    <meta property="og:description" content=".\Italya'da Milano şehrinde gezilecek yerler ve seyahat ipuçları">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://gidinizblog.com/.\italya/milano.html">
+    <meta property="og:image" content="/images/Milano/Milano 1.jpg">
+    
+    <title>Milano Seyahat Rehberi - Gidiniz Blog</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../images/anasayfa/favicon.ico">
+    <link rel="apple-touch-icon" href="../images/anasayfa/Logo2.jpg">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <style>
+        /* Milano specific styles */
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                        url('/images/Milano/Milano 1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .page-content {
+            padding: 60px 0;
+        }
+        
+        .content-section {
+            margin-bottom: 60px;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #333;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: #95d5db;
+            border-radius: 2px;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .gallery-item {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            background: #fff;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .gallery-caption {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .gallery-caption h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .gallery-caption p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .info-card {
+            background: #fff;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        
+        .info-card h3 {
+            color: #95d5db;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .info-card h3 i {
+            font-size: 1.2em;
+        }
+        
+        .info-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .info-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .info-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .info-list li i {
+            color: #95d5db;
+            width: 20px;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #95d5db, #7bc3c9);
+            color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .highlight-box h3 {
+            color: #fff;
+            margin-bottom: 15px;
+        }
+        
+        .highlight-box p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .info-card {
+                padding: 20px;
+            }
+            
+            .highlight-box {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Sayfanın üstüne çık">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <!-- Logo Section -->
+            <div class="logo-section">
+                <div class="logo-text">Gidiniz</div>
+                <div class="logo-image">
+                    <img src="/images/anasayfa/Logo2.jpg" alt="Gidiniz Blog Logo" loading="eager">
+                </div>
+                <div class="logo-text">Blog</div>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="navbar">
+                <!-- Social Icons -->
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/gidiniz.blog/" target="_blank" aria-label="Instagram" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@gidinizblog" target="_blank" aria-label="YouTube" class="social-link">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="mailto:gidiniz.blog@gmail.com" aria-label="E-posta" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+
+                <!-- Hamburger Menu -->
+                <button class="hamburger-menu" aria-label="Menüyü aç/kapat">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- Navigation Menu -->
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="../index.html" class="nav-link">Anasayfa</a></li>
+                    
+                    <!-- Rotalar Dropdown -->
+                    <li class="dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">
+                            Rotalar <i class="fas fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="sub-dropdown">
+                                <a href="#" class="dropdown-link">
+                                    Almanya <i class="fas fa-caret-right"></i>
+                                </a>
+                                <ul class="sub-dropdown-menu">
+                                    <li><a href="../almanya/koln.html">Köln</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#" class="dropdown-link">
+                                    Avusturya <i class="fas fa-caret-right"></i>
+                                </a>
+                                <ul class="sub-dropdown-menu">
+                                    <li><a href="../avusturya/viyana.html">Viyana</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#" class="dropdown-link">
+                                    Gemi Turu <i class="fas fa-caret-right"></i>
+                                </a>
+                                <ul class="sub-dropdown-menu">
+                                    <li><a href="../gemi_turu/gemi-turu.html">Gemi Turu Rehberi</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#" class="dropdown-link">
+                                    Gürcistan <i class="fas fa-caret-right"></i>
+                                </a>
+                                <ul class="sub-dropdown-menu">
+                                    <li><a href="../gürcistan/batum.html">Batum</a></li>
+                                    <li><a href="../gürcistan/tiflis.html">Tiflis</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#" class="dropdown-link">
+                                    İsviçre <i class="fas fa-caret-right"></i>
+                                </a>
+                                <ul class="sub-dropdown-menu">
+                                    <li><a href="../isviçre/basel.html">Basel</a></li>
+                                    <li><a href="../isviçre/luzern.html">Luzern</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#" class="dropdown-link">
+                                    İtalya <i class="fas fa-caret-right"></i>
+                                </a>
+                                <ul class="sub-dropdown-menu">
+                                    <li><a href="../italya/roma.html">Roma</a></li>
+                                    <li><a href="../italya/milano.html">Milano</a></li>
+                                    <li><a href="../italya/venedik.html">Venedik</a></li>
+                                    <li><a href="../italya/pisa.html">Pisa</a></li>
+                                    <li><a href="../italya/portofino.html">Portofino</a></li>
+                                    <li><a href="../italya/como.html">Como</a></li>
+                                    <li><a href="../italya/floransa.html">Floransa</a></li>
+                                    <li><a href="../italya/genova.html">Genova</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#" class="dropdown-link">
+                                    Kıbrıs <i class="fas fa-caret-right"></i>
+                                </a>
+                                <ul class="sub-dropdown-menu">
+                                    <li><a href="../kibris/girne.html">Girne</a></li>
+                                    <li><a href="../kibris/lefkosa.html">Lefkoşa</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#" class="dropdown-link">
+                                    Türkiye <i class="fas fa-caret-right"></i>
+                                </a>
+                                <ul class="sub-dropdown-menu">
+                                    <li><a href="../türkiye/alanya.html">Alanya</a></li>
+                                    <li><a href="../türkiye/amasra.html">Amasra</a></li>
+                                    <li><a href="../türkiye/ankara.html">Ankara</a></li>
+                                    <li><a href="../türkiye/antalya.html">Antalya</a></li>
+                                    <li><a href="../türkiye/bursa.html">Bursa</a></li>
+                                    <li><a href="../türkiye/eskisehir.html">Eskişehir</a></li>
+                                    <li><a href="../türkiye/istanbul.html">İstanbul</a></li>
+                                    <li><a href="../türkiye/izmir.html">İzmir</a></li>
+                                    <li><a href="../türkiye/iznik.html">İznik</a></li>
+                                    <li><a href="../türkiye/kastamonu.html">Kastamonu</a></li>
+                                    <li><a href="../türkiye/safranbolu.html">Safranbolu</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#" class="dropdown-link">
+                                    Yunanistan <i class="fas fa-caret-right"></i>
+                                </a>
+                                <ul class="sub-dropdown-menu">
+                                    <li><a href="../yunanistan/atina.html">Atina</a></li>
+                                    <li><a href="../yunanistan/selanik.html">Selanik</a></li>
+                                    <li><a href="../yunanistan/girit.html">Girit</a></li>
+                                    <li><a href="../yunanistan/kos.html">Kos</a></li>
+                                    <li><a href="../yunanistan/mykonos.html">Mykonos</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <!-- Faydalı Bilgiler Dropdown -->
+                    <li class="dropdown">
+                        <a href="../pasaport.html" class="nav-link dropdown-toggle">
+                            Faydalı Bilgiler <i class="fas fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="sub-dropdown">
+                                <a href="#" class="dropdown-link">
+                                    Pasaportlar <i class="fas fa-caret-right"></i>
+                                </a>
+                                <ul class="sub-dropdown-menu">
+                                    <li><a href="#">Pasaport Bilgileri</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#" class="dropdown-link">
+                                    Vizesiz Ülkeler <i class="fas fa-caret-right"></i>
+                                </a>
+                                <ul class="sub-dropdown-menu">
+                                    <li><a href="#">Vizesiz Ülke Listesi</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#" class="dropdown-link">
+                                    D�viz Kuru Hesaplama <i class="fas fa-caret-right"></i>
+                                </a>
+                                <ul class="sub-dropdown-menu">
+                                    <li><a href="#">Döviz Kuru Hesaplayıcı</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="../biz-kimiz.html" class="nav-link">Biz Kimiz</a></li>
+                    <li><a href="../iletisim.html" class="nav-link">İletişim</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-background milano">
+            <div class="hero-content">
+                <h1 class="hero-title">Milano</h1>
+                <p class="hero-subtitle">Milano'ın Güzellikleri</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="page-content" id="main-content">
+        <div class="container">
+            <div class="content-grid">
+                <div class="main-content-area">
+                    <!-- Introduction -->
+                    <section class="content-section">
+                        <div class="info-card">
+                            <h2 class="section-title">Milano Hakkında</h2>
+                            <p>
+                                Milano, .\Italya'da yer alan önemli bir şehirdir. Tarihi ve kültürel zenginliğiyle dikkat çeker.
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- Must Visit Places -->
+                    <section class="content-section">
+                        <h2 class="section-title">Mutlaka Görülmesi Gereken Yerler</h2>
+                        
+                        <div class="gallery-grid">
+                            
+                            <div class="gallery-item">
+                                <img src="/images/Milano/Milano 1.jpg" alt="Milano" loading="lazy">
+                                <div class="gallery-caption">
+                                    <h3><i class="fas fa-landmark"></i> Milano</h3>
+                                    <p>Milano şehrinin önemli yerlerinden biri.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Cultural Highlights -->
+                    <section class="content-section">
+                        <div class="highlight-box">
+                            <h3><i class="fas fa-star"></i> Milano'ın Öne Çıkan Özellikleri</h3>
+                            <p>
+                                Milano, zengin tarihi ve kültürel mirasıyla ziyaretçilerine unutulmaz deneyimler sunar.
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- Practical Information -->
+                    <section class="content-section">
+                        <h2 class="section-title">Pratik Bilgiler</h2>
+                        
+                        <div class="gallery-grid">
+                            
+                            <div class="info-card">
+                                <h3><i class="fas fa-plane"></i> Ulaşım</h3>
+                                <ul class="info-list">
+                                    <li><i class="fas fa-check"></i> Milano Havalimanı</li>
+                                    <li><i class="fas fa-check"></i> Şehir içi ulaşım ağı</li>
+                                    <li><i class="fas fa-check"></i> Toplu taşıma seçenekleri</li>
+                                    <li><i class="fas fa-check"></i> Taksi ve özel araç</li>
+                                </ul>
+                            </div>
+                            <div class="info-card">
+                                <h3><i class="fas fa-bed"></i> Konaklama</h3>
+                                <ul class="info-list">
+                                    <li><i class="fas fa-check"></i> Otel seçenekleri</li>
+                                    <li><i class="fas fa-check"></i> Pansiyon ve hostel</li>
+                                    <li><i class="fas fa-check"></i> Merkezi konumda konaklama</li>
+                                    <li><i class="fas fa-check"></i> Butik otel seçenekleri</li>
+                                </ul>
+                            </div>
+                            <div class="info-card">
+                                <h3><i class="fas fa-utensils"></i> Mutfak</h3>
+                                <ul class="info-list">
+                                    <li><i class="fas fa-check"></i> Yerel lezzetler</li>
+                                    <li><i class="fas fa-check"></i> Geleneksel yemekler</li>
+                                    <li><i class="fas fa-check"></i> Restoran seçenekleri</li>
+                                    <li><i class="fas fa-check"></i> Kafe ve bar</li>
+                                </ul>
+                            </div>
+                            <div class="info-card">
+                                <h3><i class="fas fa-shopping-bag"></i> Alışveriş</h3>
+                                <ul class="info-list">
+                                    <li><i class="fas fa-check"></i> Alışveriş merkezleri</li>
+                                    <li><i class="fas fa-check"></i> Hediyelik eşya dükkanları</li>
+                                    <li><i class="fas fa-check"></i> Yerel pazarlar</li>
+                                    <li><i class="fas fa-check"></i> Butik mağazalar</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Photo Gallery -->
+                    <section class="content-section">
+                        <h2 class="section-title">Fotoğraf Galerisi</h2>
+                        
+                        <div class="gallery-grid">
+                            
+                            <div class="gallery-item">
+                                <img src="/images/Milano/Milano 2.jpg" alt="Milano Manzarası" loading="lazy">
+                                <div class="gallery-caption">
+                                    <h3>Milano Manzarası</h3>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="/images/Milano/Milano 3.jpg" alt="Tarihi Sokaklar" loading="lazy">
+                                <div class="gallery-caption">
+                                    <h3>Tarihi Sokaklar</h3>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="/images/Milano/Milano 4.jpg" alt="Milano'dan Kareler" loading="lazy">
+                                <div class="gallery-caption">
+                                    <h3>Milano'dan Kareler</h3>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="/images/Milano/Milano 5.jpg" alt="Gece Manzarası" loading="lazy">
+                                <div class="gallery-caption">
+                                    <h3>Gece Manzarası</h3>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="/images/Milano/Milano 6.jpg" alt="Milano'da Gezinti" loading="lazy">
+                                <div class="gallery-caption">
+                                    <h3>Milano'da Gezinti</h3>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="/images/Milano/Milano 7.jpg" alt="Milano'ın Güzellikleri" loading="lazy">
+                                <div class="gallery-caption">
+                                    <h3>Milano'ın Güzellikleri</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Biz Kimiz</h3>
+                        <p class="widget-content">
+                            Biz kimiz hakkında kısa bilgi ve <a href="../biz-kimiz.html" class="widget-link">devamı...</a>
+                        </p>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <div class="profile-image">
+                            <img src="../images/anasayfa/IMG_20250531_095555.jpg" alt="Blog Yazarı" loading="lazy">
+                        </div>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h4 class="widget-title">Bizi Takip Edin</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i> Instagram
+                            </a>
+                            <a href="#" class="social-link" aria-label="YouTube">
+                                <i class="fab fa-youtube"></i> YouTube
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Tüm hakları saklıdır. | Gidiniz Blog</p>
+                <div class="footer-links">
+                    <a href="../kullanim-sartlari.html">Kullanım Şartları</a>
+                    <a href="../gizlilik.html">Gizlilik Politikası</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/js/main.js"></script>
+</body>
+</html>

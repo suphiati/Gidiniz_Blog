@@ -1,0 +1,351 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Gidiniz Blog - Seyahat tutkunları için keşif rehberi. Dünya genelinde rotalar, seyahat ipuçları ve deneyimler." />
+    <meta name="keywords" content="seyahat, gezi, blog, rota, viyana, roma, istanbul, seyahat rehberi" />
+    <meta name="author" content="Gidiniz Blog" />
+    <meta property="og:title" content="Gidiniz Blog - Seyahat Rehberi" />
+    <meta property="og:description" content="Seyahat tutkunları için keşif rehberi" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://gidinizblog.com" />
+    <meta property="og:image" content="/images/anasayfa/Logo2.jpg" />
+    
+    <title>Gidiniz Blog - Seyahat Rehberi</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../images/anasayfa/favicon.ico">
+    <link rel="apple-touch-icon" href="../images/anasayfa/Logo2.jpg">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+
+  <body>
+    <!-- Sayfa Yükleme Göstergesi -->
+    <div id="pageLoader" class="page-loader">
+      <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Sayfanın üstüne çık">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <!-- Logo Section -->
+        <div class="logo-section">
+          <div class="logo-text">Gidiniz</div>
+          <div class="logo-image">
+            <img src="images/anasayfa/Logo2.jpg" alt="Gidiniz Blog Logo" loading="eager" />
+          </div>
+          <div class="logo-text">Blog</div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="navbar">
+          <!-- Social Icons -->
+          <div class="social-icons">
+            <a href="https://www.instagram.com/gidiniz.blog/" target="_blank" aria-label="Instagram" class="social-link">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/@gidinizblog" target="_blank" aria-label="YouTube" class="social-link">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="mailto:gidiniz.blog@gmail.com" aria-label="E-posta" class="social-link">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+
+          <!-- Hamburger Menu -->
+          <button class="hamburger-menu" aria-label="Menüyü aç/kapat">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <!-- Navigation Menu -->
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html" class="nav-link">Anasayfa</a></li>
+            
+            <!-- Rotalar Dropdown -->
+            <li class="dropdown">
+              <a href="#" class="nav-link dropdown-toggle">
+                Rotalar <i class="fas fa-caret-down"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li class="sub-dropdown">
+                  <a href="#" class="dropdown-link">
+                    Almanya <i class="fas fa-caret-right"></i>
+                  </a>
+                  <ul class="sub-dropdown-menu">
+                    <li><a href="almanya/koln.html">Köln</a></li>
+                  </ul>
+                </li>
+                <li class="sub-dropdown">
+                  <a href="#" class="dropdown-link">
+                    Avusturya <i class="fas fa-caret-right"></i>
+                  </a>
+                  <ul class="sub-dropdown-menu">
+                    <li><a href="avusturya/viyana.html">Viyana</a></li>
+                  </ul>
+                </li>
+                <li class="sub-dropdown">
+                  <a href="#" class="dropdown-link">
+                    Gemi Turu <i class="fas fa-caret-right"></i>
+                  </a>
+                  <ul class="sub-dropdown-menu">
+                    <li><a href="gemi_turu/gemi-turu.html">Gemi Turu Rehberi</a></li>
+                  </ul>
+                </li>
+                <li class="sub-dropdown">
+                  <a href="#" class="dropdown-link">
+                    Gürcistan <i class="fas fa-caret-right"></i>
+                  </a>
+                  <ul class="sub-dropdown-menu">
+                    <li><a href="gürcistan/batum.html">Batum</a></li>
+                    <li><a href="gürcistan/tiflis.html">Tiflis</a></li>
+                  </ul>
+                </li>
+                <li class="sub-dropdown">
+                  <a href="#" class="dropdown-link">
+                    İsviçre <i class="fas fa-caret-right"></i>
+                  </a>
+                  <ul class="sub-dropdown-menu">
+                    <li><a href="isviçre/basel.html">Basel</a></li>
+                    <li><a href="isviçre/luzern.html">Luzern</a></li>
+                  </ul>
+                </li>
+                <li class="sub-dropdown">
+                  <a href="#" class="dropdown-link">
+                    İtalya <i class="fas fa-caret-right"></i>
+                  </a>
+                  <ul class="sub-dropdown-menu">
+                    <li><a href="italya/roma.html">Roma</a></li>
+                    <li><a href="italya/milano.html">Milano</a></li>
+                    <li><a href="italya/venedik.html">Venedik</a></li>
+                    <li><a href="italya/pisa.html">Pisa</a></li>
+                    <li><a href="italya/portofino.html">Portofino</a></li>
+                    <li><a href="italya/como.html">Como</a></li>
+                    <li><a href="italya/floransa.html">Floransa</a></li>
+                    <li><a href="italya/genova.html">Genova</a></li>
+                  </ul>
+                </li>
+                <li class="sub-dropdown">
+                  <a href="#" class="dropdown-link">
+                    Kıbrıs <i class="fas fa-caret-right"></i>
+                  </a>
+                  <ul class="sub-dropdown-menu">
+                    <li><a href="kibris/girne.html">Girne</a></li>
+                    <li><a href="kibris/lefkosa.html">Lefkoşa</a></li>
+                  </ul>
+                </li>
+                <li class="sub-dropdown">
+                  <a href="#" class="dropdown-link">
+                    Türkiye <i class="fas fa-caret-right"></i>
+                  </a>
+                  <ul class="sub-dropdown-menu">
+                    <li><a href="türkiye/alanya.html">Alanya</a></li>
+                    <li><a href="türkiye/amasra.html">Amasra</a></li>
+                    <li><a href="türkiye/ankara.html">Ankara</a></li>
+                    <li><a href="türkiye/antalya.html">Antalya</a></li>
+                    <li><a href="türkiye/bursa.html">Bursa</a></li>
+                    <li><a href="türkiye/eskisehir.html">Eskişehir</a></li>
+                    <li><a href="türkiye/istanbul.html">İstanbul</a></li>
+                    <li><a href="türkiye/izmir.html">İzmir</a></li>
+                    <li><a href="türkiye/iznik.html">İznik</a></li>
+                    <li><a href="türkiye/kastamonu.html">Kastamonu</a></li>
+                    <li><a href="türkiye/safranbolu.html">Safranbolu</a></li>
+                  </ul>
+                </li>
+                <li class="sub-dropdown">
+                  <a href="#" class="dropdown-link">
+                    Yunanistan <i class="fas fa-caret-right"></i>
+                  </a>
+                  <ul class="sub-dropdown-menu">
+                    <li><a href="yunanistan/atina.html">Atina</a></li>
+                    <li><a href="yunanistan/selanik.html">Selanik</a></li>
+                    <li><a href="yunanistan/girit.html">Girit</a></li>
+                    <li><a href="yunanistan/kos.html">Kos</a></li>
+                    <li><a href="yunanistan/mykonos.html">Mykonos</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            
+            <!-- Faydalı Bilgiler Dropdown -->
+            <li class="dropdown">
+              <a href="#" class="nav-link dropdown-toggle">
+                Faydalı Bilgiler <i class="fas fa-caret-down"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li class="sub-dropdown">
+                  <a href="#" class="dropdown-link">
+                    Pasaport <i class="fas fa-caret-right"></i>
+                  </a>
+                  <ul class="sub-dropdown-menu">
+                    <li><a href="pasaport.html">Pasaport Bilgileri</a></li>
+                  </ul>
+                </li>
+                <li class="sub-dropdown">
+                  <a href="#" class="dropdown-link">
+                    Vizesiz Ülkeler <i class="fas fa-caret-right"></i>
+                  </a>
+                  <ul class="sub-dropdown-menu">
+                    <li><a href="vizesiz-ulkeler.html">Vizesiz Ülkeler Listesi</a></li>
+                  </ul>
+                </li>
+                <li><a href="kur-hesaplama.html" class="dropdown-link">Kur Hesapla</a></li>
+              </ul>
+            </li>
+            
+            <li><a href="biz-kimiz.html" class="nav-link">Biz Kimiz</a></li>
+            <li><a href="iletisim.html" class="nav-link">İletişim</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-background anasayfa">
+        <div class="hero-content">
+          <h1 class="hero-title">Seyahat Tutkunları İçin Keşif Rehberi</h1>
+          <p class="hero-subtitle">Dünyayı keşfetmeye hazır mısınız?</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="intro-section">
+      <div class="container">
+        <div class="intro-content">
+          <p>
+            Bu site, bizim gibi yeni yerler keşfetmeyi seven, yolculuğa tutkuyla bağlı müteferriçler için bir rehber, bir yoldaş olma amacıyla hazırlandı.
+          </p>
+          <p>
+            Yani bizim gibi yerinde duramayan, yollarda olmayı seven herkes için bir keşif rehberi!
+          </p>
+          <p class="definition">
+            💼 <strong>Müteferriç:</strong> Gezmeyi, dolaşmayı seven; yerinde duramayan, keşfetmeden duramayan gezgin ruhlu kişidir.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="container">
+        <div class="content-grid">
+          <!-- Articles Section -->
+          <section class="articles-section">
+            <h2 class="section-title">Son Yazılar</h2>
+            
+            <div class="articles-grid">
+              <!-- Article 1 -->
+              <article class="article-card">
+                <a href="avusturya/viyana.html" class="article-link">
+                  <div class="article-image">
+                    <img src="images/Viyana/Belvedere_Sarayı-3.jpg" alt="Viyana Belvedere Sarayı" loading="lazy">
+                  </div>
+                  <div class="article-content">
+                    <h3 class="article-title">Viyana</h3>
+                    <p class="article-excerpt">
+                      Avusturya'nın başkenti olan Viyana, tarihi dokusu, klasik müziği ve mimarisiyle dikkat çeker...
+                    </p>
+                    <span class="read-more">Devamını Oku <i class="fas fa-arrow-right"></i></span>
+                  </div>
+                </a>
+              </article>
+
+              <!-- Article 2 -->
+              <article class="article-card">
+                <a href="gürcistan/tiflis.html" class="article-link">
+                  <div class="article-image">
+                    <img src="images/yazilar/tiflis.jpg" alt="Tiflis Şehri" loading="lazy">
+                  </div>
+                  <div class="article-content">
+                    <h3 class="article-title">Tiflis</h3>
+                    <p class="article-excerpt">
+                      Gürcistan'ın başkenti olan Tiflis, Kura Nehri boyunca uzanan tarihi sokakları ve sıcak atmosferiyle ünlüdür...
+                    </p>
+                    <span class="read-more">Devamını Oku <i class="fas fa-arrow-right"></i></span>
+                  </div>
+                </a>
+              </article>
+
+              <!-- Article 3 -->
+              <article class="article-card">
+                <a href="gürcistan/batum.html" class="article-link">
+                  <div class="article-image">
+                    <img src="images/yazilar/batum.jpg" alt="Batum Şehri" loading="lazy">
+                  </div>
+                  <div class="article-content">
+                    <h3 class="article-title">Batum</h3>
+                    <p class="article-excerpt">
+                      Karadeniz kıyısında yer alan Batum, modern mimarisi, plajları ve renkli gece hayatıyla seyahatseverlerin uğrak noktasıdır...
+                    </p>
+                    <span class="read-more">Devamını Oku <i class="fas fa-arrow-right"></i></span>
+                  </div>
+                </a>
+              </article>
+            </div>
+          </section>
+
+          <!-- Sidebar -->
+          <aside class="sidebar">
+            <div class="sidebar-widget">
+              <h3 class="widget-title">Biz Kimiz</h3>
+              <p class="widget-content">
+                Biz kimiz hakkında kısa bilgi ve <a href="biz-kimiz.html" class="widget-link">devamı...</a>
+              </p>
+            </div>
+
+            <div class="sidebar-widget">
+              <div class="profile-image">
+                <img src="images/anasayfa/IMG_20250531_095555.jpg" alt="Blog Yazarı" loading="lazy">
+              </div>
+            </div>
+
+            <div class="sidebar-widget">
+              <h4 class="widget-title">Bizi Takip Edin</h4>
+              <div class="social-links">
+                <a href="https://www.instagram.com/gidiniz.blog/" target="_blank" class="social-link" aria-label="Instagram">
+                  <i class="fab fa-instagram"></i> Instagram
+                </a>
+                <a href="https://www.youtube.com/@gidinizblog" target="_blank" class="social-link" aria-label="YouTube">
+                  <i class="fab fa-youtube"></i> YouTube
+                </a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <p>&copy; 2024 Tüm hakları saklıdır. | Gidiniz Blog</p>
+          <div class="footer-links">
+            <a href="kullanim-sartlari.html">Kullanım Şartları</a>
+            <a href="gizlilik.html">Gizlilik Politikası</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
