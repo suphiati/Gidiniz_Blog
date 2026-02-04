@@ -1,5 +1,5 @@
 # Images klasörü hariç tutulacak
-#images/
+images/
 
 # Sistem dosyaları
 #.DS_Store
@@ -17,3 +17,6 @@
 # Geçici dosyalar
 #*.tmp
 #*.temp 
+
+#.env
+#index.js
