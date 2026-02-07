@@ -616,18 +616,7 @@ a {
               url('../images/anasayfa/portofino_anasayfa_background.jpeg');
 }
 
-.hero-background.floransa {
-  background: linear-gradient(
-                rgba(0, 0, 0, 0.3), 
-                rgba(0, 0, 0, 0.6)
-              ), 
-              url('../images/Floransa/Floransa-1.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  filter: contrast(1.1) saturate(1.2) brightness(1.05);
-}
+
 
 .hero-background.genova {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
