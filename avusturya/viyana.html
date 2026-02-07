@@ -1,0 +1,735 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Viyana seyahat rehberi - Avusturya'da gezilecek yerler, tarihi mekanlar ve seyahat ipuçları.">
+    <meta name="keywords" content="viyana, avusturya, seyahat, gezi">
+    <meta name="author" content="Gidiniz Blog">
+    <meta property="og:title" content="Viyana Seyahat Rehberi - Gidiniz Blog">
+    <meta property="og:description" content="Avusturya'da Viyana şehrinde gezilecek yerler ve seyahat ipuçları">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://gidinizblog.com/avusturya/viyana.html">
+    <meta property="og:image" content="/images/Viyana/Belvedere_Sarayı-3.jpg">
+    
+    <title>Viyana Seyahat Rehberi - Gidiniz Blog</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/anasayfa/favicon.ico">
+    <link rel="apple-touch-icon" href="/images/anasayfa/Logo2.jpg">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <style>
+        /* Viyana specific styles */
+        
+        .page-content {
+            padding: 60px 0;
+        }
+        
+        .content-section {
+            margin-bottom: 60px;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #333;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: #95d5db;
+            border-radius: 2px;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .gallery-item {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            background: #fff;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .gallery-caption {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .gallery-caption h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .gallery-caption p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .info-card {
+            background: #fff;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        
+        .info-card h3 {
+            color: #95d5db;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .info-card h3 i {
+            font-size: 1.2em;
+        }
+        
+        .info-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .info-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .info-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .info-list li i {
+            color: #95d5db;
+            width: 20px;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #95d5db, #7bc3c9);
+            color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .highlight-box h3 {
+            color: #fff;
+            margin-bottom: 15px;
+        }
+        
+        .highlight-box p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .info-card {
+                padding: 20px;
+            }
+            
+            .highlight-box {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Sayfanın üstüne çık">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <!-- Logo Section -->
+            <div class="logo-section">
+                <div class="logo-text">Gidiniz</div>
+                <div class="logo-image">
+                    <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770234886/Logo2_lthdlu.jpg" alt="Gidiniz Blog Logo" loading="eager" />
+                </div>
+                <div class="logo-text">Blog</div>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="navbar">
+                <!-- Social Icons -->
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/gidiniz.blog/" target="_blank" aria-label="Instagram" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@gidinizblog" target="_blank" aria-label="YouTube" class="social-link">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="mailto:gidiniz.blog@gmail.com" aria-label="E-posta" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+
+                <!-- Hamburger Menu -->
+                <button class="hamburger-menu" aria-label="Menüyü aç/kapat">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- Navigation Menu -->
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="/index.html" class="nav-link">Anasayfa</a></li>
+                    
+                    <!-- Rotalar Dropdown -->
+                    <li class="dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">
+                            Rotalar <i class="fas fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="sub-dropdown">
+                                <a href="#" class="dropdown-link">
+                                    Almanya <i class="fas fa-caret-right"></i>
+                                </a>
+                                <ul class="sub-dropdown-menu">
+                                    <li><a href="/almanya/koln.html">Köln</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#" class="dropdown-link">
+                                    Avusturya <i class="fas fa-caret-right"></i>
+                                </a>
+                                <ul class="sub-dropdown-menu">
+                                    <li><a href="/avusturya/viyana.html">Viyana</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#" class="dropdown-link">
+                                    Gemi Turu <i class="fas fa-caret-right"></i>
+                                </a>
+                                <ul class="sub-dropdown-menu">
+                                    <li><a href="/gemi_turu/gemi-turu.html">Gemi Turu Rehberi</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#" class="dropdown-link">
+                                    Gürcistan <i class="fas fa-caret-right"></i>
+                                </a>
+                                <ul class="sub-dropdown-menu">
+                                    <li><a href="/gurcistan/batum.html">Batum</a></li>
+                                    <li><a href="/gurcistan/tiflis.html">Tiflis</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#" class="dropdown-link">
+                                    İsviçre <i class="fas fa-caret-right"></i>
+                                </a>
+                                <ul class="sub-dropdown-menu">
+                                    <li><a href="/isvicre/basel.html">Basel</a></li>
+                                    <li><a href="/isvicre/luzern.html">Luzern</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#" class="dropdown-link">
+                                    İtalya <i class="fas fa-caret-right"></i>
+                                </a>
+                                <ul class="sub-dropdown-menu">
+                                    <li><a href="/italya/roma.html">Roma</a></li>
+                                    <li><a href="/italya/milano.html">Milano</a></li>
+                                    <li><a href="/italya/venedik.html">Venedik</a></li>
+                                    <li><a href="/italya/pisa.html">Pisa</a></li>
+                                    <li><a href="/italya/portofino.html">Portofino</a></li>
+                                    <li><a href="/italya/como.html">Como</a></li>
+                                    <li><a href="/italya/floransa.html">Floransa</a></li>
+                                    <li><a href="/italya/genova.html">Genova</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#" class="dropdown-link">
+                                    Kıbrıs <i class="fas fa-caret-right"></i>
+                                </a>
+                                <ul class="sub-dropdown-menu">
+                                    <li><a href="/kibris/girne.html">Girne</a></li>
+                                    <li><a href="/kibris/lefkosa.html">Lefkoşa</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#" class="dropdown-link">
+                                    Türkiye <i class="fas fa-caret-right"></i>
+                                </a>
+                                <ul class="sub-dropdown-menu">
+                                    <li><a href="/turkiye/alanya.html">Alanya</a></li>
+                                    <li><a href="/turkiye/amasra.html">Amasra</a></li>
+                                    <li><a href="/turkiye/ankara.html">Ankara</a></li>
+                                    <li><a href="/turkiye/antalya.html">Antalya</a></li>
+                                    <li><a href="/turkiye/bursa.html">Bursa</a></li>
+                                    <li><a href="/turkiye/eskisehir.html">Eskişehir</a></li>
+                                    <li><a href="/turkiye/istanbul.html">İstanbul</a></li>
+                                    <li><a href="/turkiye/izmir.html">İzmir</a></li>
+                                    <li><a href="/turkiye/iznik.html">İznik</a></li>
+                                    <li><a href="/turkiye/kastamonu.html">Kastamonu</a></li>
+                                    <li><a href="/turkiye/safranbolu.html">Safranbolu</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#" class="dropdown-link">
+                                    Yunanistan <i class="fas fa-caret-right"></i>
+                                </a>
+                                <ul class="sub-dropdown-menu">
+                                    <li><a href="/yunanistan/atina.html">Atina</a></li>
+                                    <li><a href="/yunanistan/selanik.html">Selanik</a></li>
+                                    <li><a href="/yunanistan/girit.html">Girit</a></li>
+                                    <li><a href="/yunanistan/kos.html">Kos</a></li>
+                                    <li><a href="/yunanistan/mykonos.html">Mykonos</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <!-- Faydalı Bilgiler Dropdown -->
+                    <li class="dropdown">
+                        <a href="/pasaport.html" class="nav-link dropdown-toggle">
+                            Faydalı Bilgiler <i class="fas fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="sub-dropdown">
+                                <a href="#" class="dropdown-link">
+                                    Pasaport <i class="fas fa-caret-right"></i>
+                                </a>
+                                <ul class="sub-dropdown-menu">
+                                    <li><a href="/pasaport.html">Pasaport Bilgileri</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#" class="dropdown-link">
+                                    Vizesiz Ülkeler <i class="fas fa-caret-right"></i>
+                                </a>
+                                <ul class="sub-dropdown-menu">
+                                    <li><a href="/vizesiz-ulkeler.html">Vizesiz Ülkeler Listesi</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#" class="dropdown-link">
+                                    Kur Hesapla <i class="fas fa-caret-right"></i>
+                                </a>
+                                <ul class="sub-dropdown-menu">
+                                    <li><a href="/kur-hesaplama.html">Kur Hesapla</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="/biz-kimiz.html" class="nav-link">Biz Kimiz</a></li>
+                    <li><a href="/iletisim.html" class="nav-link">İletişim</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-background viyana">
+            <div class="hero-content">
+                <h1 class="hero-title">Viyana</h1>
+                <p class="hero-subtitle">Viyana'nın Güzellikleri</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="page-content" id="main-content">
+        <div class="container">
+            <div class="content-grid">
+                <div class="main-content-area">
+                    <!-- Introduction -->
+                    <section class="content-section">
+                        <div class="info-card">
+                            <h2 class="section-title">Viyana Hakkında</h2>
+                            <p>
+                                Viyana (Almanca: Wien, İngilizce: Vienna), Avusturya'nın başkenti ve en büyük şehri, aynı zamanda ülkenin dokuz eyaletinden yüzölçümü bakımından en küçüğü, yaklaşık 1.900.000 kişilik nüfusuyla ülkenin en kalabalık şehridir. Çevre ilçeleriyle birlikte Viyana'da yaklaşık iki milyon insan yaşar ki bu da Avusturya nüfusunun yaklaşık dörtte biridir. Nüfus bakımından Viyana Avrupa Birliği'nin en büyük onuncu kentidir.
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- Must Visit Places -->
+                    <section class="content-section">
+                        <h2 class="section-title"><a href="#mutlaka-gorulmesi-gereken">Mutlaka Görülmesi Gereken Yerler</a></h2>
+                        
+                        <div class="gallery-grid">
+                            
+                            <div class="gallery-item">
+                                <a href="#mutlaka-gorulmesi-gereken"><img src="/images/Viyana/Belvedere_Sarayı-3.jpg" alt="Viyana" loading="lazy"></a>
+                                <div class="gallery-caption">
+                                    <h3><i class="fas fa-landmark"></i> Viyana</h3>
+                                    <p>Viyana şehrinin önemli yerlerinden biri.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Cultural Highlights -->
+                    <section class="content-section">
+                        <div class="highlight-box">
+                            <h3><i class="fas fa-star"></i> Viyana'nın Öne Çıkan Özellikleri</h3>
+                            <p>
+                                Viyana, zengin tarihi ve kültürel mirasıyla ziyaretçilerine unutulmaz deneyimler sunar.
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- Practical Information -->
+                    <section class="content-section">
+                        <h2 class="section-title">Pratik Bilgiler</h2>
+                        
+                        <div class="gallery-grid">
+                            
+                            <a href="#ulasim"><div class="info-card">
+                                <h3><i class="fas fa-plane"></i> Ulaşım</h3>
+                                <ul class="info-list">
+                                    <li><i class="fas fa-check"></i> Viyana Havalimanı</li>
+                                    <li><i class="fas fa-check"></i> Şehir içi ulaşım ağı</li>
+                                    <li><i class="fas fa-check"></i> Toplu taşıma seçenekleri</li>
+                                    <li><i class="fas fa-check"></i> Taksi ve özel araç</li>
+                                </ul>
+                            </div></a>
+                            <div class="info-card">
+                                <h3><i class="fas fa-bed"></i> Konaklama</h3>
+                                <ul class="info-list">
+                                    <li><i class="fas fa-check"></i> Otel seçenekleri</li>
+                                    <li><i class="fas fa-check"></i> Pansiyon ve hostel</li>
+                                    <li><i class="fas fa-check"></i> Merkezi konumda konaklama</li>
+                                    <li><i class="fas fa-check"></i> Butik otel seçenekleri</li>
+                                </ul>
+                            </div>
+                            <div class="info-card">
+                                <h3><i class="fas fa-utensils"></i> Mutfak</h3>
+                                <ul class="info-list">
+                                    <li><i class="fas fa-check"></i> Yerel lezzetler</li>
+                                    <li><i class="fas fa-check"></i> Geleneksel yemekler</li>
+                                    <li><i class="fas fa-check"></i> Restoran seçenekleri</li>
+                                    <li><i class="fas fa-check"></i> Kafe ve bar</li>
+                                </ul>
+                            </div>
+                            <div class="info-card">
+                                <h3><i class="fas fa-shopping-bag"></i> Alışveriş</h3>
+                                <ul class="info-list">
+                                    <li><i class="fas fa-check"></i> Alışveriş merkezleri</li>
+                                    <li><i class="fas fa-check"></i> Hediyelik eşya dükkanları</li>
+                                    <li><i class="fas fa-check"></i> Yerel pazarlar</li>
+                                    <li><i class="fas fa-check"></i> Butik mağazalar</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="ulasim">
+                        <div>
+                            <h1>Ulaşım</h1>
+                            <h2>Nasıl Gidilir?</h2>
+<p>Türkiye’den direkt uçuşlar mevcut. İstanbul – Viyana arası uçuş süresi yaklaşık 2 saat.</p>
+
+<p>Viyana Havalimanından merkeze direkt metro mevcut. Bilet kontrolleri yapıldığı için biletinizi alın.</p>
+<p>Şehir içi ulaşım için City-Pass biletlerinden alabilirsiniz. Bu şekilde çoklu binişlerde daha ekonomik olur(Pek çok noktada bilet otomatları mevcut).</p>
+<p>Viyana’da toplu taşıma ağı oldukça iyi. İstediğiniz yere rahatlıkla gidebilirsiniz.</p>
+
+                        </div>
+                    </section>
+                    <section id="mutlaka-gorulmesi-gereken">
+                        <div>
+                            <h1>Gezilecek Yerler</h1>
+                        <div id="belvedere-sarayi">
+                            <h2 class="section-title">Belvedere Sarayı</h2>
+                            <p>
+                                Belvedere Sarayı; yapımı 1745 yılında tamamlanmış olup, Yukarı ve Aşağı Belvedere Sarayı olarak iki parçadan oluşmaktadır. 
+                                <br>Bu barok yapılar, birbirine çok büyük ve güzel bahçe ile bağlıdır. 
+                                <br>Sarayın içerisindeki Belvedere galerisinde pek çok başyapıt sergilenmekte olup, bunların en ünlüsü Gustav Klimt’in “Öpücük” adlı eseridir.
+                            </p>
+                            <img src="/images/Viyana/Belvedere_Sarayı-3.jpg" alt="Belvedere Sarayı">
+                            <img src="/images/Viyana/Belvedere_Sarayı-4.jpg" alt="">
+                        </div>
+                        <div id="hofburg-sarayi">
+                            <h2 class="section-title">Hofburg Sarayı</h2>
+                            <p>
+                            Hofburg Sarayı; merkezde bulunmakta olup, Habsburg hanedanından kalma kışlık bir saraydır. Saray yapımı 1654 yılında tamamlanmıştır.
+                            </p>
+                            <img src="/Viyana/viyana_images/Hofburg_Sarayı-1.jpg" alt="">
+                            <img src="/Viyana/viyana_images/Hofburg_Sarayı-2.jpg" alt="">
+                            <img src="/Viyana/viyana_images/Hofburg_Sarayı-4_Herkül_Heykeli.jpg" alt="">
+                            <img src="/Viyana/viyana_images/Hofburg_Sarayı-5_Zeus.jpg" alt="">
+                        </div>
+                        <div id="schönbrunn-sarayi">
+                            <h2 class="section-title">Schönbrunn Sarayı</h2>
+                            <p>
+                                Schönbrunn Sarayı; yapımı 1749 yılında tamamlanmış olup, Habsburg hanedanının yazlık sarayıdır. 
+                                <br>Saray, Sisi adıyla tanınan İmparatoriçe Elizabeth’in en sevdiği mekandı. 
+                                <br>Ayrıca, gittiğinizde bahçelerinde keyifle gezebilirsiniz.
+                            </p>
+                            <img src="/Viyana/viyana_images/Schönnbrunn_Sarayı-2.jpg" alt="">
+                            <img src="/Viyana/viyana_images/Schönnbrunn_Sarayı-4.jpg" alt="">
+                            <img src="/Viyana/viyana_images/Schönnbrunn_Sarayı-5.jpg" alt="">
+                            <img src="/Viyana/viyana_images/Schönnbrunn_Sarayı-7.jpg" alt="">
+                            <img src="/Viyana/viyana_images/Schönnbrunn_Sarayı-12.jpg" alt="">
+                        </div>
+
+                        <div id="ulusal-kutuphane">
+                            <h2 class="section-title">Ulusal Kütüphane</h2>
+                            <p>
+                                Avusturya Millî Kütüphanesi (Almanca: Österreichische Nationalbibliothek, kısaca ÖNB),  
+                                1368 yılında kurulan ve ve Hofburg İmparatorluk Sarayı içerisinde bulunan millî kütüphane, 
+                                mimarisiyle ziyaretçilere görsel bir şölen sunmaktadır.
+                            </p>
+                                <h3>Genel Bilgiler</h3>
+                                <ul>
+                                    <li><b>Kuruluşu:</b> Kökleri 14. yüzyıla, Habsburg Hanedanı’nın saray kütüphanesine dayanır. 1726’da halkın kullanımına açılmıştır.</li>
+                                    <li><b>Konumu:</b> Viyana’da, Hofburg İmparatorluk Sarayı içinde yer alır. Barok tarzda inşa edilmiş ünlü Prunksaal (İhtişamlı Salon) kütüphanenin en bilinen bölümüdür.</li>
+                                    <li><b>Fonksiyonu:</b> Avusturya’nın resmî millî kütüphanesi olup, ülkede yayımlanan her kitabın bir kopyası burada saklanır (telif yasaları gereği).</li>
+                                </ul>
+                            
+
+                            <h3>Koleksiyonlar</h3>
+                                <p>ÖNB, Avrupa’nın en zengin kütüphane koleksiyonlarından birine sahiptir:</p>
+                                <ul>
+                                    <li><b>Kitaplar:</b> 12 milyondan fazla basılı eser.</li>
+                                    <li><b>Elyazmaları ve İncil nüshaları:</b> Orta Çağ ve Rönesans’a ait paha biçilmez el yazmaları.</li>
+                                    <li><b>Haritalar:</b> 300.000’den fazla harita ve atlas.</li>
+                                    <li><b>Müzik eserleri:</b> Mozart, Beethoven, Haydn gibi bestecilerin orijinal notaları.</li>
+                                    <li><b>Papirüs Koleksiyonu:</b> Dünya çapında en büyük papirüs koleksiyonlarından biri.</li>
+                                    <li><b>Gazeteler & dergiler:</b> 17. yüzyıldan günümüze Avrupa basın tarihini yansıtan geniş arşiv.</li>
+                                </ul>
+
+                                <h3>Mimari ve Ziyaret</h3>
+                                    <li><b>Prunksaal (İhtişamlı Salon):</b> 18. yüzyılda yapılmış 80 metre uzunluğunda, tavan freskleriyle ünlü bir salondur. Yaklaşık 200.000 cilt kitap barındırır.</li>
+                                    <li><b>Müze Birimleri:</b> Harita Müzesi, Papirüs Müzesi ve Esperanto Müzesi gibi özel müzeler kütüphaneye bağlıdır.</li>
+                                    <li><b>Ziyaret:</b> Günümüzde hem araştırmacılara hem de turistlere açıktır. Çeşitli sergiler, geçici etkinlikler ve dijital arşivler düzenlenir.</li>
+
+                                    <img src="/Viyana/viyana_images/Ulusal_Kütüphane-3.jpg" alt="">
+                                    <img src="/Viyana/viyana_images/Ulusal_Kütüphane-5.jpg" alt="">
+                        </div>
+                        <div id="sanat-tarihi-muzesi">
+                            <h2 class="section-title">Sanat Tarihi Müzesi</h2>
+                            <p>
+                                1891’de Habsburg Hanedanı’nın topladığı eserleri sergilemek amacıyla açılmıştır.
+                            </p>
+                            <p>
+                                Habsburg Hanedanı’nın yüzyıllar boyunca Avrupa’nın dört bir yanından topladığı sanat eserlerine dayanır.
+                            </p>
+
+                            <h3>Mimari ve İç Mekân</h3>
+                            <ul>
+                                <li>Girişte görkemli kubbe ve freskler ziyaretçileri karşılar.</li>
+                                <li>Mermer merdivenler, tavan süslemeleri ve Gustav Klimt’in erken dönem resimleri binayı başlı başına bir sanat eseri haline getirir.</li>
+                            </ul>
+
+                            <img src="/Viyana/viyana_images/Ulusal_Sanat_Tarihi_Müzesi-4.jpg" alt="">
+                            <img src="/Viyana/viyana_images/Ulusal_Sanat_Tarihi_Müzesi-5.jpg" alt="">
+                            <img src="/Viyana/viyana_images/Ulusal_Sanat_Tarihi_Müzesi-6.jpg" alt="">
+                            <img src="/Viyana/viyana_images/Ulusal_Sanat_Tarihi_Müzesi-7.jpg" alt="">
+                        </div>
+                    </div> 
+                    </section>
+                    <!-- Photo Gallery -->
+                    <section class="content-section">
+                        <h2 class="section-title">Fotoğraf Galerisi</h2>
+                        
+                        <div class="gallery-grid">
+                            
+                            <div class="gallery-item">
+                                <img src="/Viyana/viyana_images//Belvedere_Sarayı-4.jpg" alt="Viyana Manzarası" loading="lazy">
+                                <div class="gallery-caption">
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="/Viyana/viyana_images/Belvedere_Sarayı-3.jpg" alt="Tarihi Sokaklar" loading="lazy">
+                                <div class="gallery-caption">
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="/Viyana/viyana_images/Hofburg_Sarayı-1.jpg" alt="Viyana'dan Kareler" loading="lazy">
+                                <div class="gallery-caption">
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="/Viyana/viyana_images/Hofburg_Sarayı-2.jpg" alt="Gece Manzarası" loading="lazy">
+                                <div class="gallery-caption">
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../Viyana/viyana_images/Schönnbrunn_Sarayı-1.jpg" alt="Viyana'da Gezinti" loading="lazy">
+                                <div class="gallery-caption">
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../Viyana/viyana_images/Schönnbrunn_Sarayı-2.jpg" alt="Viyana'nın Güzellikleri" loading="lazy">
+                                <div class="gallery-caption">
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../Viyana/viyana_images/Central_Cafe-1.jpg" alt="Viyana'nın Güzellikleri" loading="lazy">
+                                <div class="gallery-caption">
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../Viyana/viyana_images/Schottenkirche-1.jpg" alt="Viyana'nın Güzellikleri" loading="lazy">
+                                <div class="gallery-caption">
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../Viyana/viyana_images//Central_Cafe-2.jpg" alt="Viyana'nın Güzellikleri" loading="lazy">
+                                <div class="gallery-caption">
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../Viyana/viyana_images/Konser-1.jpg" alt="Viyana'nın Güzellikleri" loading="lazy">
+                                <div class="gallery-caption">
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../Viyana/viyana_images/Central_Cafe-3.jpg" alt="Viyana'nın Güzellikleri" loading="lazy">
+                                <div class="gallery-caption">
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../Viyana/viyana_images/Maria_Theresien_Platz.jpg" alt="Viyana'nın Güzellikleri" loading="lazy">
+                                <div class="gallery-caption">
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../Viyana/viyana_images/Central_Cafe-5.jpg" alt="Viyana'nın Güzellikleri" loading="lazy">
+                                <div class="gallery-caption">
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../Viyana/viyana_images/Konser-4.jpg" alt="Viyana'nın Güzellikleri" loading="lazy">
+                                <div class="gallery-caption">
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../Viyana/viyana_images/Central_Cafe-6.jpg" alt="Viyana'nın Güzellikleri" loading="lazy">
+                                <div class="gallery-caption">
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../Viyana/viyana_images/Konser-8.jpg" alt="Viyana'nın Güzellikleri" loading="lazy">
+                                <div class="gallery-caption">
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../Viyana/viyana_images/Mariahilfer_Caddesi-1.jpg" alt="Viyana'nın Güzellikleri" loading="lazy">
+                                <div class="gallery-caption">
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../Viyana/viyana_images/Mozart_Cafe-1.jpg" alt="Viyana'nın Güzellikleri" loading="lazy">
+                                <div class="gallery-caption">
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../Viyana/viyana_images/Palas_Daun-Kinsky-9.jpg" alt="Viyana'nın Güzellikleri" loading="lazy">
+                                <div class="gallery-caption">
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </section>
+                    <!-- Map Section -->
+                    <section class="content-section">
+                        <h2 class="section-title">Harita</h2>
+                        <div class="map-container" style="text-align: center;">
+                            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1eAeY7cZgqC40eqJkGTC4OFTzXwHntAA&ehbc=2E312F" 
+                            width="640" height="480">
+                            </iframe>
+                        </div>
+                    </section></div>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Biz Kimiz</h3>
+                        <p class="widget-content">
+                            Biz kimiz hakkında kısa bilgi ve <a href="../biz-kimiz.html" class="widget-link">devamı...</a>
+                        </p>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <div class="profile-image">
+                            <img src="/anasayfa_images/IMG_20250531_095555.jpg" alt="Blog Yazarı" loading="lazy">
+                        </div>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h4 class="widget-title">Bizi Takip Edin</h4>
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/gidiniz.blog/" target="_blank" class="social-link" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i> Instagram
+                            </a>
+                            <a href="https://youtube.com/@gidinizblog" target="_blank" class="social-link" aria-label="YouTube">
+                                <i class="fab fa-youtube"></i> YouTube
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Tüm hakları saklıdır. | Gidiniz Blog</p>
+                <div class="footer-links">
+                    <a href="/kullanim-sartlari.html">Kullanım Şartları</a>
+                    <a href="/gizlilik.html">Gizlilik Politikası</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/js/main.js"></script>
+</body>
+</html>
