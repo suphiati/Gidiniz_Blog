@@ -1823,4 +1823,15 @@ button:focus {
   .region-image::after {
     font-size: 2rem;
   }
+}
+
+/* Harita iframe mobil uyumluluk */
+.map-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  max-width: 100%;
+  display: block;
 } 
