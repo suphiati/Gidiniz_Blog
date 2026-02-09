@@ -8,14 +8,6 @@
 /* Sayfa yükleme optimizasyonları */
 html {
   scroll-behavior: smooth;
-  /* Tarayıcı yüklenme çubuğunu gizle */
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE/Edge */
-}
-
-/* Webkit tarayıcılar için scrollbar gizleme */
-html::-webkit-scrollbar {
-  display: none;
 }
 
 /* Sayfa yüklendiğinde body'ye uygulanacak stiller */
@@ -489,7 +481,7 @@ a {
                 rgba(0, 0, 0, 0.3), 
                 rgba(0, 0, 0, 0.6)
               ), 
-              url('../images/Viyana/Schönnbrunn_Sarayı-1.jpg');
+              url('https://res.cloudinary.com/dllpts1ha/image/upload/v1770235183/Sch%C3%B6nnbrunn_Saray%C4%B1-5_odzzl4.jpg');
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
@@ -567,7 +559,7 @@ a {
                 rgba(0, 0, 0, 0.3), 
                 rgba(0, 0, 0, 0.6)
               ), 
-              url('../images/Roma/Roma 1.jpg');
+              url('../images/Roma/Roma%201.jpg');
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
@@ -743,7 +735,7 @@ a {
                 rgba(34, 139, 34, 0.4), 
                 rgba(30, 144, 255, 0.4)
               ), 
-              url('../images/vizesiz ülkeler/dünya.jpg');
+              url('../images/vizesiz%20ülkeler/dünya.jpg');
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;

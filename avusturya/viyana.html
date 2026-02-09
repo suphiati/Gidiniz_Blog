@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Viyana seyahat rehberi - Avusturya'da gezilecek yerler, tarihi mekanlar ve seyahat ipuçları.">
-    <meta name="keywords" content="viyana, avusturya, seyahat, gezi">
+    <meta name="keywords" content="viyana, avusturya, belvedere, schönbrunn, hofburg, seyahat rehberi, gezi, viyana gezilecek yerler">
     <meta name="author" content="Gidiniz Blog">
     <meta property="og:title" content="Viyana Seyahat Rehberi - Gidiniz Blog">
     <meta property="og:description" content="Avusturya'da Viyana şehrinde gezilecek yerler ve seyahat ipuçları">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://gidinizblog.com/avusturya/viyana.html">
-    <meta property="og:image" content="/images/Viyana/Belvedere_Sarayı-3.jpg">
+    <meta property="og:url" content="https://gidiniz.blog/avusturya/viyana.html">
+    <meta property="og:image" content="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235166/Belvedere_Saray%C4%B1-3_rttkox.jpg">
     
     <title>Viyana Seyahat Rehberi - Gidiniz Blog</title>
     
@@ -31,18 +31,10 @@
 
     
     <style>
-        /* Viyana specific styles */
-        
-        .hero-section{
-        width: 100%;
-        height: 400px;
-        background-image: url("https://res.cloudinary.com/dllpts1ha/image/upload/v1770235166/Belvedere_Saray%C4%B1-3_rttkox.jpg");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-      }
-
+        /* Viyana specific styles - main.css .hero-background.viyana handles background */
+        @media (max-width: 768px) {
+            .hero-section .hero-background.viyana { background-attachment: scroll; }
+        }
     </style>
 </head>
 
@@ -68,10 +60,10 @@
             <nav class="navbar">
                 <!-- Social Icons -->
                 <div class="social-icons">
-                    <a href="https://www.instagram.com/gidiniz.blog/" target="_blank" aria-label="Instagram" class="social-link">
+                    <a href="https://www.instagram.com/gidiniz.blog/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-link">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="https://www.youtube.com/@gidinizblog" target="_blank" aria-label="YouTube" class="social-link">
+                    <a href="https://www.youtube.com/@gidinizblog" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="social-link">
                         <i class="fab fa-youtube"></i>
                     </a>
                     <a href="mailto:gidiniz.blog@gmail.com" aria-label="E-posta" class="social-link">
@@ -267,12 +259,39 @@
                         <h2 class="section-title"><a href="#mutlaka-gorulmesi-gereken">Mutlaka Görülmesi Gereken Yerler</a></h2>
                         
                         <div class="gallery-grid">
-                            
                             <div class="gallery-item">
-                                <a href="#mutlaka-gorulmesi-gereken"><img src="/images/viyana_images/Belvedere_Sarayı-3.jpg" alt="Viyana" loading="lazy"></a>
+                                <a href="#belvedere-sarayi"><img src="/images/viyana_images/Belvedere_Sarayı-3.jpg" alt="Belvedere Sarayı" loading="lazy"></a>
                                 <div class="gallery-caption">
-                                    <h3><i class="fas fa-landmark"></i> Viyana</h3>
-                                    <p>Viyana şehrinin önemli yerlerinden biri.</p>
+                                    <h3><i class="fas fa-landmark"></i> Belvedere Sarayı</h3>
+                                    <p>Barok mimari ve Klimt eserleriyle ünlü saray.</p>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <a href="#hofburg-sarayi"><img src="/images/viyana_images/Hofburg_Sarayı-1.jpg" alt="Hofburg Sarayı" loading="lazy"></a>
+                                <div class="gallery-caption">
+                                    <h3><i class="fas fa-crown"></i> Hofburg Sarayı</h3>
+                                    <p>Habsburg hanedanının kışlık sarayı.</p>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <a href="#schönbrunn-sarayi"><img src="/images/viyana_images/Schönbrunn_Sarayı-2.jpg" alt="Schönbrunn Sarayı" loading="lazy"></a>
+                                <div class="gallery-caption">
+                                    <h3><i class="fas fa-sun"></i> Schönbrunn Sarayı</h3>
+                                    <p>Yazlık saray ve UNESCO Dünya Mirası.</p>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <a href="#ulusal-kutuphane"><img src="/images/viyana_images/Ulusal_Kütüphane-3.jpg" alt="Ulusal Kütüphane" loading="lazy"></a>
+                                <div class="gallery-caption">
+                                    <h3><i class="fas fa-book"></i> Ulusal Kütüphane</h3>
+                                    <p>Prunksaal salonuyla ünlü barok kütüphane.</p>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <a href="#sanat-tarihi-muzesi"><img src="/images/viyana_images/Ulusal_Sanat_Tarihi_Müzesi-5.jpg" alt="Sanat Tarihi Müzesi" loading="lazy"></a>
+                                <div class="gallery-caption">
+                                    <h3><i class="fas fa-palette"></i> Sanat Tarihi Müzesi</h3>
+                                    <p>Habsburg koleksiyonu ve Klimt freskleri.</p>
                                 </div>
                             </div>
                         </div>
@@ -294,7 +313,7 @@
                         
                         <div class="gallery-grid">
                             
-                            <div class="info-card"><a href="#ulasim">
+                            <div class="info-card"><a href="#ulasim" class="info-card-link">
                                 <h3><i class="fas fa-plane"></i> Ulaşım</h3>
                                 <ul class="info-list">
                                     <li><i class="fas fa-check"></i> Viyana Havalimanı</li>
@@ -304,7 +323,7 @@
                                 </ul>
                                 </a>
                             </div>
-                            <div class="info-card">
+                            <div class="info-card"><a href="#konaklama" class="info-card-link">
                                 <h3><i class="fas fa-bed"></i> Konaklama</h3>
                                 <ul class="info-list">
                                     <li><i class="fas fa-check"></i> Otel seçenekleri</li>
@@ -312,8 +331,9 @@
                                     <li><i class="fas fa-check"></i> Merkezi konumda konaklama</li>
                                     <li><i class="fas fa-check"></i> Butik otel seçenekleri</li>
                                 </ul>
+                                </a>
                             </div>
-                            <div class="info-card">
+                            <div class="info-card"><a href="#mutfak" class="info-card-link">
                                 <h3><i class="fas fa-utensils"></i> Mutfak</h3>
                                 <ul class="info-list">
                                     <li><i class="fas fa-check"></i> Yerel lezzetler</li>
@@ -321,8 +341,9 @@
                                     <li><i class="fas fa-check"></i> Restoran seçenekleri</li>
                                     <li><i class="fas fa-check"></i> Kafe ve bar</li>
                                 </ul>
+                                </a>
                             </div>
-                            <div class="info-card">
+                            <div class="info-card"><a href="#alisveris" class="info-card-link">
                                 <h3><i class="fas fa-shopping-bag"></i> Alışveriş</h3>
                                 <ul class="info-list">
                                     <li><i class="fas fa-check"></i> Alışveriş merkezleri</li>
@@ -330,13 +351,14 @@
                                     <li><i class="fas fa-check"></i> Yerel pazarlar</li>
                                     <li><i class="fas fa-check"></i> Butik mağazalar</li>
                                 </ul>
+                                </a>
                             </div>
                         </div>
                     </section>
-                    <section id="ulasim">
+                    <section id="ulasim" class="content-section">
                         <div>
-                            <h1>Ulaşım</h1>
-                            <h2>Nasıl Gidilir?</h2>
+                            <h2 class="section-title">Ulaşım</h2>
+                            <h3>Nasıl Gidilir?</h3>
 <p>Türkiye’den direkt uçuşlar mevcut. İstanbul – Viyana arası uçuş süresi yaklaşık 2 saat.</p>
 
 <p>Viyana Havalimanından merkeze direkt metro mevcut. Bilet kontrolleri yapıldığı için biletinizi alın.</p>
@@ -345,48 +367,64 @@
 
                         </div>
                     </section>
-                    <section id="mutlaka-gorulmesi-gereken">
+
+                    <section id="konaklama" class="content-section">
+                        <h2 class="section-title">Konaklama</h2>
+                        <p>Viyana'da konaklama seçenekleri oldukça zengindir. İç Şehir (Innere Stadt) veya Ring Caddesi civarı hem ulaşım hem de gezilecek yerlere yakınlık açısından idealdir. Butik oteller, pansiyonlar ve hosteller bütçeye göre seçenek sunar. Turistik sezonlarda erken rezervasyon önerilir.</p>
+                    </section>
+
+                    <section id="mutfak" class="content-section">
+                        <h2 class="section-title">Mutfak</h2>
+                        <p>Viyana mutfağı Wiener Schnitzel, Sacher Torte ve Apfelstrudel gibi ikonik lezzetlerle ünlüdür. Geleneksel kafelerde (Kaffeehaus) kahve ve tatlı keyfi yapılabilir. Café Central, Demel ve Mozart Café gibi tarihi mekânlar deneyim için önerilir.</p>
+                    </section>
+
+                    <section id="alisveris" class="content-section">
+                        <h2 class="section-title">Alışveriş</h2>
+                        <p>Mariahilfer Caddesi başlıca alışveriş arteridir. Graben ve Kärntner Strasse lüks mağazalar sunarken, Naschmarkt yerel ürünler ve hediyelik eşyalar için idealdir. Mozart bibloları, Swarovski ürünleri ve Viyana kahvesi popüler hediyeliklerdir.</p>
+                    </section>
+
+                    <section id="mutlaka-gorulmesi-gereken" class="content-section">
                         <div>
-                            <h1>Gezilecek Yerler</h1>
+                            <h2 class="section-title">Gezilecek Yerler</h2>
                         <div id="belvedere-sarayi">
-                            <h2 class="section-title">Belvedere Sarayı</h2>
+                            <h3>Belvedere Sarayı</h3>
                             <p>
                                 Belvedere Sarayı; yapımı 1745 yılında tamamlanmış olup, Yukarı ve Aşağı Belvedere Sarayı olarak iki parçadan oluşmaktadır. 
                                 <br>Bu barok yapılar, birbirine çok büyük ve güzel bahçe ile bağlıdır. 
                                 <br>Sarayın içerisindeki Belvedere galerisinde pek çok başyapıt sergilenmekte olup, bunların en ünlüsü Gustav Klimt’in “Öpücük” adlı eseridir.
                             </p>
-                            <img src="/images/Viyana/Belvedere_Sarayı-3.jpg" alt="Belvedere Sarayı">
-                            <img src="/images/Viyana/Belvedere_Sarayı-4.jpg" alt="">
+                            <img src="/images/viyana_images/Belvedere_Sarayı-3.jpg" alt="Belvedere Sarayı ve bahçesi" loading="lazy">
+                            <img src="/images/viyana_images/Belvedere_Sarayı-4.jpg" alt="Belvedere Sarayı detay" loading="lazy">
                         </div>
                         <div id="hofburg-sarayi">
-                            <h2 class="section-title">Hofburg Sarayı</h2>
+                            <h3>Hofburg Sarayı</h3>
                             <p>
                             Hofburg Sarayı; merkezde bulunmakta olup, Habsburg hanedanından kalma kışlık bir saraydır. Saray yapımı 1654 yılında tamamlanmıştır.
                             </p>
-                            <img src="/images/viyana_images/Hofburg_Sarayı-1.jpg" alt="">
-                            <img src="/images/viyana_images/Hofburg_Sarayı-2.jpg" alt="">
-                            <img src="/images/viyana_images/Hofburg_Sarayı-4_Herkül_Heykeli.jpg" alt="">
-                            <img src="/images/viyana_images/Hofburg_Sarayı-5_Zeus.jpg" alt="">
+                            <img src="/images/viyana_images/Hofburg_Sarayı-1.jpg" alt="Hofburg Sarayı görünümü" loading="lazy">
+                            <img src="/images/viyana_images/Hofburg_Sarayı-2.jpg" alt="Hofburg Sarayı avlusu" loading="lazy">
+                            <img src="/images/viyana_images/Hofburg_Sarayı-4_Herkül_Heykeli.jpg" alt="Hofburg Sarayı Herkül heykeli" loading="lazy">
+                            <img src="/images/viyana_images/Hofburg_Sarayı-5_Zeus.jpg" alt="Hofburg Sarayı Zeus heykeli" loading="lazy">
                         </div>
                         <div id="schönbrunn-sarayi">
-                            <h2 class="section-title">Schönbrunn Sarayı</h2>
+                            <h3>Schönbrunn Sarayı</h3>
                             <p>
                                 Schönbrunn Sarayı; yapımı 1749 yılında tamamlanmış olup, Habsburg hanedanının yazlık sarayıdır. 
                                 <br>Saray, Sisi adıyla tanınan İmparatoriçe Elizabeth’in en sevdiği mekandı. 
                                 <br>Ayrıca, gittiğinizde bahçelerinde keyifle gezebilirsiniz.
                             </p>
-                            <img src="/images/viyana_images/Schönnbrunn_Sarayı-2.jpg" alt="">
-                            <img src="/images/viyana_images/Schönnbrunn_Sarayı-4.jpg" alt="">
-                            <img src="/images/viyana_images/Schönnbrunn_Sarayı-5.jpg" alt="">
-                            <img src="/images/viyana_images/Schönnbrunn_Sarayı-7.jpg" alt="">
-                            <img src="/images/viyana_images/Schönnbrunn_Sarayı-12.jpg" alt="">
+                            <img src="/images/viyana_images/Schönbrunn_Sarayı-2.jpg" alt="Schönbrunn Sarayı cephesi" loading="lazy">
+                            <img src="/images/viyana_images/Schönbrunn_Sarayı-4.jpg" alt="Schönbrunn Sarayı bahçeleri" loading="lazy">
+                            <img src="/images/viyana_images/Schönbrunn_Sarayı-5.jpg" alt="Schönbrunn Sarayı detay" loading="lazy">
+                            <img src="/images/viyana_images/Schönbrunn_Sarayı-7.jpg" alt="Schönbrunn Sarayı iç mekân" loading="lazy">
+                            <img src="/images/viyana_images/Schönbrunn_Sarayı-1.jpg" alt="Schönbrunn Sarayı manzarası" loading="lazy">
                         </div>
 
                         <div id="ulusal-kutuphane">
-                            <h2 class="section-title">Ulusal Kütüphane</h2>
+                            <h3>Ulusal Kütüphane</h3>
                             <p>
                                 Avusturya Millî Kütüphanesi (Almanca: Österreichische Nationalbibliothek, kısaca ÖNB),  
-                                1368 yılında kurulan ve ve Hofburg İmparatorluk Sarayı içerisinde bulunan millî kütüphane, 
+                                1368 yılında kurulan ve Hofburg İmparatorluk Sarayı içerisinde bulunan millî kütüphane, 
                                 mimarisiyle ziyaretçilere görsel bir şölen sunmaktadır.
                             </p>
                                 <h3>Genel Bilgiler</h3>
@@ -414,11 +452,11 @@
                                     <li><b>Müze Birimleri:</b> Harita Müzesi, Papirüs Müzesi ve Esperanto Müzesi gibi özel müzeler kütüphaneye bağlıdır.</li>
                                     <li><b>Ziyaret:</b> Günümüzde hem araştırmacılara hem de turistlere açıktır. Çeşitli sergiler, geçici etkinlikler ve dijital arşivler düzenlenir.</li>
                                 </ul>
-                                    <img src="/images/viyana_images/Ulusal_Kütüphane-3.jpg" alt="">
-                                    <img src="/images/viyana_images/Ulusal_Kütüphane-5.jpg" alt="">
+                                    <img src="/images/viyana_images/Ulusal_Kütüphane-3.jpg" alt="Avusturya Ulusal Kütüphanesi Prunksaal" loading="lazy">
+                                    <img src="/images/viyana_images/Ulusal_Kütüphane-5.jpg" alt="Avusturya Ulusal Kütüphanesi tavan freskleri" loading="lazy">
                         </div>
                         <div id="sanat-tarihi-muzesi">
-                            <h2 class="section-title">Sanat Tarihi Müzesi</h2>
+                            <h3>Sanat Tarihi Müzesi</h3>
                             <p>
                                 1891’de Habsburg Hanedanı’nın topladığı eserleri sergilemek amacıyla açılmıştır.
                             </p>
@@ -432,10 +470,9 @@
                                 <li>Mermer merdivenler, tavan süslemeleri ve Gustav Klimt’in erken dönem resimleri binayı başlı başına bir sanat eseri haline getirir.</li>
                             </ul>
 
-                            <img src="/images/viyana_images/Ulusal_Sanat_Tarihi_Müzesi-4.jpg" alt="">
-                            <img src="/images/viyana_images/Ulusal_Sanat_Tarihi_Müzesi-5.jpg" alt="">
-                            <img src="/images/viyana_images/Ulusal_Sanat_Tarihi_Müzesi-6.jpg" alt="">
-                            <img src="/images/viyana_images/Ulusal_Sanat_Tarihi_Müzesi-7.jpg" alt="">
+                            <img src="/images/viyana_images/Ulusal_Sanat_Tarihi_Müzesi-5.jpg" alt="Sanat Tarihi Müzesi kubbesi ve freskleri" loading="lazy">
+                            <img src="/images/viyana_images/Ulusal_Sanat_Tarihi_Müzesi-6.jpg" alt="Sanat Tarihi Müzesi freskleri" loading="lazy">
+                            <img src="/images/viyana_images/Ulusal_Sanat_Tarihi_Müzesi-7.jpg" alt="Sanat Tarihi Müzesi iç mekân" loading="lazy">
                         </div>
                     </div> 
                     </section>
@@ -446,99 +483,80 @@
                         <div class="gallery-grid">
                             
                             <div class="gallery-item">
-                                <img src="/images/viyana_images/Belvedere_Sarayı-4.jpg" alt="Viyana Manzarası" loading="lazy">
-                                <div class="gallery-caption">
-                                </div>
+                                <img src="/images/viyana_images/Belvedere_Sarayı-4.jpg" alt="Belvedere Sarayı bahçe manzarası" loading="lazy">
+                                <div class="gallery-caption"><h3>Belvedere Sarayı</h3></div>
                             </div>
                             <div class="gallery-item">
-                                <img src="/images/viyana_images/Belvedere_Sarayı-3.jpg" alt="Tarihi Sokaklar" loading="lazy">
-                                <div class="gallery-caption">
-                                </div>
+                                <img src="/images/viyana_images/Belvedere_Sarayı-3.jpg" alt="Belvedere Sarayı ve bahçeleri" loading="lazy">
+                                <div class="gallery-caption"><h3>Tarihi Saraylar</h3></div>
                             </div>
                             <div class="gallery-item">
-                                <img src="/images/viyana_images/Hofburg_Sarayı-1.jpg" alt="Viyana'dan Kareler" loading="lazy">
-                                <div class="gallery-caption">
-                                </div>
+                                <img src="/images/viyana_images/Hofburg_Sarayı-1.jpg" alt="Hofburg Sarayı" loading="lazy">
+                                <div class="gallery-caption"><h3>Hofburg Sarayı</h3></div>
                             </div>
                             <div class="gallery-item">
-                                <img src="/images/viyana_images/Hofburg_Sarayı-2.jpg" alt="Gece Manzarası" loading="lazy">
-                                <div class="gallery-caption">
-                                </div>
+                                <img src="/images/viyana_images/Hofburg_Sarayı-2.jpg" alt="Hofburg Sarayı avlusu" loading="lazy">
+                                <div class="gallery-caption"><h3>Hofburg Avlusu</h3></div>
                             </div>
                             <div class="gallery-item">
-                                <img src="/images/viyana_images/Schönnbrunn_Sarayı-1.jpg" alt="Viyana'da Gezinti" loading="lazy">
-                                <div class="gallery-caption">
-                                </div>
+                                <img src="/images/viyana_images/Sch%C3%B6nbrunn_Saray%C4%B1-1.jpg" alt="Schönbrunn Sarayı" loading="lazy">
+                                <div class="gallery-caption"><h3>Schönbrunn Sarayı</h3></div>
                             </div>
                             <div class="gallery-item">
-                                <img src="/images/viyana_images/Schönnbrunn_Sarayı-2.jpg" alt="Viyana'nın Güzellikleri" loading="lazy">
-                                <div class="gallery-caption">
-                                </div>
+                                <img src="/images/viyana_images/Sch%C3%B6nbrunn_Saray%C4%B1-2.jpg" alt="Schönbrunn bahçeleri" loading="lazy">
+                                <div class="gallery-caption"><h3>Schönbrunn Bahçeleri</h3></div>
                             </div>
                             <div class="gallery-item">
-                                <img src="/images/viyana_images/Central_Cafe-1.jpg" alt="Viyana'nın Güzellikleri" loading="lazy">
-                                <div class="gallery-caption">
-                                </div>
+                                <img src="/images/viyana_images/Central_Cafe-1.jpg" alt="Café Central" loading="lazy">
+                                <div class="gallery-caption"><h3>Café Central</h3></div>
                             </div>
                             <div class="gallery-item">
-                                <img src="/images/viyana_images/Palas_Daun-Kinsky-9.jpg" alt="Viyana'nın Güzellikleri" loading="lazy">
-                                <div class="gallery-caption">
-                                </div>
+                                <img src="/images/viyana_images/Palas_Daun-Kinsky-9.jpg" alt="Palais Daun-Kinsky" loading="lazy">
+                                <div class="gallery-caption"><h3>Palais Daun-Kinsky</h3></div>
                             </div>
                             <div class="gallery-item">
-                                <img src="/images/viyana_images/Central_Cafe-2.jpg" alt="Viyana'nın Güzellikleri" loading="lazy">
-                                <div class="gallery-caption">
-                                </div>
+                                <img src="/images/viyana_images/Central_Cafe-2.jpg" alt="Viyana kafeleri" loading="lazy">
+                                <div class="gallery-caption"><h3>Viyana Kafeleri</h3></div>
                             </div>
                             <div class="gallery-item">
-                                <img src="/images/viyana_images/Konser-1.jpg" alt="Viyana'nın Güzellikleri" loading="lazy">
-                                <div class="gallery-caption">
-                                </div>
+                                <img src="/images/viyana_images/Konser-1.jpg" alt="Viyana konser salonu" loading="lazy">
+                                <div class="gallery-caption"><h3>Konser Salonu</h3></div>
                             </div>
                             <div class="gallery-item">
-                                <img src="/images/viyana_images/Central_Cafe-3.jpg" alt="Viyana'nın Güzellikleri" loading="lazy">
-                                <div class="gallery-caption">
-                                </div>
+                                <img src="/images/viyana_images/Central_Cafe-3.jpg" alt="Viyana kahve kültürü" loading="lazy">
+                                <div class="gallery-caption"><h3>Kahve Kültürü</h3></div>
                             </div>
                             <div class="gallery-item">
-                                <img src="/images/viyana_images/Maria_Theresien_Platz.jpg" alt="Viyana'nın Güzellikleri" loading="lazy">
-                                <div class="gallery-caption">
-                                </div>
+                                <img src="/images/viyana_images/Schottenkirche-1.jpg" alt="Schottenkirche kilisesi" loading="lazy">
+                                <div class="gallery-caption"><h3>Schottenkirche</h3></div>
                             </div>
                             <div class="gallery-item">
-                                <img src="/images/viyana_images/Central_Cafe-5.jpg" alt="Viyana'nın Güzellikleri" loading="lazy">
-                                <div class="gallery-caption">
-                                </div>
+                                <img src="/images/viyana_images/Central_Cafe-5.jpg" alt="Viyana pastanesi" loading="lazy">
+                                <div class="gallery-caption"><h3>Viyana Pastaneleri</h3></div>
                             </div>
                             <div class="gallery-item">
-                                <img src="/images/viyana_images/Konser-4.jpg" alt="Viyana'nın Güzellikleri" loading="lazy">
-                                <div class="gallery-caption">
-                                </div>
+                                <img src="/images/viyana_images/Ulusal_Kütüphane-3.jpg" alt="Ulusal Kütüphane Prunksaal" loading="lazy">
+                                <div class="gallery-caption"><h3>Ulusal Kütüphane</h3></div>
                             </div>
                             <div class="gallery-item">
-                                <img src="/images/viyana_images/Central_Cafe-6.jpg" alt="Viyana'nın Güzellikleri" loading="lazy">
-                                <div class="gallery-caption">
-                                </div>
+                                <img src="/images/viyana_images/Central_Cafe-6.jpg" alt="Viyana kafe atmosferi" loading="lazy">
+                                <div class="gallery-caption"><h3>Kafe Atmosferi</h3></div>
                             </div>
                             <div class="gallery-item">
-                                <img src="/images/viyana_images/Konser-8.jpg" alt="Viyana'nın Güzellikleri" loading="lazy">
-                                <div class="gallery-caption">
-                                </div>
+                                <img src="/images/viyana_images/brunn_Sarayı-4.jpg" alt="Schönbrunn Sarayı detay" loading="lazy">
+                                <div class="gallery-caption"><h3>Schönbrunn Detay</h3></div>
                             </div>
                             <div class="gallery-item">
-                                <img src="/images/viyana_images/Mariahilfer_Caddesi-1.jpg" alt="Viyana'nın Güzellikleri" loading="lazy">
-                                <div class="gallery-caption">
-                                </div>
+                                <img src="/images/viyana_images/Ulusal_Sanat_Tarihi_Müzesi-5.jpg" alt="Sanat Tarihi Müzesi" loading="lazy">
+                                <div class="gallery-caption"><h3>Sanat Tarihi Müzesi</h3></div>
                             </div>
                             <div class="gallery-item">
-                                <img src="/images/viyana_images/Mozart_Cafe-1.jpg" alt="Viyana'nın Güzellikleri" loading="lazy">
-                                <div class="gallery-caption">
-                                </div>
+                                <img src="/images/viyana_images/Mozart_Cafe-1.jpg" alt="Mozart Café" loading="lazy">
+                                <div class="gallery-caption"><h3>Mozart Café</h3></div>
                             </div>
                             <div class="gallery-item">
-                                <img src="/images/viyana_images/Palas_Daun-Kinsky-9.jpg" alt="Viyana'nın Güzellikleri" loading="lazy">
-                                <div class="gallery-caption">
-                                </div>
+                                <img src="/images/viyana_images/Ulusal_Sanat_Tarihi_Müzesi-6.jpg" alt="Sanat Tarihi Müzesi salonu" loading="lazy">
+                                <div class="gallery-caption"><h3>Müze İç Mekân</h3></div>
                             </div>
                         </div>
                         
@@ -571,10 +589,10 @@
                     <div class="sidebar-widget">
                         <h4 class="widget-title">Bizi Takip Edin</h4>
                         <div class="social-links">
-                            <a href="https://www.instagram.com/gidiniz.blog/" target="_blank" class="social-link" aria-label="Instagram">
+                            <a href="https://www.instagram.com/gidiniz.blog/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
                                 <i class="fab fa-instagram"></i> Instagram
                             </a>
-                            <a href="https://youtube.com/@gidinizblog" target="_blank" class="social-link" aria-label="YouTube">
+                            <a href="https://www.youtube.com/@gidinizblog" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
                                 <i class="fab fa-youtube"></i> YouTube
                             </a>
                         </div>

@@ -114,7 +114,7 @@ h3 i {
 }
 
 #showcase {
-  background-image: url('/images/Viyana/Belvedere_Sarayı-3.jpg');
+  background-image: url('https://res.cloudinary.com/dllpts1ha/image/upload/v1770235183/Sch%C3%B6nnbrunn_Saray%C4%B1-5_odzzl4.jpg');
   background-attachment: fixed;
 }
 
@@ -331,6 +331,16 @@ footer {
   padding: 30px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   margin-bottom: 30px;
+}
+
+.info-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.info-card-link:hover {
+  opacity: 0.95;
 }
 
 .info-card h3 {

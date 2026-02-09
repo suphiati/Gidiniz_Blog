@@ -174,7 +174,7 @@ Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için `LICENSE` dosy
 
 ## 📞 İletişim
 
-- **Website**: [gidinizblog.com](https://gidinizblog.com)
+- **Website**: [gidiniz.blog](https://gidiniz.blog)
 - **Email**: gidiniz@blog.com
 - **Instagram**: [@gidinizblog](https://instagram.com/gidinizblog)
 - **YouTube**: [Gidiniz Blog](https://youtube.com/gidinizblog)

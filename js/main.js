@@ -383,19 +383,6 @@ window.addEventListener('error', function(e) {
     // You can add error reporting here
 });
 
-// ===== SERVICE WORKER REGISTRATION (Optional) =====
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
-        navigator.serviceWorker.register('/sw.js')
-            .then(function(registration) {
-                console.log('ServiceWorker registration successful');
-            })
-            .catch(function(err) {
-                console.log('ServiceWorker registration failed');
-            });
-    });
-}
-
 // ===== EXPORT FUNCTIONS FOR GLOBAL USE =====
 window.toggleMenu = function() {
     const navMenu = document.getElementById('navMenu');
