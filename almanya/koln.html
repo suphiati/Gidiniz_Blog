@@ -40,7 +40,30 @@
         background-attachment: fixed;
       }
         
+        /* Hero title gradient animation */
+        .hero-background.koln .hero-title {
+            background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3, #ff6b6b);
+            background-size: 300% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: gradient-flow 4s ease-in-out infinite;
+        }
+        @keyframes gradient-flow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        /* Logo text gradient animation */
+        .header .logo-section .logo-text {
+            background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3, #ff6b6b);
+            background-size: 300% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: gradient-flow 4s ease-in-out infinite;
+        }
 
+        
     </style>
 </head>
 
@@ -240,7 +263,7 @@
         <div class="hero-background koln">
             <div class="hero-content">
                 <h1 class="hero-title">Köln</h1>
-                <p class="hero-subtitle">Köln'ün Güzellikleri</p>
+
             </div>
         </div>
     </section>
@@ -444,7 +467,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2024 Tüm hakları saklıdır. | Gidiniz Blog</p>
+                <p>&copy; 2025 Tüm hakları saklıdır. | Gidiniz Blog</p>
                 <div class="footer-links">
                     <a href="/kullanim-sartlari.html">Kullanım Şartları</a>
                     <a href="/gizlilik.html">Gizlilik Politikası</a>

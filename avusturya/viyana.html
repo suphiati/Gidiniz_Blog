@@ -35,6 +35,30 @@
         @media (max-width: 768px) {
             .hero-section .hero-background.viyana { background-attachment: scroll; }
         }
+        /* Hero title gradient animation */
+        .hero-background.viyana .hero-title {
+            background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3, #ff6b6b);
+            background-size: 300% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: gradient-flow 4s ease-in-out infinite;
+        }
+        @keyframes gradient-flow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+                /* Logo text gradient animation */
+                .header .logo-section .logo-text {
+            background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3, #ff6b6b);
+            background-size: 300% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: gradient-flow 4s ease-in-out infinite;
+        }
+
     </style>
 </head>
 
@@ -234,7 +258,7 @@
         <div class="hero-background viyana">
             <div class="hero-content">
                 <h1 class="hero-title">Viyana</h1>
-                <p class="hero-subtitle">Viyana'nın Güzellikleri</p>
+                <!-- <p class="hero-subtitle">Viyana'nın Güzellikleri</p> -->
             </div>
         </div>
     </section>
@@ -606,7 +630,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2024 Tüm hakları saklıdır. | Gidiniz Blog</p>
+                <p>&copy; 2025 Tüm hakları saklıdır. | Gidiniz Blog</p>
                 <div class="footer-links">
                     <a href="/kullanim-sartlari.html">Kullanım Şartları</a>
                     <a href="/gizlilik.html">Gizlilik Politikası</a>
