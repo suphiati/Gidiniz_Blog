@@ -1,5 +1,8 @@
-# Images klasörü hariç tutulacak
-images/
+# Images klasörü hariç tutulacak (favicon hariç - sekme logosu için gerekli)
+images/*
+!images/anasayfa_images/
+images/anasayfa_images/*
+!images/anasayfa_images/site_logo.png
 
 # Sistem dosyaları
 #.DS_Store
