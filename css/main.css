@@ -543,10 +543,10 @@ a {
 
 .hero-background.koln {
   background: linear-gradient(
-                rgba(0, 0, 0, 0.3), 
+                rgba(0, 0, 0, 0.3),
                 rgba(0, 0, 0, 0.6)
-              ), 
-              url('../images/Köln/Köln-1.jpg');
+              ),
+              url('https://res.cloudinary.com/dllpts1ha/image/upload/v1770237521/K%C3%B6ln-2_rxejb8.jpg');
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
