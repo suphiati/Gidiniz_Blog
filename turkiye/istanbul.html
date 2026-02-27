@@ -403,129 +403,209 @@
         <div class="container">
             <div class="content-grid">
                 <div class="main-content-area">
+
                     <!-- Introduction -->
-                    <section class="content-section">
-                        <div class="info-card">
-                            <h2 class="section-title">İstanbul Hakkında</h2>
-                            <p>
-                                İstanbul, Türkiye'de yer alan önemli bir şehirdir. Tarihi ve kültürel zenginliğiyle dikkat çeker.
-                            </p>
-                        </div>
-                    </section>
+                    <div class="info-card" style="margin-bottom:30px;">
+                        <h2 style="color:#95d5db; margin-bottom:15px;"><i class="fas fa-globe"></i> İstanbul Hakkında</h2>
+                        <p style="line-height:1.8; color:#555;">
+                            İstanbul, dünyanın iki kıtaya (Avrupa ve Asya) yayılan tek büyük şehridir. İstanbul Boğazı'nın iki yakasına kurulu bu eşsiz metropol; Byzantium, Konstantinopolis ve İstanbul adlarıyla tarihe mal olmuş, yaklaşık 2700 yıllık kesintisiz bir şehir hayatının tanığıdır. Roma, Bizans ve Osmanlı medeniyetlerinin beşiği olan İstanbul; UNESCO Dünya Mirası Listesi'ndeki Tarihi Yarımadası, Ayasofya, Topkapı Sarayı ve Kapalı Çarşısıyla dünyanın en önemli kültür destinasyonlarından biridir. Bugün 15 milyonu aşan nüfusuyla Avrupa'nın en kalabalık şehri olan İstanbul; Doğu ile Batı'nın, tarihin ve modernliğin, mistisizmin ve canlı kentsel yaşamın nefes kesici biçimde bir arada var olduğu bir dünya kenti olmaya devam etmektedir.
+                        </p>
+                    </div>
 
-                    <!-- Must Visit Places -->
-                    <section class="content-section">
+                    <!-- Gallery -->
+                    <section id="mutlaka-gorulmesi-gereken" class="content-section">
                         <h2 class="section-title">Mutlaka Görülmesi Gereken Yerler</h2>
-                        
                         <div class="gallery-grid">
-                            
-                            <div class="gallery-item">
-                                <img src="/images/İstanbul/İstanbul%201.jpg" alt="İstanbul" loading="lazy">
-                                <div class="gallery-caption">
-                                    <h3><i class="fas fa-landmark"></i> İstanbul</h3>
-                                    <p>İstanbul şehrinin önemli yerlerinden biri.</p>
+
+                            <a href="#ayasofya" style="text-decoration:none;">
+                                <div class="gallery-item">
+                                    <div class="gallery-caption">
+                                        <h3><i class="fas fa-mosque"></i> Ayasofya</h3>
+                                        <p>537'de inşa edilen ve Bizans-Osmanlı mimarisinin zirvesi sayılan bu dev yapı; dünyanın en büyük tarihi ibadethanelerinden biri.</p>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
+
+                            <a href="#sultanahmet" style="text-decoration:none;">
+                                <div class="gallery-item">
+                                    <div class="gallery-caption">
+                                        <h3><i class="fas fa-star-and-crescent"></i> Sultanahmet Camii</h3>
+                                        <p>6 minaresi ve 20.000'den fazla mavi İznik çinisiyle dünyada "Mavi Cami" olarak tanınan Osmanlı başyapıtı.</p>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="#topkapi" style="text-decoration:none;">
+                                <div class="gallery-item">
+                                    <div class="gallery-caption">
+                                        <h3><i class="fas fa-crown"></i> Topkapı Sarayı</h3>
+                                        <p>400 yıl boyunca Osmanlı padişahlarının ikametgâhı; Harem dairesi, hazinesi ve dünyanın en iyi İslam eserleri koleksiyonuyla.</p>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="#kapali-carsi" style="text-decoration:none;">
+                                <div class="gallery-item">
+                                    <div class="gallery-caption">
+                                        <h3><i class="fas fa-store"></i> Kapalı Çarşı</h3>
+                                        <p>1455'te kurulan ve dünyanın en eski kapalı çarşılarından biri; 4.000'den fazla dükkân, kuyumcular, halıcılar ve baharat satıcıları.</p>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="#bogaz-turu" style="text-decoration:none;">
+                                <div class="gallery-item">
+                                    <div class="gallery-caption">
+                                        <h3><i class="fas fa-ship"></i> Boğaz Turu</h3>
+                                        <p>İki kıta arasındaki İstanbul Boğazı'nda tekne turu; Dolmabahçe, Rumeli Hisarı ve köklü yalıların arasından geçiş.</p>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="#galata" style="text-decoration:none;">
+                                <div class="gallery-item">
+                                    <div class="gallery-caption">
+                                        <h3><i class="fas fa-binoculars"></i> Galata Kulesi</h3>
+                                        <p>1348'de Cenevizliler tarafından inşa edilen kule; Haliç ve İstanbul'un görkemli panoramasını sunan tarihi seyir noktası.</p>
+                                    </div>
+                                </div>
+                            </a>
+
                         </div>
                     </section>
 
-                    <!-- Cultural Highlights -->
-                    <section class="content-section">
-                        <div class="highlight-box">
-                            <h3><i class="fas fa-star"></i> İstanbul'un Öne Çıkan Özellikleri</h3>
-                            <p>
-                                İstanbul, zengin tarihi ve kültürel mirasıyla ziyaretçilerine unutulmaz deneyimler sunar.
-                            </p>
-                        </div>
-                    </section>
+                    <!-- Highlight Box -->
+                    <div class="highlight-box">
+                        <h3><i class="fas fa-star"></i> İstanbul'un Öne Çıkan Özellikleri</h3>
+                        <ul style="list-style:none; padding:0; margin-top:15px; text-align:left; display:inline-block;">
+                            <li style="padding:6px 0;"><i class="fas fa-check" style="margin-right:8px;"></i> <strong>İki Kıta:</strong> Dünyanın iki kıtaya yayılan tek büyük şehri; sabah Avrupa'da, öğleden sonra Asya'da olabilirsiniz</li>
+                            <li style="padding:6px 0;"><i class="fas fa-check" style="margin-right:8px;"></i> <strong>3 İmparatorluk Mirası:</strong> Roma, Bizans ve Osmanlı uygarlıklarının iz bıraktığı tarihin en zengin şehirlerinden biri</li>
+                            <li style="padding:6px 0;"><i class="fas fa-check" style="margin-right:8px;"></i> <strong>Türk Mutfağı:</strong> Balık ekmek, döner, baklava ve Türk kahvesiyle dünya mutfakları arasında özel bir yer</li>
+                            <li style="padding:6px 0;"><i class="fas fa-check" style="margin-right:8px;"></i> <strong>Kapalı Çarşı:</strong> 4.000 dükkân, altın, halı ve baharatlarla dünyanın en büyük ve en eski kapalı çarşısı</li>
+                            <li style="padding:6px 0;"><i class="fas fa-check" style="margin-right:8px;"></i> <strong>Boğaz Vapurları:</strong> İki yakayı birleştiren rüzgarlı vapur yolculukları; İstanbul'u denizden izlemenin en keyifli yolu</li>
+                        </ul>
+                    </div>
 
-                    <!-- Practical Information -->
+                    <!-- Pratik Bilgiler -->
                     <section class="content-section">
                         <h2 class="section-title">Pratik Bilgiler</h2>
-                        
                         <div class="gallery-grid">
-                            
-                            <div class="info-card">
-                                <h3><i class="fas fa-plane"></i> Ulaşım</h3>
-                                <ul class="info-list">
-                                    <li><i class="fas fa-check"></i> İstanbul Havalimanı</li>
-                                    <li><i class="fas fa-check"></i> Şehir içi ulaşım ağı</li>
-                                    <li><i class="fas fa-check"></i> Toplu taşıma seçenekleri</li>
-                                    <li><i class="fas fa-check"></i> Taksi ve özel araç</li>
-                                </ul>
-                            </div>
-                            <div class="info-card">
-                                <h3><i class="fas fa-bed"></i> Konaklama</h3>
-                                <ul class="info-list">
-                                    <li><i class="fas fa-check"></i> Otel seçenekleri</li>
-                                    <li><i class="fas fa-check"></i> Pansiyon ve hostel</li>
-                                    <li><i class="fas fa-check"></i> Merkezi konumda konaklama</li>
-                                    <li><i class="fas fa-check"></i> Butik otel seçenekleri</li>
-                                </ul>
-                            </div>
-                            <div class="info-card">
-                                <h3><i class="fas fa-utensils"></i> Mutfak</h3>
-                                <ul class="info-list">
-                                    <li><i class="fas fa-check"></i> Yerel lezzetler</li>
-                                    <li><i class="fas fa-check"></i> Geleneksel yemekler</li>
-                                    <li><i class="fas fa-check"></i> Restoran seçenekleri</li>
-                                    <li><i class="fas fa-check"></i> Kafe ve bar</li>
-                                </ul>
-                            </div>
-                            <div class="info-card">
-                                <h3><i class="fas fa-shopping-bag"></i> Alışveriş</h3>
-                                <ul class="info-list">
-                                    <li><i class="fas fa-check"></i> Alışveriş merkezleri</li>
-                                    <li><i class="fas fa-check"></i> Hediyelik eşya dükkanları</li>
-                                    <li><i class="fas fa-check"></i> Yerel pazarlar</li>
-                                    <li><i class="fas fa-check"></i> Butik mağazalar</li>
-                                </ul>
-                            </div>
+                            <a href="#ulasim" class="info-card-link">
+                                <div class="info-card">
+                                    <h3><i class="fas fa-plane"></i> Ulaşım</h3>
+                                    <p>İstanbul Havalimanı, Sabiha Gökçen, metro, vapur ve İETT otobüsleriyle şehir içi ulaşım.</p>
+                                </div>
+                            </a>
+                            <a href="#konaklama" class="info-card-link">
+                                <div class="info-card">
+                                    <h3><i class="fas fa-bed"></i> Konaklama</h3>
+                                    <p>Sultanahmet, Beyoğlu, Karaköy ve Kadıköy'deki en iyi konaklama seçenekleri.</p>
+                                </div>
+                            </a>
+                            <a href="#mutfak" class="info-card-link">
+                                <div class="info-card">
+                                    <h3><i class="fas fa-utensils"></i> Mutfak</h3>
+                                    <p>Simit, balık ekmek, döner, baklava ve Türk çayıyla İstanbul'un lezzetli sokak kültürü.</p>
+                                </div>
+                            </a>
+                            <a href="#alisveris" class="info-card-link">
+                                <div class="info-card">
+                                    <h3><i class="fas fa-shopping-bag"></i> Alışveriş</h3>
+                                    <p>Kapalı Çarşı, Mısır Çarşısı, İstiklal Caddesi ve modern AVM'ler.</p>
+                                </div>
+                            </a>
                         </div>
                     </section>
 
-                    <!-- Photo Gallery -->
+                    <!-- Ulaşım -->
+                    <section id="ulasim" class="content-section">
+                        <div class="info-card">
+                            <h3><i class="fas fa-plane"></i> Ulaşım</h3>
+                            <ul class="info-list">
+                                <li><i class="fas fa-plane-arrival"></i> <strong>İstanbul Havalimanı (IST):</strong> Avrupa yakasında, şehir merkezine ~45 km. M11 metro hattıyla Gayrettepe'ye ~38 dakika (yaklaşık 100 TL).</li>
+                                <li><i class="fas fa-plane-arrival"></i> <strong>Sabiha Gökçen Havalimanı (SAW):</strong> Asya yakasında; şehir merkezine Havas otobüsü veya metro+feribot kombinasyonuyla ~1,5 saat.</li>
+                                <li><i class="fas fa-subway"></i> <strong>Metro:</strong> M1, M2, M3, M4, M5, M6, M7, M9, M11 hatlarıyla şehrin büyük bölümü kapsanıyor. İstanbulkart zorunlu.</li>
+                                <li><i class="fas fa-tram"></i> <strong>Tramvay ve Nostaljik Tramvay:</strong> T1 tramvayı Kabataş-Bağcılar arasında Sultanahmet, Kapalıçarşı ve Eminönü'ne uğrar. Beyoğlu'nda nostaljik T2 tramvayı.</li>
+                                <li><i class="fas fa-ship"></i> <strong>Vapur:</strong> İDO ve Şehir Hatları vapurlarıyla Kadıköy, Üsküdar, Adalar, Beşiktaş ve Sarıyer arasında deniz ulaşımı; İstanbul'u görmenin en güzel yolu.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- Konaklama -->
+                    <section id="konaklama" class="content-section">
+                        <div class="info-card">
+                            <h3><i class="fas fa-bed"></i> Konaklama</h3>
+                            <ul class="info-list">
+                                <li><i class="fas fa-star"></i> <strong>Sultanahmet:</strong> Tarihi yarımadanın kalbi; Ayasofya, Topkapı ve Kapalı Çarşı'ya yürüyüş mesafesi. Butik oteller ve pansiyonlar ağırlıklı.</li>
+                                <li><i class="fas fa-map-marker-alt"></i> <strong>Beyoğlu/Taksim:</strong> Modern İstanbul'un nabzı; restoranlar, gece hayatı ve İstiklal Caddesi'ne yakın 4-5 yıldızlı oteller.</li>
+                                <li><i class="fas fa-map-marker-alt"></i> <strong>Karaköy:</strong> Trendy butik oteller ve sanat galerileri; hem tarihi yarımadaya hem Beyoğlu'na yakın, Galata Kulesi'nin eteklerinde.</li>
+                                <li><i class="fas fa-map-marker-alt"></i> <strong>Kadıköy (Asya Yakası):</strong> Daha yerel ve sakin; Moda kafe kültürü, Boğaz vapuruyla Avrupa yakasına kolay geçiş imkânı. Uygun fiyatlı.</li>
+                                <li><i class="fas fa-info-circle"></i> İstanbulkart her ulaşım türünde geçerli; havalimanından veya istasyonlardan temin edilebilir.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- Mutfak -->
+                    <section id="mutfak" class="content-section">
+                        <div class="info-card">
+                            <h3><i class="fas fa-utensils"></i> İstanbul Mutfağı</h3>
+                            <ul class="info-list">
+                                <li><i class="fas fa-fish"></i> <strong>Balık Ekmek:</strong> Eminönü Köprüsü altında teknelerdeki ızgaracılardan alınan ızgara balıklı sandviç; İstanbul'un en ikonik sokak yiyeceği.</li>
+                                <li><i class="fas fa-bread-slice"></i> <strong>Simit:</strong> Susam kaplı, gevrek halkalar; sabah çayıyla ya da yürürken en sade ve en tatmin edici İstanbul kahvaltısı.</li>
+                                <li><i class="fas fa-drumstick-bite"></i> <strong>Döner Kebap:</strong> Döner ustalarının eli açtığı yatay şişte dönen et; lahmacun ve pide gibi diğer fırın lezzetleriyle birlikte Türk mutfağının sembolleri.</li>
+                                <li><i class="fas fa-cookie"></i> <strong>Baklava:</strong> Fıstıklı ya da cevizli, kat kat yufkalarla hazırlanan şuruplu Türk tatlısı; Kapalıçarşı çevresindeki tarihi baklavacılardan denenmeli.</li>
+                                <li><i class="fas fa-coffee"></i> <strong>Türk Çayı ve Kahvesi:</strong> İstanbul'da her mola küçük belli bardaklarda demlenen çayla veya köpüklü Türk kahvesiyle tamamlanır.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- Alışveriş -->
+                    <section id="alisveris" class="content-section">
+                        <div class="info-card">
+                            <h3><i class="fas fa-shopping-bag"></i> Alışveriş</h3>
+                            <ul class="info-list">
+                                <li><i class="fas fa-store"></i> <strong>Kapalı Çarşı (Büyük Çarşı):</strong> 1455'te kurulan dünyanın en eski kapalı çarşısı; altın, halı, deri, el yapımı seramikler ve hediyelikler için 4.000+ dükkân.</li>
+                                <li><i class="fas fa-leaf"></i> <strong>Mısır Çarşısı (Spice Bazaar):</strong> Eminönü'nde baharat, lokum, çay ve kuru meyveler için Osmanlı dönemi kapalı pazarı. Hediyelik için ideal.</li>
+                                <li><i class="fas fa-walking"></i> <strong>İstiklal Caddesi:</strong> Beyoğlu'ndaki 1,4 km'lik yaya caddesi; zincir mağazalar, yerli butikler, kitabevleri ve kafelerle canlı alışveriş deneyimi.</li>
+                                <li><i class="fas fa-gem"></i> <strong>Arasta Bazaarı:</strong> Sultanahmet'te; halı, kılıç, el dokuması ve antika koleksiyoncular için daha sakin ve özgün alışveriş atmosferi.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- Gezilecek Yerler Detayları -->
                     <section class="content-section">
-                        <h2 class="section-title">Fotoğraf Galerisi</h2>
-                        
-                        <div class="gallery-grid">
-                            
-                            <div class="gallery-item">
-                                <img src="/images/İstanbul/İstanbul%202.jpg" alt="İstanbul Manzarası" loading="lazy">
-                                <div class="gallery-caption">
-                                    <h3>İstanbul Manzarası</h3>
-                                </div>
-                            </div>
-                            <div class="gallery-item">
-                                <img src="/images/İstanbul/İstanbul%203.jpg" alt="Tarihi Sokaklar" loading="lazy">
-                                <div class="gallery-caption">
-                                    <h3>Tarihi Sokaklar</h3>
-                                </div>
-                            </div>
-                            <div class="gallery-item">
-                                <img src="/images/İstanbul/İstanbul%204.jpg" alt="İstanbul'dan Kareler" loading="lazy">
-                                <div class="gallery-caption">
-                                    <h3>İstanbul'dan Kareler</h3>
-                                </div>
-                            </div>
-                            <div class="gallery-item">
-                                <img src="/images/İstanbul/İstanbul%205.jpg" alt="Gece Manzarası" loading="lazy">
-                                <div class="gallery-caption">
-                                    <h3>Gece Manzarası</h3>
-                                </div>
-                            </div>
-                            <div class="gallery-item">
-                                <img src="/images/İstanbul/İstanbul%206.jpg" alt="İstanbul'da Gezinti" loading="lazy">
-                                <div class="gallery-caption">
-                                    <h3>İstanbul'da Gezinti</h3>
-                                </div>
-                            </div>
-                            <div class="gallery-item">
-                                <img src="/images/İstanbul/İstanbul%207.jpg" alt="İstanbul'un Güzellikleri" loading="lazy">
-                                <div class="gallery-caption">
-                                    <h3>İstanbul'un Güzellikleri</h3>
-                                </div>
-                            </div>
+                        <h2 class="section-title">Gezilecek Yerler</h2>
+
+                        <div id="ayasofya" class="info-card" style="margin-bottom:20px;">
+                            <h3><i class="fas fa-mosque"></i> Ayasofya (Hagia Sophia)</h3>
+                            <p style="line-height:1.8; color:#555; margin-bottom:10px;">MS 537'de İmparator Justinianus tarafından yaptırılan ve asırlarca dünyanın en büyük katedrali olan Ayasofya; 1453'te camiye, 1934'te müzeye, 2020'de yeniden camiye dönüştürülmüştür. İçindeki altın mozaikler ve 31 metre çaplı dev kubbesiyle mimarinin zirve noktalarından biri.</p>
+                            <p><a href="https://ayasofyacamii.diyanet.gov.tr/" target="_blank" rel="noopener noreferrer" style="color:#95d5db;">ayasofyacamii.diyanet.gov.tr</a></p>
+                        </div>
+
+                        <div id="sultanahmet" class="info-card" style="margin-bottom:20px;">
+                            <h3><i class="fas fa-star-and-crescent"></i> Sultanahmet Camii (Mavi Cami)</h3>
+                            <p style="line-height:1.8; color:#555; margin-bottom:10px;">1616'da Sultan I. Ahmed tarafından yaptırılan ve dünyada 6 minaresiyle ünlü olan "Mavi Cami"; iç mekânındaki 20.000'den fazla İznik çinisi ve zarif kubbeleriyle Osmanlı mimarisinin şaheseri. İçerisi namaz vakitleri dışında ziyaretçilere açık.</p>
+                        </div>
+
+                        <div id="topkapi" class="info-card" style="margin-bottom:20px;">
+                            <h3><i class="fas fa-crown"></i> Topkapı Sarayı</h3>
+                            <p style="line-height:1.8; color:#555; margin-bottom:10px;">1478'den 1856'ya kadar yaklaşık 400 yıl boyunca Osmanlı padişahlarının yönetim ve yaşam merkezi olan Topkapı Sarayı; dört büyük avlusu, Harem dairesi, hazinesi (Kaşıkçı Elması dahil) ve kutsal emanetler bölümüyle mutlaka görülmesi gereken bir mekân.</p>
+                            <p><a href="https://topkapisarayi.gov.tr/" target="_blank" rel="noopener noreferrer" style="color:#95d5db;">topkapisarayi.gov.tr</a></p>
+                        </div>
+
+                        <div id="kapali-carsi" class="info-card" style="margin-bottom:20px;">
+                            <h3><i class="fas fa-store"></i> Kapalı Çarşı</h3>
+                            <p style="line-height:1.8; color:#555; margin-bottom:10px;">1455'te Fatih Sultan Mehmet tarafından kurulan Kapalı Çarşı; 61 kapalı sokağı, 18 hanı ve 4.000'den fazla dükkânıyla dünyanın en büyük ve en eski kapalı çarşılarından biridir. Günde 250.000 ila 400.000 ziyaretçi çeken bu yapı; altın, mücevher, halı, deri ve seramiklerle turistlerin ve yerellerin buluşma noktası.</p>
+                        </div>
+
+                        <div id="bogaz-turu" class="info-card" style="margin-bottom:20px;">
+                            <h3><i class="fas fa-ship"></i> Boğaz Turu</h3>
+                            <p style="line-height:1.8; color:#555; margin-bottom:10px;">İstanbul'u tam anlamıyla hissetmek için Boğaz'da bir tekne turu şarttır. Şehir Hatları vapurlarıyla uygun fiyatlı günlük turlar düzenlenir; Dolmabahçe Sarayı, Rumeli Hisarı, köklü yalılar ve Anadolu Hisarı'nın önünden geçilir. Hem Avrupa hem Asya kıyısı bir arada izlenir.</p>
+                        </div>
+
+                        <div id="galata" class="info-card" style="margin-bottom:20px;">
+                            <h3><i class="fas fa-binoculars"></i> Galata Kulesi</h3>
+                            <p style="line-height:1.8; color:#555; margin-bottom:10px;">1348'de Cenevizliler tarafından inşa edilen ve 67 metre yüksekliğindeki Galata Kulesi; Haliç, Boğaz ve İstanbul'un tüm siluetini sunan panoramik seyir terasıyla tarihin ve manzaranın buluşma noktasıdır. Bilet alarak kulenin tepesine çıkmak mümkün.</p>
                         </div>
                     </section>
 
@@ -533,14 +613,14 @@
                     <section class="content-section">
                         <h2 class="section-title">Harita</h2>
                         <div class="map-container">
-                            <iframe 
+                            <iframe
                                 title="İstanbul haritası"
                                 src="https://www.google.com/maps/d/u/0/embed?mid=1GzxxNWegTGT_RQD7PQDnhgmYo7q0-L0&ehbc=2E312F"
-                                width="100%" 
-                                height="450" 
-                                style="border:0;" 
-                                allowfullscreen="" 
-                                loading="lazy" 
+                                width="100%"
+                                height="450"
+                                style="border:0;"
+                                allowfullscreen=""
+                                loading="lazy"
                                 referrerpolicy="no-referrer-when-downgrade">
                             </iframe>
                         </div>
@@ -565,10 +645,10 @@
                     <div class="sidebar-widget">
                         <h4 class="widget-title">Bizi Takip Edin</h4>
                         <div class="social-links">
-                            <a href="#" class="social-link" aria-label="Instagram">
+                            <a href="https://www.instagram.com/gidiniz.blog/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
                                 <i class="fab fa-instagram"></i> Instagram
                             </a>
-                            <a href="#" class="social-link" aria-label="YouTube">
+                            <a href="https://www.youtube.com/@gidinizblog" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
                                 <i class="fab fa-youtube"></i> YouTube
                             </a>
                         </div>
