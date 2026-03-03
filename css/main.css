@@ -696,7 +696,9 @@ a {
 /* Diğer sayfalar için background'lar */
 .hero-background.biz-kimiz {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-              url('../images/anasayfa/portofino.jpg');
+              url('https://res.cloudinary.com/dllpts1ha/image/upload/v1772570229/biz_kimiz_oxmdec.png');
+  background-size: cover;
+  background-position: center;
 }
 
 .hero-background.fayadali-bilgiler {
