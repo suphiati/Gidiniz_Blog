@@ -725,7 +725,10 @@ a {
 
 .hero-background.kullanim-sartlari {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-              url('../images/anasayfa/portofino.jpg');
+              url('https://res.cloudinary.com/dllpts1ha/image/upload/v1772603825/kullanim_sartlari_iyerao.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 /* Eksik şehirler için CSS tanımları */
@@ -740,11 +743,10 @@ a {
                 rgba(30, 144, 255, 0.4)
               ), 
               url('../images/vizesiz%20ülkeler/dünya.jpg');
-  background-size: cover;
+  background-size: contain;
   background-position: center center;
-  background-attachment: fixed;
   background-repeat: no-repeat;
-  filter: contrast(1.2) saturate(1.3) brightness(1.1);
+  background-color: #1e5a8a;
 }
 
 .hero-content {
