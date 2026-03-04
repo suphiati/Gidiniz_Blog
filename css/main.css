@@ -697,8 +697,9 @@ a {
 .hero-background.biz-kimiz {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
               url('https://res.cloudinary.com/dllpts1ha/image/upload/v1772570229/biz_kimiz_oxmdec.png');
-  background-size: cover;
-  background-position: center;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .hero-background.fayadali-bilgiler {
