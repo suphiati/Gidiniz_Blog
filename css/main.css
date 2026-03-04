@@ -720,7 +720,10 @@ a {
 
 .hero-background.gizlilik {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-              url('../images/anasayfa/portofino.jpg');
+              url('https://res.cloudinary.com/dllpts1ha/image/upload/v1772604058/gizlilik_politikasi_pzu5c6.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .hero-background.kullanim-sartlari {
