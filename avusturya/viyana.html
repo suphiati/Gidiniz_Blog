@@ -49,34 +49,35 @@
             50% { background-position: 100% 50%; }
         }
 
-        /* İçerik görselleri - küçük boyut, hover efekti */
-        .content-images {
-            display: flex;
-            flex-wrap: wrap;
+        /* Thumbnail Grid */
+        .thumb-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
             gap: 12px;
-            margin: 20px 0;
+            margin-top: 15px;
         }
-        .content-images .lightbox-img {
-            width: 180px;
-            height: 135px;
+        .thumb-grid img {
+            width: 100%;
+            height: 140px;
             object-fit: cover;
-            border-radius: 8px;
+            border-radius: 10px;
             cursor: pointer;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
-        .content-images .lightbox-img:hover {
+        .thumb-grid img:hover {
             transform: scale(1.08);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
         }
 
-        /* Galeri görselleri - daha küçük */
-        .gallery-grid .gallery-item img {
-            height: 180px;
-            cursor: pointer;
-        }
-        .gallery-grid .gallery-item img:hover {
-            transform: scale(1.06);
+        @media (max-width: 480px) {
+            .thumb-grid {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                gap: 8px;
+            }
+            .thumb-grid img {
+                height: 110px;
+            }
         }
 
         /* Lightbox */
@@ -364,7 +365,7 @@
 
                     <!-- Must Visit Places -->
                     <section class="content-section">
-                        <h2 class="section-title"><a href="#mutlaka-gorulmesi-gereken">Mutlaka Görülmesi Gereken Yerler</a></h2>
+                        <h2 class="section-title"><a href="#mutlaka-gorulmesi-gereken">Fotoğraf Galerisi</a></h2>
 
                         <div class="gallery-grid">
                             <div class="gallery-item">
@@ -410,10 +411,10 @@
                                 </div>
                             </div>
                             <div class="gallery-item">
-                                <a href="#prater"><img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235175/Konser-1_m2fqp5.jpg" alt="Prater Parkı" loading="lazy"></a>
+                                <a href="#klasik-konser"><img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235175/Konser-1_m2fqp5.jpg" alt="Viyana Klasik Konser" loading="lazy"></a>
                                 <div class="gallery-caption">
-                                    <h3><i class="fas fa-ferris-wheel"></i> Konser Salonu Bileti</h3>
-                                    <p>Klasik müzik konserleri bileti</p>
+                                    <h3><i class="fas fa-music"></i> Klasik Konser</h3>
+                                    <p>Viyana'da klasik müzik konseri deneyimi.</p>
                                 </div>
                             </div>
                             <div class="gallery-item">
@@ -589,9 +590,9 @@
                                 <li><b>Bahçeler:</b> Fransız tarzı, geometrik düzenlenmiş bahçeler; ücretsiz girilebilir, fotoğraf için idealdir.</li>
                             </ul>
                             <p><i class="fas fa-info-circle"></i> Resmi web sitesi: <a href="https://www.belvedere.at" target="_blank" rel="noopener noreferrer">belvedere.at</a></p>
-                            <div class="content-images">
-                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235166/Belvedere_Saray%C4%B1-3_rttkox.jpg" alt="Belvedere Sarayı ve bahçesi" loading="lazy" class="lightbox-img">
-                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235167/Belvedere_Saray%C4%B1-4_o6eznv.jpg" alt="Belvedere Sarayı detay" loading="lazy" class="lightbox-img">
+                            <div class="thumb-grid">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235166/Belvedere_Saray%C4%B1-3_rttkox.jpg" alt="Belvedere Sarayı ve bahçesi" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235167/Belvedere_Saray%C4%B1-4_o6eznv.jpg" alt="Belvedere Sarayı detay" loading="lazy">
                             </div>
                         </div>
 
@@ -611,11 +612,11 @@
                                 <li><b>İspanyol Binicilik Okulu:</b> Viyana’nın sembolik kurumlarından biri; Lipizzan atlarıyla yapılan gösterileri izlenebilir.</li>
                             </ul>
                             <p><i class="fas fa-info-circle"></i> Resmi web sitesi: <a href="https://www.hofburg-wien.at" target="_blank" rel="noopener noreferrer">hofburg-wien.at</a></p>
-                            <div class="content-images">
-                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235172/Hofburg_Saray%C4%B1-1_qddhsv.jpg" alt="Hofburg Sarayı görünümü" loading="lazy" class="lightbox-img">
-                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235174/Hofburg_Saray%C4%B1-2_fslfvc.jpg" alt="Hofburg Sarayı avlusu" loading="lazy" class="lightbox-img">
-                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235174/Hofburg_Saray%C4%B1-4_Herk%C3%BCl_Heykeli_hrdct1.jpg" alt="Hofburg Sarayı Herkül heykeli" loading="lazy" class="lightbox-img">
-                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235175/Hofburg_Saray%C4%B1-5_Zeus_jx5yrq.jpg" alt="Hofburg Sarayı Zeus heykeli" loading="lazy" class="lightbox-img">
+                            <div class="thumb-grid">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235172/Hofburg_Saray%C4%B1-1_qddhsv.jpg" alt="Hofburg Sarayı görünümü" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235174/Hofburg_Saray%C4%B1-2_fslfvc.jpg" alt="Hofburg Sarayı avlusu" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235174/Hofburg_Saray%C4%B1-4_Herk%C3%BCl_Heykeli_hrdct1.jpg" alt="Hofburg Sarayı Herkül heykeli" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235175/Hofburg_Saray%C4%B1-5_Zeus_jx5yrq.jpg" alt="Hofburg Sarayı Zeus heykeli" loading="lazy">
                             </div>
                         </div>
 
@@ -634,12 +635,12 @@
                                 <li><b>Hayvanat Bahçesi (Tiergarten Schönbrunn):</b> Dünyanın hâlâ faaliyette olan en eski hayvanat bahçesi, saray bahçeleri içindedir.</li>
                             </ul>
                             <p><i class="fas fa-info-circle"></i> Resmi web sitesi: <a href="https://www.schoenbrunn.at" target="_blank" rel="noopener noreferrer">schoenbrunn.at</a></p>
-                            <div class="content-images">
-                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235181/Sch%C3%B6nnbrunn_Saray%C4%B1-2_wxvaxr.jpg" alt="Schönbrunn Sarayı cephesi" loading="lazy" class="lightbox-img">
-                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235183/Sch%C3%B6nnbrunn_Saray%C4%B1-4_mmgvl7.jpg" alt="Schönbrunn Sarayı bahçeleri" loading="lazy" class="lightbox-img">
-                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235183/Sch%C3%B6nnbrunn_Saray%C4%B1-5_odzzl4.jpg" alt="Schönbrunn Sarayı detay" loading="lazy" class="lightbox-img">
-                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235184/Sch%C3%B6nnbrunn_Saray%C4%B1-7_qqucjd.jpg" alt="Schönbrunn Sarayı iç mekân" loading="lazy" class="lightbox-img">
-                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235181/Sch%C3%B6nnbrunn_Saray%C4%B1-1_hhuqcj.jpg" alt="Schönbrunn Sarayı manzarası" loading="lazy" class="lightbox-img">
+                            <div class="thumb-grid">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235181/Sch%C3%B6nnbrunn_Saray%C4%B1-2_wxvaxr.jpg" alt="Schönbrunn Sarayı cephesi" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235183/Sch%C3%B6nnbrunn_Saray%C4%B1-4_mmgvl7.jpg" alt="Schönbrunn Sarayı bahçeleri" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235183/Sch%C3%B6nnbrunn_Saray%C4%B1-5_odzzl4.jpg" alt="Schönbrunn Sarayı detay" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235184/Sch%C3%B6nnbrunn_Saray%C4%B1-7_qqucjd.jpg" alt="Schönbrunn Sarayı iç mekân" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235181/Sch%C3%B6nnbrunn_Saray%C4%B1-1_hhuqcj.jpg" alt="Schönbrunn Sarayı manzarası" loading="lazy">
                             </div>
                         </div>
 
@@ -675,9 +676,9 @@
                                 <li><b>Ziyaret:</b> Günümüzde hem araştırmacılara hem de turistlere açıktır. Çeşitli sergiler, geçici etkinlikler ve dijital arşivler düzenlenir.</li>
                             </ul>
                             <p><i class="fas fa-info-circle"></i> Resmi web sitesi: <a href="https://www.onb.ac.at" target="_blank" rel="noopener noreferrer">onb.ac.at</a></p>
-                            <div class="content-images">
-                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235185/Ulusal_K%C3%BCt%C3%BCphane-3_ov9luu.jpg" alt="Avusturya Ulusal Kütüphanesi Prunksaal" loading="lazy" class="lightbox-img">
-                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235186/Ulusal_K%C3%BCt%C3%BCphane-5_o0vkw6.jpg" alt="Avusturya Ulusal Kütüphanesi tavan freskleri" loading="lazy" class="lightbox-img">
+                            <div class="thumb-grid">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235185/Ulusal_K%C3%BCt%C3%BCphane-3_ov9luu.jpg" alt="Avusturya Ulusal Kütüphanesi Prunksaal" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235186/Ulusal_K%C3%BCt%C3%BCphane-5_o0vkw6.jpg" alt="Avusturya Ulusal Kütüphanesi tavan freskleri" loading="lazy">
                             </div>
                         </div>
 
@@ -705,10 +706,10 @@
                                 <li>Binanın karşısındaki Maria-Theresien Platz’da müzenin ikizi Doğa Tarihi Müzesi (Naturhistorisches Museum) yer alır.</li>
                             </ul>
                             <p><i class="fas fa-info-circle"></i> Resmi web sitesi: <a href="https://www.khm.at" target="_blank" rel="noopener noreferrer">khm.at</a></p>
-                            <div class="content-images">
-                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235187/Ulusal_Sanat_Tarihi_M%C3%BCzesi-5_nqfhyu.jpg" alt="Sanat Tarihi Müzesi kubbesi ve freskleri" loading="lazy" class="lightbox-img">
-                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235188/Ulusal_Sanat_Tarihi_M%C3%BCzesi-6_uypzzj.jpg" alt="Sanat Tarihi Müzesi freskleri" loading="lazy" class="lightbox-img">
-                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235190/Ulusal_Sanat_Tarihi_M%C3%BCzesi-7_qcvssh.jpg" alt="Sanat Tarihi Müzesi iç mekân" loading="lazy" class="lightbox-img">
+                            <div class="thumb-grid">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235187/Ulusal_Sanat_Tarihi_M%C3%BCzesi-5_nqfhyu.jpg" alt="Sanat Tarihi Müzesi kubbesi ve freskleri" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235188/Ulusal_Sanat_Tarihi_M%C3%BCzesi-6_uypzzj.jpg" alt="Sanat Tarihi Müzesi freskleri" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235190/Ulusal_Sanat_Tarihi_M%C3%BCzesi-7_qcvssh.jpg" alt="Sanat Tarihi Müzesi iç mekân" loading="lazy">
                             </div>
                         </div>
 
@@ -727,6 +728,10 @@
                             </ul>
                             <p><i class="fas fa-lightbulb"></i> <b>İpucu:</b> Meydan civarındaki Fiaker (at arabası) turları Stephansdom’dan başlar; romantik bir Viyana deneyimi için tercih edilebilir.</p>
                             <p><i class="fas fa-info-circle"></i> Resmi web sitesi: <a href="https://www.stephanskirche.at" target="_blank" rel="noopener noreferrer">stephanskirche.at</a></p>
+                            <div class="thumb-grid">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235178/Schottenkirche-1_df0zlr.jpg" alt="Schottenkirche kilisesi" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235178/Palas_Daun-Kinsky-9_rp7pll.jpg" alt="Palais Daun-Kinsky" loading="lazy">
+                            </div>
                         </div>
 
                         <div id="prater">
@@ -742,6 +747,25 @@
                             <p><i class="fas fa-info-circle"></i> Riesenrad resmi web sitesi: <a href="https://www.wienerriesenrad.com" target="_blank" rel="noopener noreferrer">wienerriesenrad.com</a></p>
                         </div>
 
+                        <div id="klasik-konser">
+                            <h3><i class="fas fa-music"></i> Klasik Konser</h3>
+                            <p>
+                                Viyana, dünya klasik müziğinin başkenti olarak kabul edilir. Mozart, Beethoven, Schubert ve Strauss gibi büyük bestecilerin yaşadığı bu şehirde, klasik müzik konseri izlemek unutulmaz bir deneyimdir.
+                            </p>
+                            <ul>
+                                <li><b>Musikverein:</b> "Altın Salon" akustiğiyle efsaneleşmiş konser salonu. Viyana Filarmoni Orkestrası'nın evi. Her yıl 1 Ocak'ta dünyaya canlı yayınlanan Yılbaşı Konseri burada gerçekleşir.</li>
+                                <li><b>Wiener Staatsoper:</b> Dünyanın en prestijli opera sahnelerinden biri. Sezon boyunca her gece farklı bir opera veya bale sahneye çıkar.</li>
+                                <li><b>Konzerthaus:</b> Üç farklı salonda klasik müzikten caza kadar geniş bir repertuar sunar.</li>
+                                <li><b>Bilet İpucu:</b> Staatsoper'de "Stehplatz" (ayakta dinleme) biletleri çok uygun fiyata satılır; gösteriden kısa süre önce gişede bulunabilirsiniz.</li>
+                            </ul>
+                            <div class="thumb-grid">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235175/Konser-1_m2fqp5.jpg" alt="Viyana konser salonu" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/f_auto,q_auto/v1773828389/Konser-2_f2fqw6.jpg" alt="Viyana klasik konser" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/f_auto,q_auto/v1773828390/Konser-3_z0glwp.heic" alt="Konser salonu iç mekan" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/f_auto,q_auto/v1773828392/Konser-4_lkvuqn.jpg" alt="Viyana orkestra konseri" loading="lazy">
+                            </div>
+                        </div>
+
                         <div id="kaffeehaus">
                             <h3>Viyana Kafe Kültürü (Kaffeehaus)</h3>
                             <p>
@@ -755,102 +779,17 @@
                                 <li><b>Mozart Café:</b> Stephansdom yakınında, turistik konumuyla öne çıkan tarihi kafe.</li>
                             </ul>
                             <p><i class="fas fa-coffee"></i> <b>Sipariş İpucu:</b> "Melange" (sütlü kahve), "Verlängerter" (uzun espresso) veya "Einspänner" (kremşantili siyah kahve) Viyana’ya özgü kahve çeşitleridir.</p>
-                            <div class="content-images">
-                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235167/Central_Cafe-1_udym01.jpg" alt="Café Central iç mekânı" loading="lazy" class="lightbox-img">
-                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235169/Central_Cafe-2_iaivpc.jpg" alt="Café Central Viyana" loading="lazy" class="lightbox-img">
-                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235169/Central_Cafe-3_ypjcld.jpg" alt="Viyana kahve kültürü" loading="lazy" class="lightbox-img">
-                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235170/Central_Cafe-5_oas7fp.jpg" alt="Viyana pastaneleri" loading="lazy" class="lightbox-img">
-                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235171/Central_Cafe-6_ug2fbe.jpg" alt="Viyana kafe atmosferi" loading="lazy" class="lightbox-img">
-                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235177/Mozart_Cafe-1_mninor.jpg" alt="Mozart Café" loading="lazy" class="lightbox-img">
+                            <div class="thumb-grid">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235167/Central_Cafe-1_udym01.jpg" alt="Café Central iç mekânı" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235169/Central_Cafe-2_iaivpc.jpg" alt="Café Central Viyana" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235169/Central_Cafe-3_ypjcld.jpg" alt="Viyana kahve kültürü" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235170/Central_Cafe-5_oas7fp.jpg" alt="Viyana pastaneleri" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235171/Central_Cafe-6_ug2fbe.jpg" alt="Viyana kafe atmosferi" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235177/Mozart_Cafe-1_mninor.jpg" alt="Mozart Café" loading="lazy">
                             </div>
                         </div>
 
                     </div>
-                    </section>
-                    <!-- Photo Gallery -->
-                    <section class="content-section">
-                        <h2 class="section-title">Fotoğraf Galerisi</h2>
-                        
-                        <div class="gallery-grid">
-                            
-                            <div class="gallery-item">
-                                <img class="lightbox-img" src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235167/Belvedere_Saray%C4%B1-4_o6eznv.jpg" alt="Belvedere Sarayı bahçe manzarası" loading="lazy">
-                                <div class="gallery-caption"><h3>Belvedere Sarayı</h3></div>
-                            </div>
-                            <div class="gallery-item">
-                                <img class="lightbox-img" src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235166/Belvedere_Saray%C4%B1-3_rttkox.jpg" alt="Belvedere Sarayı ve bahçeleri" loading="lazy">
-                                <div class="gallery-caption"><h3>Tarihi Saraylar</h3></div>
-                            </div>
-                            <div class="gallery-item">
-                                <img class="lightbox-img" src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235172/Hofburg_Saray%C4%B1-1_qddhsv.jpg" alt="Hofburg Sarayı" loading="lazy">
-                                <div class="gallery-caption"><h3>Hofburg Sarayı</h3></div>
-                            </div>
-                            <div class="gallery-item">
-                                <img class="lightbox-img" src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235174/Hofburg_Saray%C4%B1-2_fslfvc.jpg" alt="Hofburg Sarayı avlusu" loading="lazy">
-                                <div class="gallery-caption"><h3>Hofburg Avlusu</h3></div>
-                            </div>
-                            <div class="gallery-item">
-                                <img class="lightbox-img" src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235181/Sch%C3%B6nnbrunn_Saray%C4%B1-1_hhuqcj.jpg" alt="Schönbrunn Sarayı" loading="lazy">
-                                <div class="gallery-caption"><h3>Schönbrunn Sarayı</h3></div>
-                            </div>
-                            <div class="gallery-item">
-                                <img class="lightbox-img" src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235181/Sch%C3%B6nnbrunn_Saray%C4%B1-2_wxvaxr.jpg" alt="Schönbrunn bahçeleri" loading="lazy">
-                                <div class="gallery-caption"><h3>Schönbrunn Bahçeleri</h3></div>
-                            </div>
-                            <div class="gallery-item">
-                                <img class="lightbox-img" src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235167/Central_Cafe-1_udym01.jpg" alt="Café Central" loading="lazy">
-                                <div class="gallery-caption"><h3>Café Central</h3></div>
-                            </div>
-                            <div class="gallery-item">
-                                <img class="lightbox-img" src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235178/Palas_Daun-Kinsky-9_rp7pll.jpg" alt="Palais Daun-Kinsky" loading="lazy">
-                                <div class="gallery-caption"><h3>Palais Daun-Kinsky</h3></div>
-                            </div>
-                            <div class="gallery-item">
-                                <img class="lightbox-img" src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235169/Central_Cafe-2_iaivpc.jpg" alt="Viyana kafeleri" loading="lazy">
-                                <div class="gallery-caption"><h3>Viyana Kafeleri</h3></div>
-                            </div>
-                            <div class="gallery-item">
-                                <img class="lightbox-img" src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235175/Konser-1_m2fqp5.jpg" alt="Viyana konser salonu" loading="lazy">
-                                <div class="gallery-caption"><h3>Konser Salonu</h3></div>
-                            </div>
-                            <div class="gallery-item">
-                                <img class="lightbox-img" src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235169/Central_Cafe-3_ypjcld.jpg" alt="Viyana kahve kültürü" loading="lazy">
-                                <div class="gallery-caption"><h3>Kahve Kültürü</h3></div>
-                            </div>
-                            <div class="gallery-item">
-                                <img class="lightbox-img" src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235178/Schottenkirche-1_df0zlr.jpg" alt="Schottenkirche kilisesi" loading="lazy">
-                                <div class="gallery-caption"><h3>Schottenkirche</h3></div>
-                            </div>
-                            <div class="gallery-item">
-                                <img class="lightbox-img" src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235170/Central_Cafe-5_oas7fp.jpg" alt="Viyana pastanesi" loading="lazy">
-                                <div class="gallery-caption"><h3>Viyana Pastaneleri</h3></div>
-                            </div>
-                            <div class="gallery-item">
-                                <img class="lightbox-img" src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235185/Ulusal_K%C3%BCt%C3%BCphane-3_ov9luu.jpg" alt="Ulusal Kütüphane Prunksaal" loading="lazy">
-                                <div class="gallery-caption"><h3>Ulusal Kütüphane</h3></div>
-                            </div>
-                            <div class="gallery-item">
-                                <img class="lightbox-img" src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235171/Central_Cafe-6_ug2fbe.jpg" alt="Viyana kafe atmosferi" loading="lazy">
-                                <div class="gallery-caption"><h3>Kafe Atmosferi</h3></div>
-                            </div>
-                            <div class="gallery-item">
-                                <img class="lightbox-img" src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235183/Sch%C3%B6nnbrunn_Saray%C4%B1-4_mmgvl7.jpg" alt="Schönbrunn Sarayı detay" loading="lazy">
-                                <div class="gallery-caption"><h3>Schönbrunn Detay</h3></div>
-                            </div>
-                            <div class="gallery-item">
-                                <img class="lightbox-img" src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235187/Ulusal_Sanat_Tarihi_M%C3%BCzesi-5_nqfhyu.jpg" alt="Sanat Tarihi Müzesi" loading="lazy">
-                                <div class="gallery-caption"><h3>Sanat Tarihi Müzesi</h3></div>
-                            </div>
-                            <div class="gallery-item">
-                                <img class="lightbox-img" src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235177/Mozart_Cafe-1_mninor.jpg" alt="Mozart Café" loading="lazy">
-                                <div class="gallery-caption"><h3>Mozart Café</h3></div>
-                            </div>
-                            <div class="gallery-item">
-                                <img class="lightbox-img" src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770235188/Ulusal_Sanat_Tarihi_M%C3%BCzesi-6_uypzzj.jpg" alt="Sanat Tarihi Müzesi salonu" loading="lazy">
-                                <div class="gallery-caption"><h3>Müze İç Mekân</h3></div>
-                            </div>
-                        </div>
-                        
                     </section>
                     <!-- Map Section -->
                     <section class="content-section">
@@ -897,7 +836,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2025 Tüm hakları saklıdır. | Gidiniz Blog</p>
+                <p>&copy; 2026 Tüm hakları saklıdır. | Gidiniz Blog</p>
                 <div class="footer-links">
                     <a href="/kullanim-sartlari.html">Kullanım Şartları</a>
                     <a href="/gizlilik.html">Gizlilik Politikası</a>
@@ -927,7 +866,7 @@
                 document.body.style.overflow = '';
             }
 
-            document.querySelectorAll('.lightbox-img').forEach(function(img) {
+            document.querySelectorAll('.thumb-grid img').forEach(function(img) {
                 img.addEventListener('click', function(e) {
                     e.preventDefault();
                     e.stopPropagation();
