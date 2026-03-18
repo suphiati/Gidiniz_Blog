@@ -719,11 +719,12 @@ a {
 }
 
 .hero-background.gizlilik {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
               url('https://res.cloudinary.com/dllpts1ha/image/upload/v1772604058/gizlilik_politikasi_pzu5c6.png');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  background-attachment: scroll;
 }
 
 .hero-background.kullanim-sartlari {
@@ -1267,10 +1268,24 @@ a {
   }
   
   /* Hero Mobile */
+  .hero-section {
+    height: 350px;
+  }
+
+  .hero-background {
+    background-attachment: scroll;
+  }
+
+  .hero-background.gizlilik,
+  .hero-background.kullanim-sartlari {
+    background-size: cover;
+    background-position: center top;
+  }
+
   .hero-title {
     font-size: 2.5rem;
   }
-  
+
   .hero-subtitle {
     font-size: 1.2rem;
   }
@@ -1297,10 +1312,20 @@ a {
 }
 
 @media (max-width: 480px) {
+  .hero-section {
+    height: 280px;
+  }
+
+  .hero-background.gizlilik,
+  .hero-background.kullanim-sartlari {
+    background-size: cover;
+    background-position: center center;
+  }
+
   .hero-title {
     font-size: 2rem;
   }
-  
+
   .hero-subtitle {
     font-size: 1rem;
   }

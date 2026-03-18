@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:www.flypgs.com)",
+      "WebFetch(domain:visaindex.com)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(netstat -ano)"
+    ]
+  }
+}
