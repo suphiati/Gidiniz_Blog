@@ -10,7 +10,7 @@
     <meta property="og:description" content="Almanya'da Köln şehrinde gezilecek yerler ve seyahat ipuçları">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://gidiniz.blog/almanya/koln.html">
-    <meta property="og:image" content="https://res.cloudinary.com/dllpts1ha/image/upload/v1770237521/K%C3%B6ln-2_rxejb8.jpg">
+    <meta property="og:image" content="https://res.cloudinary.com/dllpts1ha/image/upload/f_auto,q_auto/v1773824377/koln_katedral_1_lkxx2g.jpg">
     
     <title>Köln Seyahat Rehberi - Gidiniz Blog</title>
     
@@ -52,7 +52,81 @@
             animation: gradient-flow 4s ease-in-out infinite;
         }
 
-        
+        /* Thumbnail Grid */
+        .thumb-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 12px;
+            margin-top: 15px;
+        }
+        .thumb-grid img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .thumb-grid img:hover {
+            transform: scale(1.08);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+        }
+
+        /* Lightbox */
+        .lightbox-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.92);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+        }
+        .lightbox-overlay.active {
+            display: flex;
+        }
+        .lightbox-overlay img {
+            max-width: 90vw;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 8px;
+            animation: lightbox-in 0.3s ease;
+        }
+        @keyframes lightbox-in {
+            from { opacity: 0; transform: scale(0.85); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 20px; right: 25px;
+            font-size: 36px;
+            color: #fff;
+            cursor: pointer;
+            background: rgba(0,0,0,0.5);
+            border: none;
+            border-radius: 50%;
+            width: 50px; height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s;
+            z-index: 10000;
+        }
+        .lightbox-close:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        @media (max-width: 480px) {
+            .thumb-grid {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                gap: 8px;
+            }
+            .thumb-grid img {
+                height: 110px;
+            }
+        }
     </style>
     <!-- Vercel Analytics -->
     <script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script>
@@ -279,14 +353,14 @@
                         </div>
                     </section>
 
-                    <!-- Must Visit Places -->
+                    <!-- Photo Gallery -->
                     <section class="content-section">
-                        <h2 class="section-title"><a href="#gezilecek-yerler">Mutlaka Görülmesi Gereken Yerler</a></h2>
+                        <h2 class="section-title"><a href="#gezilecek-yerler">Fotoğraf Galerisi</a></h2>
 
                         <div class="gallery-grid">
                             <div class="gallery-item">
                                 <a href="#kolner-dom">
-                                    <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770237521/K%C3%B6ln-2_rxejb8.jpg" alt="Kölner Dom Katedrali" loading="lazy">
+                                    <img src="https://res.cloudinary.com/dllpts1ha/image/upload/f_auto,q_auto/v1773824377/koln_katedral_1_lkxx2g.jpg" alt="Kölner Dom Katedrali" loading="lazy">
                                 </a>
                                 <div class="gallery-caption">
                                     <h3><i class="fas fa-church"></i> Kölner Dom</h3>
@@ -294,30 +368,48 @@
                                 </div>
                             </div>
                             <div class="gallery-item">
-                                <a href="#ren-nehri">
-                                    <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770237525/K%C3%B6ln-7_lkc6ri.jpg" alt="Ren Nehri Köln" loading="lazy">
+                                <a href="#kopru-nehir">
+                                    <img src="https://res.cloudinary.com/dllpts1ha/image/upload/f_auto,q_auto/v1773824389/Koln_koprusu_ve_nehir_3_w446qc.jpg" alt="Köln Köprüsü ve Ren Nehri" loading="lazy">
                                 </a>
                                 <div class="gallery-caption">
-                                    <h3><i class="fas fa-water"></i> Ren Nehri</h3>
-                                    <p>Şehrin ruhunu şekillendiren büyük nehir.</p>
+                                    <h3><i class="fas fa-water"></i> Köprü ve Ren Nehri</h3>
+                                    <p>Hohenzollern Köprüsü ve Ren Nehri'nin büyüleyici manzarası.</p>
                                 </div>
                             </div>
                             <div class="gallery-item">
-                                <a href="#altstadt">
-                                    <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770237522/K%C3%B6ln-9_ajr0g5.jpg" alt="Köln Altstadt" loading="lazy">
+                                <a href="#cikolata-muzesi">
+                                    <img src="https://res.cloudinary.com/dllpts1ha/image/upload/f_auto,q_auto/v1773824351/Cikolata_muzesi_1_mt9pco.heic" alt="Köln Çikolata Müzesi" loading="lazy">
                                 </a>
                                 <div class="gallery-caption">
-                                    <h3><i class="fas fa-home"></i> Altstadt (Eski Şehir)</h3>
-                                    <p>Tarihi evler, meydanlar ve geleneksel bira evleri.</p>
+                                    <h3><i class="fas fa-candy-cane"></i> Çikolata Müzesi</h3>
+                                    <p>Çikolatanın büyülü dünyasına açılan kapı.</p>
                                 </div>
                             </div>
                             <div class="gallery-item">
-                                <a href="#muzeler">
-                                    <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770237515/K%C3%B6ln-3_mbwzro.jpg" alt="Köln Müzeleri" loading="lazy">
+                                <a href="#koku-muzesi">
+                                    <img src="https://res.cloudinary.com/dllpts1ha/image/upload/f_auto,q_auto/v1773824353/Koku_muzesi_1_vgmr1m.heic" alt="Köln Koku Müzesi 4711" loading="lazy">
                                 </a>
                                 <div class="gallery-caption">
-                                    <h3><i class="fas fa-palette"></i> Müzeler</h3>
-                                    <p>50'den fazla müzeyle sanat ve kültür merkezi.</p>
+                                    <h3><i class="fas fa-spray-can"></i> Koku Müzesi (4711)</h3>
+                                    <p>Dünyanın ilk parfümü Eau de Cologne'un doğduğu yer.</p>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <a href="#kis-pazari">
+                                    <img src="https://res.cloudinary.com/dllpts1ha/image/upload/f_auto,q_auto/v1773824381/koln_kis_pazari_5_gyoms5.jpg" alt="Köln Kış Pazarı" loading="lazy">
+                                </a>
+                                <div class="gallery-caption">
+                                    <h3><i class="fas fa-snowflake"></i> Kış Pazarı</h3>
+                                    <p>Almanya'nın en büyüleyici Noel pazarlarından biri.</p>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <a href="#mimari">
+                                    <img src="https://res.cloudinary.com/dllpts1ha/image/upload/f_auto,q_auto/v1773824394/koln_mimari_1_yo5cqk.jpg" alt="Köln Mimarisi" loading="lazy">
+                                </a>
+                                <div class="gallery-caption">
+                                    <h3><i class="fas fa-building"></i> Köln Mimarisi</h3>
+                                    <p>Gotik'ten moderne uzanan mimari yolculuk.</p>
                                 </div>
                             </div>
                         </div>
@@ -370,7 +462,7 @@
                                     <li><i class="fas fa-check"></i> Kölsch bira ve Brauhaus kültürü</li>
                                     <li><i class="fas fa-check"></i> Himmel un Äd (yerel yemek)</li>
                                     <li><i class="fas fa-check"></i> Ren kıyısı restoran seçenekleri</li>
-                                    <li><i class="fas fa-check"></i> Türk ve Orta Doğu mutfağı</li>
+                                    <li><i class="fas fa-check"></i> Glühwein ve Reibekuchen</li>
                                 </ul>
                                 </a>
                             </div>
@@ -392,10 +484,10 @@
                         <h2 class="section-title">Gezilecek Yerler</h2>
 
                         <div id="kolner-dom">
-                            <h3>Kölner Dom (Köln Katedrali)</h3>
+                            <h3><i class="fas fa-church"></i> Kölner Dom (Köln Katedrali)</h3>
                             <p>
                                 Kölner Dom, Almanya'nın en önemli yapılarından biri ve dünyanın en büyük Gotik katedrallerinden biridir.
-                                1248 yılında inşaatına başlanmış, ancak çeşitli kesintilerle 1880 yılında tamamlanabilmiştir —inşaat süreci yaklaşık 600 yılı kapsar.
+                                1248 yılında inşaatına başlanmış, ancak çeşitli kesintilerle 1880 yılında tamamlanabilmiştir — inşaat süreci yaklaşık 600 yılı kapsar.
                             </p>
                             <ul>
                                 <li><b>UNESCO Mirası:</b> 1996 yılında UNESCO Dünya Mirası listesine alınmıştır.</li>
@@ -404,12 +496,14 @@
                                 <li><b>Vitray Pencereler:</b> Özellikle Gerhard Richter'in modern tasarımı olan renkli vitray güney penceresi dikkat çekicidir.</li>
                             </ul>
                             <p><i class="fas fa-info-circle"></i> Resmi web sitesi: <a href="https://www.koelner-dom.de" target="_blank" rel="noopener noreferrer">koelner-dom.de</a></p>
-                            <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770237521/K%C3%B6ln-2_rxejb8.jpg" alt="Kölner Dom Katedrali" loading="lazy">
-                            <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770237515/K%C3%B6ln-3_mbwzro.jpg" alt="Kölner Dom yakın çekim" loading="lazy">
+                            <div class="thumb-grid">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/f_auto,q_auto/v1773824377/koln_katedral_1_lkxx2g.jpg" alt="Kölner Dom Katedrali önden görünüm" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/f_auto,q_auto/v1773824383/koln_katedral_2_krc8b1.jpg" alt="Kölner Dom Katedrali detay" loading="lazy">
+                            </div>
                         </div>
 
-                        <div id="ren-nehri">
-                            <h3>Ren Nehri ve Hohenzollern Köprüsü</h3>
+                        <div id="kopru-nehir">
+                            <h3><i class="fas fa-water"></i> Köprü ve Ren Nehri</h3>
                             <p>
                                 Ren (Rhein) Nehri, Köln'ün tam ortasından geçen ve şehrin siluetini tanımlayan büyük nehirdir. Kıyı boyunca yürüyüş yapmak, bisiklet sürmek veya tekne turuna çıkmak en sevilen aktiviteler arasındadır.
                             </p>
@@ -418,37 +512,106 @@
                                 <li><b>Nehir Kıyısı Gezisi:</b> Deutzer Brücke'den başlayarak dom tarafına geçip kıyı boyunca yürüyüş hem manzara hem fotoğraf için idealdir.</li>
                                 <li><b>Nehir Turu:</b> KD (Köln-Düsseldorfer) şirketi Ren Nehri üzerinde çeşitli tekne turları düzenlemektedir. <a href="https://www.k-d.com" target="_blank" rel="noopener noreferrer">k-d.com</a></li>
                             </ul>
-                            <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770237525/K%C3%B6ln-7_lkc6ri.jpg" alt="Ren Nehri ve Köln manzarası" loading="lazy">
-                            <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770237516/K%C3%B6ln-6_icfqa9.jpg" alt="Köln Ren Nehri kıyısı" loading="lazy">
+                            <div class="thumb-grid">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/f_auto,q_auto/v1773824389/Koln_koprusu_ve_nehir_3_w446qc.jpg" alt="Köln Köprüsü ve Ren Nehri manzarası" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/f_auto,q_auto/v1773824384/Koln_koprusu_ve_nehir_4_o5zv3f.jpg" alt="Hohenzollern Köprüsü" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/f_auto,q_auto/v1773824390/Koln_koprusu_ve_nehir_5_yhbd7x.jpg" alt="Ren Nehri kıyısı" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/f_auto,q_auto/v1773824361/Koln_koprusu_ve_nehir_1_lls5y8.heic" alt="Köln Köprüsü gece görünümü" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/f_auto,q_auto/v1773824360/Koln_koprusu_ve_nehir_2_yrie8k.heic" alt="Ren Nehri panorama" loading="lazy">
+                            </div>
                         </div>
 
-                        <div id="altstadt">
-                            <h3>Altstadt (Eski Şehir) ve Brauhaus Kültürü</h3>
+                        <div id="cikolata-muzesi">
+                            <h3><i class="fas fa-candy-cane"></i> Çikolata Müzesi (Schokoladenmuseum)</h3>
                             <p>
-                                Köln'ün tarihi eski şehri (Altstadt), Kölner Dom çevresinde yayılan dar sokaklarıyla gezgin ruhlu ziyaretçilere muhteşem bir keşif alanı sunar.
+                                Köln'ün en popüler müzelerinden biri olan Çikolata Müzesi, Ren Nehri kıyısındaki cam yapısıyla dikkat çeker.
+                                Kakao çekirdeğinden çikolata tabletine uzanan üretim sürecini canlı olarak izleyebileceğiniz bu müze, her yaştan ziyaretçiye unutulmaz bir deneyim sunuyor.
                             </p>
                             <ul>
-                                <li><b>Brauhaus'lar:</b> Köln bira evleri (Brauhaus), "Köbes" adı verilen geleneksel kıyafetli garsonlarıyla yerel Kölsch birasını sunar. Früh, Gaffel, Sion ve Päffgen en ünlü Brauhaus'lardır.</li>
-                                <li><b>Alter Markt:</b> Şehrin tarihi ana meydanı; Noel döneminde büyüleyici pazar kuruluyor.</li>
-                                <li><b>Heumarkt:</b> Canlı bar ve restoranlarıyla akşam hayatının merkezi olan tarihi meydan.</li>
+                                <li><b>Çikolata Çeşmesi:</b> Müzenin simgesi olan 3 metrelik çikolata çeşmesinden sıcak çikolatayı tadabilirsiniz.</li>
+                                <li><b>Üretim Hattı:</b> Gerçek bir çikolata üretim hattını baştan sona izleyebilir, taze çikolata örnekleri alabilirsiniz.</li>
+                                <li><b>Tropikal Sera:</b> Kakao ağaçlarının yetiştirildiği tropikal serada çikolatanın hammaddesini keşfedebilirsiniz.</li>
+                                <li><b>Tarihi Koleksiyon:</b> Mayalardan günümüze çikolatanın 5.000 yıllık tarihini sergileyen geniş koleksiyon.</li>
                             </ul>
-                            <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770237522/K%C3%B6ln-9_ajr0g5.jpg" alt="Köln Altstadt tarihi sokaklar" loading="lazy">
-                            <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770237526/K%C3%B6ln-5_fmbtq4.jpg" alt="Köln'de gezinti" loading="lazy">
+                            <p><i class="fas fa-info-circle"></i> Resmi web sitesi: <a href="https://www.schokoladenmuseum.de" target="_blank" rel="noopener noreferrer">schokoladenmuseum.de</a></p>
+                            <div class="thumb-grid">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/f_auto,q_auto/v1773824351/Cikolata_muzesi_1_mt9pco.heic" alt="Çikolata Müzesi giriş" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/f_auto,q_auto/v1773824361/Cikolata_muzesi_2_aqy5on.heic" alt="Çikolata Müzesi sergi alanı" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/f_auto,q_auto/v1773824351/Cikolata_muzesi_3_ru21tx.heic" alt="Çikolata üretim hattı" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/f_auto,q_auto/v1773824352/Cikolata_muzesi_4_wlsfhd.heic" alt="Çikolata çeşmesi" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/f_auto,q_auto/v1773824368/Cikolata_muzesi_5_lljiid.heic" alt="Çikolata müzesi iç mekan" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/f_auto,q_auto/v1773824352/Cikolata_muzesi_6_b8bfni.heic" alt="Çikolata tarihi sergisi" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/f_auto,q_auto/v1773824371/Cikolata_muzesi_7_ylv6b8.heic" alt="Kakao çekirdekleri sergisi" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/f_auto,q_auto/v1773824373/Cikolata_muzesi_8_n54ubc.heic" alt="Çikolata müzesi detay" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/f_auto,q_auto/v1773824366/Cikolata_muzesi_9_awlsoo.heic" alt="Çikolata müzesi mağaza" loading="lazy">
+                            </div>
                         </div>
 
-                        <div id="muzeler">
-                            <h3>Müzeler</h3>
+                        <div id="koku-muzesi">
+                            <h3><i class="fas fa-spray-can"></i> Koku Müzesi — Farina Haus (4711)</h3>
                             <p>
-                                Köln, 50'den fazla müzesiyle Almanya'nın müze kenti olarak bilinir. Sanat, tarih, çikolata ve spor gibi çok farklı ilgi alanlarına hitap eder.
+                                Köln, dünyanın en ünlü parfümü "Eau de Cologne"un doğduğu şehirdir. 1709 yılında İtalyan parfümcü Johann Maria Farina tarafından yaratılan bu efsanevi koku, şehre adını vermiştir.
+                                Farina Haus, dünyanın en eski parfüm fabrikası olarak hâlâ faaliyettedir ve müze olarak ziyarete açıktır.
                             </p>
                             <ul>
-                                <li><b>Museum Ludwig:</b> 20. yy modern sanatının başyapıtlarına ev sahipliği yapan müze; dünyanın en önemli Picasso koleksiyonlarından birini içerir. <a href="https://www.museum-ludwig.de" target="_blank" rel="noopener noreferrer">museum-ludwig.de</a></li>
-                                <li><b>Wallraf-Richartz-Museum:</b> Orta Çağ'dan 19. yüzyıla uzanan Avrupa resimleri koleksiyonu. <a href="https://www.wallraf.museum" target="_blank" rel="noopener noreferrer">wallraf.museum</a></li>
-                                <li><b>Çikolata Müzesi (Schokoladenmuseum):</b> Çikolatanın tarihini anlatan ve içinde canlı çikolata çeşmesi bulunan eğlenceli müze; özellikle aileler için ideal. <a href="https://www.schokoladenmuseum.de" target="_blank" rel="noopener noreferrer">schokoladenmuseum.de</a></li>
-                                <li><b>Roma-Germen Müzesi:</b> Roma dönemine ait eserlerin sergilendiği, Kölner Dom'un hemen yanındaki müze.</li>
+                                <li><b>Farina Fragrance Museum:</b> 1709'dan bu yana parfüm üretiminin tarihini anlatan, orijinal formüllerin ve antika şişelerin sergilendiği müze.</li>
+                                <li><b>4711 Mağazası:</b> Glockengasse'deki ikonik 4711 binası; cephesindeki ünlü saat her saat başı çalınan melodisiyle dikkat çeker.</li>
+                                <li><b>Parfüm Atölyesi:</b> Bazı turlarda kendi kokunuzu yaratma imkanı sunan interaktif atölye deneyimi.</li>
+                                <li><b>Tarihi Önemi:</b> Napolyon'un bile favorisi olan bu koku, yüzyıllardır dünya parfüm endüstrisini etkilemektedir.</li>
                             </ul>
-                            <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770237525/K%C3%B6ln-10_pgmmrj.jpg" alt="Köln'den kareler" loading="lazy">
-                            <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770237520/K%C3%B6ln-8_czyks3.jpg" alt="Köln'ün güzellikleri" loading="lazy">
+                            <p><i class="fas fa-info-circle"></i> Resmi web sitesi: <a href="https://ffrm.de" target="_blank" rel="noopener noreferrer">ffrm.de</a> | <a href="https://www.4711.com" target="_blank" rel="noopener noreferrer">4711.com</a></p>
+                            <div class="thumb-grid">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/f_auto,q_auto/v1773824353/Koku_muzesi_1_vgmr1m.heic" alt="Koku Müzesi dış cephe" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/f_auto,q_auto/v1773824376/Koku_muzesi_2_syv7ha.heic" alt="Koku Müzesi sergi" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/f_auto,q_auto/v1773824355/Koku_muzesi_3_wzedbc.heic" alt="Antik parfüm şişeleri" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/f_auto,q_auto/v1773824356/Koku_muzesi_4_dovglf.heic" alt="Koku müzesi iç mekan" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/f_auto,q_auto/v1773824371/Koku_muzesi_5_dikoef.heic" alt="4711 parfüm koleksiyonu" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/f_auto,q_auto/v1773824356/Koku_muzesi_6_hsagoc.heic" alt="Koku müzesi detay" loading="lazy">
+                            </div>
+                        </div>
+
+                        <div id="kis-pazari">
+                            <h3><i class="fas fa-snowflake"></i> Kış Pazarı (Weihnachtsmarkt)</h3>
+                            <p>
+                                Köln'ün Noel pazarları, Almanya'nın ve hatta Avrupa'nın en güzel kış pazarları arasında gösterilir.
+                                Kasım sonundan Aralık sonuna kadar şehrin farklı noktalarında kurulan pazarlarda sıcak şarap (Glühwein), geleneksel yiyecekler ve el yapımı hediyelikler bulabilirsiniz.
+                            </p>
+                            <ul>
+                                <li><b>Dom Önü Pazarı:</b> Kölner Dom'un muhteşem siluetinin önünde kurulan en büyük ve en ünlü pazar; ışıl ışıl süslemeler ve devasa Noel ağacıyla büyüleyici.</li>
+                                <li><b>Alter Markt Pazarı:</b> Tarihi meydanda kurulan, daha geleneksel ve yerel atmosfere sahip pazar.</li>
+                                <li><b>Neumarkt Nikolausdorf:</b> Çocuklar için özel etkinliklerin düzenlendiği, aile dostu Noel köyü.</li>
+                                <li><b>Glühwein:</b> Tarçın, karanfil ve portakal kabuğuyla hazırlanan sıcak şarap; kış pazarlarının vazgeçilmezi.</li>
+                                <li><b>Reibekuchen:</b> Noel pazarlarında mutlaka denenmesi gereken patates gözlemesi, elma sosuyla servis edilir.</li>
+                            </ul>
+                            <div class="thumb-grid">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/f_auto,q_auto/v1773824381/koln_kis_pazari_5_gyoms5.jpg" alt="Köln Kış Pazarı genel görünüm" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/f_auto,q_auto/v1773824384/koln_kis_pazari_1_oaxghj.heic" alt="Kölner Dom önü Noel pazarı" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/f_auto,q_auto/v1773824359/koln_kis_pazari_2_lug03a.heic" alt="Kış pazarı stantları" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/f_auto,q_auto/v1773824359/koln_kis_pazari_3_h58dtd.heic" alt="Noel pazarı ışıkları" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/f_auto,q_auto/v1773824378/koln_kis_pazari_4_gla42f.heic" alt="Kış pazarı atmosfer" loading="lazy">
+                            </div>
+                        </div>
+
+                        <div id="mimari">
+                            <h3><i class="fas fa-building"></i> Köln Mimarisi</h3>
+                            <p>
+                                Köln, Gotik ihtişamdan modern tasarıma uzanan zengin bir mimari mirasa sahiptir. İkinci Dünya Savaşı'nda büyük hasar görmesine rağmen, şehir tarihi dokusunu koruyarak yeniden inşa edilmiştir.
+                                Bugün Roma kalıntıları, Ortaçağ kiliseleri ve çağdaş yapılar yan yana durarak şehre eşsiz bir karakter kazandırır.
+                            </p>
+                            <ul>
+                                <li><b>Romanesk Kiliseler:</b> Köln'de 12 adet Romanesk kilise bulunur; Gross St. Martin ve St. Maria im Kapitol en dikkat çekici olanlarıdır.</li>
+                                <li><b>Kranhäuser:</b> Ren Nehri kıyısında yükselen vinç şeklindeki modern binalar, Köln'ün çağdaş mimari sembolüdür.</li>
+                                <li><b>Tarihi Binalar:</b> Altstadt'taki renkli yarı ahşap evler, şehrin Orta Çağ atmosferini yansıtır.</li>
+                                <li><b>Köln Rathaus:</b> 14. yüzyıldan kalma belediye binası, Almanya'nın en eski belediye binalarından biridir.</li>
+                            </ul>
+                            <div class="thumb-grid">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/f_auto,q_auto/v1773824394/koln_mimari_1_yo5cqk.jpg" alt="Köln mimari sokak görünümü" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/f_auto,q_auto/v1773824384/koln_mimari_2_ccvxbo.jpg" alt="Köln tarihi yapılar" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/f_auto,q_auto/v1773824393/koln_mimari_3_ccv4fn.jpg" alt="Köln mimari detay" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/f_auto,q_auto/v1773824365/koln_mimari_4_bti1te.heic" alt="Köln Romanesk kilise" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/f_auto,q_auto/v1773824365/koln_mimari_5_v6edmp.heic" alt="Köln modern mimari" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/f_auto,q_auto/v1773824367/koln_mimari_6_yu1fmg.heic" alt="Köln şehir dokusu" loading="lazy">
+                            </div>
                         </div>
                     </section>
 
@@ -514,45 +677,6 @@
                         </ul>
                     </section>
 
-                    <!-- Photo Gallery -->
-                    <section class="content-section">
-                        <h2 class="section-title">Fotoğraf Galerisi</h2>
-
-                        <div class="gallery-grid">
-                            <div class="gallery-item">
-                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770237521/K%C3%B6ln-2_rxejb8.jpg" alt="Kölner Dom Katedrali" loading="lazy">
-                                <div class="gallery-caption"><h3>Kölner Dom</h3></div>
-                            </div>
-                            <div class="gallery-item">
-                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770237525/K%C3%B6ln-7_lkc6ri.jpg" alt="Ren Nehri Köln" loading="lazy">
-                                <div class="gallery-caption"><h3>Ren Nehri</h3></div>
-                            </div>
-                            <div class="gallery-item">
-                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770237516/K%C3%B6ln-6_icfqa9.jpg" alt="Köln Manzarası" loading="lazy">
-                                <div class="gallery-caption"><h3>Köln Manzarası</h3></div>
-                            </div>
-                            <div class="gallery-item">
-                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770237522/K%C3%B6ln-9_ajr0g5.jpg" alt="Tarihi Sokaklar" loading="lazy">
-                                <div class="gallery-caption"><h3>Tarihi Sokaklar</h3></div>
-                            </div>
-                            <div class="gallery-item">
-                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770237525/K%C3%B6ln-10_pgmmrj.jpg" alt="Köln'den Kareler" loading="lazy">
-                                <div class="gallery-caption"><h3>Köln'den Kareler</h3></div>
-                            </div>
-                            <div class="gallery-item">
-                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770237515/K%C3%B6ln-3_mbwzro.jpg" alt="Köln Gece Manzarası" loading="lazy">
-                                <div class="gallery-caption"><h3>Gece Manzarası</h3></div>
-                            </div>
-                            <div class="gallery-item">
-                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770237526/K%C3%B6ln-5_fmbtq4.jpg" alt="Köln'de Gezinti" loading="lazy">
-                                <div class="gallery-caption"><h3>Köln'de Gezinti</h3></div>
-                            </div>
-                            <div class="gallery-item">
-                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770237520/K%C3%B6ln-8_czyks3.jpg" alt="Köln'ün Güzellikleri" loading="lazy">
-                                <div class="gallery-caption"><h3>Köln'ün Güzellikleri</h3></div>
-                            </div>
-                        </div>
-                    </section>
                     <!-- Map Section -->
                     <section class="content-section">
                         <h2 class="section-title">Harita</h2>
@@ -605,7 +729,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2025 Tüm hakları saklıdır. | Gidiniz Blog</p>
+                <p>&copy; 2026 Tüm hakları saklıdır. | Gidiniz Blog</p>
                 <div class="footer-links">
                     <a href="/kullanim-sartlari.html">Kullanım Şartları</a>
                     <a href="/gizlilik.html">Gizlilik Politikası</a>
@@ -614,7 +738,45 @@
         </div>
     </footer>
 
+    <!-- Lightbox Modal -->
+    <div class="lightbox-overlay" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Kapat">&times;</button>
+        <img src="" alt="" id="lightboxImg">
+    </div>
+
     <!-- JavaScript -->
     <script src="/js/main.js"></script>
+    <script>
+    (function() {
+        const overlay = document.getElementById('lightbox');
+        const lbImg = document.getElementById('lightboxImg');
+        const lbClose = document.getElementById('lightboxClose');
+
+        document.querySelectorAll('.thumb-grid img').forEach(function(img) {
+            img.addEventListener('click', function() {
+                // Thumbnail'dan büyük versiyonu göster (w_1200 transform ekle)
+                var src = this.src;
+                lbImg.src = src;
+                lbImg.alt = this.alt;
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        lbClose.addEventListener('click', closeLightbox);
+        overlay.addEventListener('click', function(e) {
+            if (e.target === overlay) closeLightbox();
+        });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeLightbox();
+        });
+
+        function closeLightbox() {
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+            lbImg.src = '';
+        }
+    })();
+    </script>
 </body>
 </html>
