@@ -187,17 +187,65 @@ function initializeBackToTop() {
 
 // ===== SMOOTH SCROLLING =====
 function initializeSmoothScrolling() {
-    // Smooth scroll for internal links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    // "Geri Dön" butonu oluştur (bir kez)
+    const backBtn = document.createElement('button');
+    backBtn.className = 'back-to-gallery-btn';
+    backBtn.innerHTML = '<i class="fas fa-arrow-up"></i> Geri Dön';
+    backBtn.style.cssText = `
+        display: none;
+        position: fixed;
+        bottom: 90px;
+        right: 30px;
+        background: #95d5db;
+        color: #fff;
+        border: none;
+        border-radius: 25px;
+        padding: 10px 20px;
+        font-size: 14px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        cursor: pointer;
+        z-index: 999;
+        box-shadow: 0 4px 15px rgba(149, 213, 219, 0.4);
+        transition: all 0.3s ease;
+    `;
+    document.body.appendChild(backBtn);
+
+    let savedScrollPos = null;
+
+    backBtn.addEventListener('click', function() {
+        if (savedScrollPos !== null) {
+            window.scrollTo({ top: savedScrollPos, behavior: 'smooth' });
+            savedScrollPos = null;
+            backBtn.style.display = 'none';
+        }
+    });
+
+    // Gallery kartlarındaki anchor linkleri
+    document.querySelectorAll('.gallery-item a[href^="#"], .info-card a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            
+            const href = this.getAttribute('href');
+            if (href === '#') return;
+            const target = document.querySelector(href);
             if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+                savedScrollPos = window.pageYOffset || document.documentElement.scrollTop;
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                backBtn.style.display = 'block';
+            }
+        });
+    });
+
+    // Diğer anchor linkler (dropdown, section title vs.)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        if (anchor.closest('.gallery-item') || anchor.closest('.info-card')) return;
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const href = this.getAttribute('href');
+            if (href === '#') return;
+            const target = document.querySelector(href);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         });
     });
