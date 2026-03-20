@@ -190,7 +190,10 @@ function initializeSmoothScrolling() {
     // "Geri Dön" butonu oluştur (bir kez)
     const backBtn = document.createElement('button');
     backBtn.className = 'back-to-gallery-btn';
-    backBtn.innerHTML = '<i class="fas fa-arrow-up"></i> Geri Dön';
+    var btnIcon = document.createElement('i');
+    btnIcon.className = 'fas fa-arrow-up';
+    backBtn.appendChild(btnIcon);
+    backBtn.appendChild(document.createTextNode(' Geri Dön'));
     backBtn.style.cssText = `
         display: none;
         position: fixed;
