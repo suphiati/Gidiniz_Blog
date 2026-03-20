@@ -1,3 +1,4 @@
+const crypto = require('crypto');
 const { redis, pipeline } = require('./lib/redis');
 
 module.exports = async function handler(req, res) {
@@ -42,7 +43,10 @@ module.exports = async function handler(req, res) {
     // Clean page path
     const cleanPage = page.replace(/^\//, '').replace(/\.html$/, '') || 'anasayfa';
 
-    const visitData = JSON.stringify({
+    const visitId = crypto.randomBytes(8).toString('hex');
+
+    const visitObj = {
+      visitId,
       page: cleanPage,
       referrer: referrer || 'direct',
       browser,
@@ -52,7 +56,8 @@ module.exports = async function handler(req, res) {
       language: language || 'unknown',
       ip: ip.split(',')[0].trim(),
       timestamp: now.toISOString(),
-    });
+    };
+    const visitData = JSON.stringify(visitObj);
 
     // Pipeline: increment counters + store visit
     await pipeline([
@@ -60,14 +65,15 @@ module.exports = async function handler(req, res) {
       ['INCR', `pageviews:${dateKey}:${cleanPage}`],
       ['LPUSH', 'visits', visitData],
       ['LTRIM', 'visits', '0', '999'],
-      // Track unique pages set for the day
       ['SADD', `pages:${dateKey}`, cleanPage],
-      ['EXPIRE', `pages:${dateKey}`, 2592000], // 30 days TTL
+      ['EXPIRE', `pages:${dateKey}`, 2592000],
       ['EXPIRE', `pageviews:${dateKey}`, 2592000],
       ['EXPIRE', `pageviews:${dateKey}:${cleanPage}`, 2592000],
+      // Store visit by ID for duration updates
+      ['SET', `visit:${visitId}`, visitData, 'EX', 2592000],
     ]);
 
-    res.status(200).json({ ok: true });
+    res.status(200).json({ ok: true, visitId });
   } catch (error) {
     console.error('Track error:', error);
     res.status(500).json({ error: 'Internal server error' });

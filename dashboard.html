@@ -161,8 +161,8 @@
       <div class="table-container">
         <h2>Son Ziyaretçiler</h2>
         <table>
-          <thead><tr><th>Sayfa</th><th>Cihaz</th><th>Tarayıcı</th><th>Ülke</th><th>Referrer</th><th>Tarih</th></tr></thead>
-          <tbody id="visitorsBody"><tr><td colspan="6" class="loading"><div class="spinner"></div></td></tr></tbody>
+          <thead><tr><th>Sayfa</th><th>Cihaz</th><th>Tarayıcı</th><th>Ülke</th><th>Referrer</th><th>Süre</th><th>Tarih</th></tr></thead>
+          <tbody id="visitorsBody"><tr><td colspan="7" class="loading"><div class="spinner"></div></td></tr></tbody>
         </table>
         <div class="pagination">
           <button id="prevBtn" onclick="changePage(-1)" disabled>Önceki</button>
@@ -306,14 +306,14 @@
 
     function loadVisitors() {
       var tbody = document.getElementById('visitorsBody');
-      tbody.innerHTML = '<tr><td colspan="6" class="loading"><div class="spinner"></div></td></tr>';
+      tbody.innerHTML = '<tr><td colspan="7" class="loading"><div class="spinner"></div></td></tr>';
 
       fetch('/api/dashboard/visitors?limit=' + pageSize + '&offset=' + (currentPage * pageSize), { credentials: 'same-origin' })
         .then(function (r) { return r.json(); })
         .then(function (data) {
           tbody.innerHTML = '';
           if (!data.visitors || data.visitors.length === 0) {
-            tbody.innerHTML = '<tr><td colspan="6" style="color:#64748b">Henüz ziyaretçi yok</td></tr>';
+            tbody.innerHTML = '<tr><td colspan="7" style="color:#64748b">Henüz ziyaretçi yok</td></tr>';
           } else {
             data.visitors.forEach(function (v) {
               var tr = document.createElement('tr');
@@ -340,6 +340,10 @@
               tdRef.style.textOverflow = 'ellipsis';
               tdRef.style.whiteSpace = 'nowrap';
 
+              var tdDuration = document.createElement('td');
+              tdDuration.textContent = formatDuration(v.duration);
+              tdDuration.style.color = v.duration ? '#67e8f9' : '#64748b';
+
               var tdDate = document.createElement('td');
               var d = new Date(v.timestamp);
               tdDate.textContent = d.toLocaleDateString('tr-TR') + ' ' + d.toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' });
@@ -349,6 +353,7 @@
               tr.appendChild(tdBrowser);
               tr.appendChild(tdCountry);
               tr.appendChild(tdRef);
+              tr.appendChild(tdDuration);
               tr.appendChild(tdDate);
               tbody.appendChild(tr);
             });
@@ -385,6 +390,15 @@
 
     function closePasswordModal() {
       document.getElementById('passwordModal').classList.remove('active');
+    }
+
+    function formatDuration(seconds) {
+      if (!seconds && seconds !== 0) return '—';
+      if (seconds < 1) return '—';
+      var m = Math.floor(seconds / 60);
+      var s = Math.round(seconds % 60);
+      if (m > 0) return m + 'dk ' + s + 'sn';
+      return s + 'sn';
     }
 
     function changePassword() {

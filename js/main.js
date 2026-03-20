@@ -7,6 +7,12 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // ===== PAGE VIEW TRACKING =====
+var _trackVisitId = null;
+var _trackStartTime = Date.now();
+var _trackActiveTime = 0;
+var _trackLastActive = Date.now();
+var _trackIsVisible = true;
+
 function trackPageView() {
     try {
         if (navigator.doNotTrack === '1') return;
@@ -25,7 +31,35 @@ function trackPageView() {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data),
             keepalive: true
+        }).then(function(r) { return r.json(); })
+        .then(function(d) {
+            if (d.visitId) _trackVisitId = d.visitId;
         }).catch(function() {});
+
+        // Track active time (pause when tab is hidden)
+        document.addEventListener('visibilitychange', function() {
+            if (document.hidden) {
+                _trackActiveTime += (Date.now() - _trackLastActive) / 1000;
+                _trackIsVisible = false;
+            } else {
+                _trackLastActive = Date.now();
+                _trackIsVisible = true;
+            }
+        });
+
+        // Send duration on page unload
+        window.addEventListener('beforeunload', function() {
+            if (!_trackVisitId) return;
+            if (_trackIsVisible) {
+                _trackActiveTime += (Date.now() - _trackLastActive) / 1000;
+            }
+            var duration = Math.round(_trackActiveTime);
+            if (duration < 1) return;
+            navigator.sendBeacon('/api/track-duration', JSON.stringify({
+                visitId: _trackVisitId,
+                duration: duration
+            }));
+        });
     } catch (e) {}
 }
 
