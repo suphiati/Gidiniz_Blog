@@ -3,7 +3,31 @@
 // DOM Content Loaded Event
 document.addEventListener('DOMContentLoaded', function() {
     initializeApp();
+    trackPageView();
 });
+
+// ===== PAGE VIEW TRACKING =====
+function trackPageView() {
+    try {
+        if (navigator.doNotTrack === '1') return;
+        if (window.location.pathname.includes('dashboard')) return;
+
+        var data = {
+            page: window.location.pathname,
+            referrer: document.referrer || 'direct',
+            userAgent: navigator.userAgent,
+            language: navigator.language,
+            screenWidth: window.innerWidth
+        };
+
+        fetch('/api/track', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data),
+            keepalive: true
+        }).catch(function() {});
+    } catch (e) {}
+}
 
 // Window Load Event - Sayfa tamamen yüklendiğinde
 window.addEventListener('load', function() {

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Admin Dashboard - Gidiniz Blog</title>
+  <link rel="icon" type="image/png" href="https://res.cloudinary.com/dllpts1ha/image/upload/v1771436637/site_logo_um2dfu.png">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: #0f172a; color: #e2e8f0; min-height: 100vh; }
+
+    /* Login */
+    .login-container { display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 20px; }
+    .login-box { background: #1e293b; border-radius: 16px; padding: 40px; width: 100%; max-width: 400px; box-shadow: 0 25px 50px rgba(0,0,0,0.4); }
+    .login-box h1 { font-size: 1.5rem; text-align: center; margin-bottom: 8px; color: #95d5db; }
+    .login-box p { text-align: center; color: #94a3b8; margin-bottom: 24px; font-size: 0.9rem; }
+    .login-box input { width: 100%; padding: 12px 16px; background: #0f172a; border: 1px solid #334155; border-radius: 8px; color: #e2e8f0; font-size: 1rem; margin-bottom: 16px; outline: none; }
+    .login-box input:focus { border-color: #95d5db; }
+    .login-box button { width: 100%; padding: 12px; background: #95d5db; color: #0f172a; border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; }
+    .login-box button:hover { background: #7bc5cc; }
+    .login-error { color: #f87171; text-align: center; margin-top: 12px; font-size: 0.9rem; display: none; }
+
+    /* Dashboard */
+    .dashboard { display: none; }
+    .topbar { background: #1e293b; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #334155; }
+    .topbar h1 { font-size: 1.2rem; color: #95d5db; }
+    .topbar-actions { display: flex; gap: 12px; }
+    .topbar-actions button { padding: 8px 16px; border-radius: 6px; border: 1px solid #334155; background: transparent; color: #94a3b8; cursor: pointer; font-size: 0.85rem; }
+    .topbar-actions button:hover { background: #334155; color: #e2e8f0; }
+
+    .content { padding: 24px; max-width: 1200px; margin: 0 auto; }
+
+    /* Stats Cards */
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 24px; }
+    .stat-card { background: #1e293b; border-radius: 12px; padding: 20px; }
+    .stat-card .label { font-size: 0.8rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+    .stat-card .value { font-size: 2rem; font-weight: 700; color: #f8fafc; }
+    .stat-card .sub { font-size: 0.8rem; color: #64748b; margin-top: 4px; }
+
+    /* Chart */
+    .chart-container { background: #1e293b; border-radius: 12px; padding: 20px; margin-bottom: 24px; }
+    .chart-container h2 { font-size: 1rem; color: #94a3b8; margin-bottom: 16px; }
+    .chart { display: flex; align-items: flex-end; gap: 8px; height: 150px; }
+    .chart-bar-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; height: 100%; justify-content: flex-end; }
+    .chart-bar { width: 100%; background: #95d5db; border-radius: 4px 4px 0 0; min-height: 2px; transition: height 0.3s; }
+    .chart-label { font-size: 0.7rem; color: #64748b; margin-top: 6px; }
+    .chart-value { font-size: 0.7rem; color: #94a3b8; margin-bottom: 4px; }
+
+    /* Tables */
+    .table-container { background: #1e293b; border-radius: 12px; padding: 20px; margin-bottom: 24px; overflow-x: auto; }
+    .table-container h2 { font-size: 1rem; color: #94a3b8; margin-bottom: 16px; }
+    table { width: 100%; border-collapse: collapse; }
+    th { text-align: left; padding: 10px 12px; font-size: 0.75rem; color: #64748b; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid #334155; }
+    td { padding: 10px 12px; font-size: 0.85rem; border-bottom: 1px solid #1e293b; color: #cbd5e1; }
+    tr:hover td { background: #253043; }
+    .badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 500; }
+    .badge-mobile { background: #7c3aed20; color: #a78bfa; }
+    .badge-desktop { background: #06b6d420; color: #67e8f9; }
+    .badge-tablet { background: #f59e0b20; color: #fbbf24; }
+
+    /* Password Change Modal */
+    .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 100; align-items: center; justify-content: center; padding: 20px; }
+    .modal-overlay.active { display: flex; }
+    .modal { background: #1e293b; border-radius: 16px; padding: 32px; width: 100%; max-width: 400px; }
+    .modal h2 { font-size: 1.2rem; color: #95d5db; margin-bottom: 20px; }
+    .modal input { width: 100%; padding: 10px 14px; background: #0f172a; border: 1px solid #334155; border-radius: 8px; color: #e2e8f0; font-size: 0.9rem; margin-bottom: 12px; outline: none; }
+    .modal input:focus { border-color: #95d5db; }
+    .modal-actions { display: flex; gap: 12px; margin-top: 8px; }
+    .modal-actions button { flex: 1; padding: 10px; border-radius: 8px; border: none; cursor: pointer; font-weight: 600; }
+    .btn-primary { background: #95d5db; color: #0f172a; }
+    .btn-secondary { background: #334155; color: #94a3b8; }
+    .modal-msg { text-align: center; margin-top: 12px; font-size: 0.85rem; }
+
+    /* Loading */
+    .loading { text-align: center; padding: 40px; color: #64748b; }
+    .spinner { display: inline-block; width: 32px; height: 32px; border: 3px solid #334155; border-top-color: #95d5db; border-radius: 50%; animation: spin 0.8s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* Pagination */
+    .pagination { display: flex; justify-content: center; gap: 8px; margin-top: 16px; }
+    .pagination button { padding: 8px 16px; border-radius: 6px; border: 1px solid #334155; background: transparent; color: #94a3b8; cursor: pointer; }
+    .pagination button:hover { background: #334155; }
+    .pagination button:disabled { opacity: 0.3; cursor: not-allowed; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .stat-card .value { font-size: 1.5rem; }
+      .content { padding: 16px; }
+      .topbar { padding: 12px 16px; }
+      .topbar h1 { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Login Screen -->
+  <div class="login-container" id="loginScreen">
+    <div class="login-box">
+      <h1>Gidiniz Blog</h1>
+      <p>Admin Dashboard</p>
+      <form id="loginForm">
+        <input type="password" id="passwordInput" placeholder="Şifre" autocomplete="current-password" required>
+        <button type="submit">Giriş Yap</button>
+      </form>
+      <div class="login-error" id="loginError"></div>
+    </div>
+  </div>
+
+  <!-- Dashboard -->
+  <div class="dashboard" id="dashboardScreen">
+    <div class="topbar">
+      <h1>Gidiniz Blog — Dashboard</h1>
+      <div class="topbar-actions">
+        <button onclick="loadData()">Yenile</button>
+        <button onclick="openPasswordModal()">Şifre Değiştir</button>
+        <button onclick="logout()">Çıkış</button>
+      </div>
+    </div>
+    <div class="content">
+      <!-- Stats Cards -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="label">Bugün</div>
+          <div class="value" id="statToday">—</div>
+          <div class="sub">ziyaret</div>
+        </div>
+        <div class="stat-card">
+          <div class="label">Dün</div>
+          <div class="value" id="statYesterday">—</div>
+          <div class="sub">ziyaret</div>
+        </div>
+        <div class="stat-card">
+          <div class="label">Bu Hafta</div>
+          <div class="value" id="statWeek">—</div>
+          <div class="sub">ziyaret</div>
+        </div>
+        <div class="stat-card">
+          <div class="label">Bu Ay</div>
+          <div class="value" id="statMonth">—</div>
+          <div class="sub">ziyaret</div>
+        </div>
+      </div>
+
+      <!-- Chart -->
+      <div class="chart-container">
+        <h2>Son 7 Gün</h2>
+        <div class="chart" id="dailyChart"></div>
+      </div>
+
+      <!-- Page Stats -->
+      <div class="table-container">
+        <h2>Bugün — Sayfa Bazlı Ziyaretler</h2>
+        <table>
+          <thead><tr><th>Sayfa</th><th>Ziyaret</th></tr></thead>
+          <tbody id="pageStatsBody"><tr><td colspan="2" class="loading"><div class="spinner"></div></td></tr></tbody>
+        </table>
+      </div>
+
+      <!-- Recent Visitors -->
+      <div class="table-container">
+        <h2>Son Ziyaretçiler</h2>
+        <table>
+          <thead><tr><th>Sayfa</th><th>Cihaz</th><th>Tarayıcı</th><th>Ülke</th><th>Referrer</th><th>Tarih</th></tr></thead>
+          <tbody id="visitorsBody"><tr><td colspan="6" class="loading"><div class="spinner"></div></td></tr></tbody>
+        </table>
+        <div class="pagination">
+          <button id="prevBtn" onclick="changePage(-1)" disabled>Önceki</button>
+          <button id="nextBtn" onclick="changePage(1)">Sonraki</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Password Modal -->
+  <div class="modal-overlay" id="passwordModal">
+    <div class="modal">
+      <h2>Şifre Değiştir</h2>
+      <input type="password" id="currentPw" placeholder="Mevcut şifre" autocomplete="current-password">
+      <input type="password" id="newPw" placeholder="Yeni şifre (min. 8 karakter)" autocomplete="new-password">
+      <input type="password" id="confirmPw" placeholder="Yeni şifre tekrar" autocomplete="new-password">
+      <div class="modal-actions">
+        <button class="btn-secondary" onclick="closePasswordModal()">İptal</button>
+        <button class="btn-primary" onclick="changePassword()">Kaydet</button>
+      </div>
+      <div class="modal-msg" id="pwMsg"></div>
+    </div>
+  </div>
+
+  <script>
+    var currentPage = 0;
+    var pageSize = 50;
+
+    // Check auth on load
+    fetch('/api/auth/verify', { credentials: 'same-origin' })
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        if (data.ok) showDashboard();
+      })
+      .catch(function () {});
+
+    // Login
+    document.getElementById('loginForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var pw = document.getElementById('passwordInput').value;
+      var errEl = document.getElementById('loginError');
+      errEl.style.display = 'none';
+
+      fetch('/api/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'same-origin',
+        body: JSON.stringify({ password: pw }),
+      })
+        .then(function (r) { return r.json().then(function (d) { return { ok: r.ok, data: d }; }); })
+        .then(function (res) {
+          if (res.ok) {
+            showDashboard();
+          } else {
+            errEl.textContent = 'Hatalı şifre';
+            errEl.style.display = 'block';
+          }
+        })
+        .catch(function () {
+          errEl.textContent = 'Bağlantı hatası';
+          errEl.style.display = 'block';
+        });
+    });
+
+    function showDashboard() {
+      document.getElementById('loginScreen').style.display = 'none';
+      document.getElementById('dashboardScreen').style.display = 'block';
+      loadData();
+    }
+
+    function loadData() {
+      loadStats();
+      loadVisitors();
+    }
+
+    function loadStats() {
+      fetch('/api/dashboard/stats', { credentials: 'same-origin' })
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          document.getElementById('statToday').textContent = data.today || 0;
+          document.getElementById('statYesterday').textContent = data.yesterday || 0;
+          document.getElementById('statWeek').textContent = data.week || 0;
+          document.getElementById('statMonth').textContent = data.month || 0;
+
+          // Chart
+          renderChart(data.daily || []);
+
+          // Page stats
+          var tbody = document.getElementById('pageStatsBody');
+          if (!data.pageStats || data.pageStats.length === 0) {
+            tbody.innerHTML = '<tr><td colspan="2" style="color:#64748b">Henüz veri yok</td></tr>';
+          } else {
+            tbody.innerHTML = '';
+            data.pageStats.forEach(function (p) {
+              var tr = document.createElement('tr');
+              var td1 = document.createElement('td');
+              td1.textContent = p.page;
+              var td2 = document.createElement('td');
+              td2.textContent = p.views;
+              tr.appendChild(td1);
+              tr.appendChild(td2);
+              tbody.appendChild(tr);
+            });
+          }
+        })
+        .catch(function () {
+          document.getElementById('pageStatsBody').innerHTML = '<tr><td colspan="2" style="color:#f87171">Veri yüklenemedi</td></tr>';
+        });
+    }
+
+    function renderChart(daily) {
+      var container = document.getElementById('dailyChart');
+      container.innerHTML = '';
+      if (!daily.length) return;
+
+      var max = Math.max.apply(null, daily.map(function (d) { return d.views; })) || 1;
+
+      daily.forEach(function (d) {
+        var wrap = document.createElement('div');
+        wrap.className = 'chart-bar-wrap';
+
+        var val = document.createElement('div');
+        val.className = 'chart-value';
+        val.textContent = d.views;
+
+        var bar = document.createElement('div');
+        bar.className = 'chart-bar';
+        bar.style.height = Math.max((d.views / max) * 120, 2) + 'px';
+
+        var label = document.createElement('div');
+        label.className = 'chart-label';
+        var parts = d.date.split('-');
+        label.textContent = parts[2] + '/' + parts[1];
+
+        wrap.appendChild(val);
+        wrap.appendChild(bar);
+        wrap.appendChild(label);
+        container.appendChild(wrap);
+      });
+    }
+
+    function loadVisitors() {
+      var tbody = document.getElementById('visitorsBody');
+      tbody.innerHTML = '<tr><td colspan="6" class="loading"><div class="spinner"></div></td></tr>';
+
+      fetch('/api/dashboard/visitors?limit=' + pageSize + '&offset=' + (currentPage * pageSize), { credentials: 'same-origin' })
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          tbody.innerHTML = '';
+          if (!data.visitors || data.visitors.length === 0) {
+            tbody.innerHTML = '<tr><td colspan="6" style="color:#64748b">Henüz ziyaretçi yok</td></tr>';
+          } else {
+            data.visitors.forEach(function (v) {
+              var tr = document.createElement('tr');
+
+              var tdPage = document.createElement('td');
+              tdPage.textContent = v.page;
+
+              var tdDevice = document.createElement('td');
+              var badge = document.createElement('span');
+              badge.className = 'badge badge-' + v.device;
+              badge.textContent = v.device;
+              tdDevice.appendChild(badge);
+
+              var tdBrowser = document.createElement('td');
+              tdBrowser.textContent = v.browser;
+
+              var tdCountry = document.createElement('td');
+              tdCountry.textContent = v.country + (v.city && v.city !== 'unknown' ? ' / ' + v.city : '');
+
+              var tdRef = document.createElement('td');
+              tdRef.textContent = v.referrer === 'direct' ? '—' : v.referrer;
+              tdRef.style.maxWidth = '200px';
+              tdRef.style.overflow = 'hidden';
+              tdRef.style.textOverflow = 'ellipsis';
+              tdRef.style.whiteSpace = 'nowrap';
+
+              var tdDate = document.createElement('td');
+              var d = new Date(v.timestamp);
+              tdDate.textContent = d.toLocaleDateString('tr-TR') + ' ' + d.toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' });
+
+              tr.appendChild(tdPage);
+              tr.appendChild(tdDevice);
+              tr.appendChild(tdBrowser);
+              tr.appendChild(tdCountry);
+              tr.appendChild(tdRef);
+              tr.appendChild(tdDate);
+              tbody.appendChild(tr);
+            });
+          }
+
+          document.getElementById('prevBtn').disabled = currentPage === 0;
+          document.getElementById('nextBtn').disabled = (currentPage + 1) * pageSize >= data.total;
+        })
+        .catch(function () {
+          tbody.innerHTML = '<tr><td colspan="6" style="color:#f87171">Veri yüklenemedi</td></tr>';
+        });
+    }
+
+    function changePage(dir) {
+      currentPage += dir;
+      if (currentPage < 0) currentPage = 0;
+      loadVisitors();
+    }
+
+    function logout() {
+      document.cookie = 'admin_token=; Path=/; Max-Age=0';
+      document.getElementById('dashboardScreen').style.display = 'none';
+      document.getElementById('loginScreen').style.display = 'flex';
+      document.getElementById('passwordInput').value = '';
+    }
+
+    function openPasswordModal() {
+      document.getElementById('passwordModal').classList.add('active');
+      document.getElementById('pwMsg').textContent = '';
+      document.getElementById('currentPw').value = '';
+      document.getElementById('newPw').value = '';
+      document.getElementById('confirmPw').value = '';
+    }
+
+    function closePasswordModal() {
+      document.getElementById('passwordModal').classList.remove('active');
+    }
+
+    function changePassword() {
+      var cur = document.getElementById('currentPw').value;
+      var newPw = document.getElementById('newPw').value;
+      var confirm = document.getElementById('confirmPw').value;
+      var msg = document.getElementById('pwMsg');
+
+      if (!cur || !newPw) { msg.textContent = 'Tüm alanları doldurun'; msg.style.color = '#f87171'; return; }
+      if (newPw !== confirm) { msg.textContent = 'Yeni şifreler eşleşmiyor'; msg.style.color = '#f87171'; return; }
+      if (newPw.length < 8) { msg.textContent = 'Yeni şifre en az 8 karakter olmalı'; msg.style.color = '#f87171'; return; }
+
+      fetch('/api/auth/change-password', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'same-origin',
+        body: JSON.stringify({ currentPassword: cur, newPassword: newPw }),
+      })
+        .then(function (r) { return r.json().then(function (d) { return { ok: r.ok, data: d }; }); })
+        .then(function (res) {
+          if (res.ok) {
+            msg.textContent = 'Şifre başarıyla değiştirildi!';
+            msg.style.color = '#4ade80';
+            setTimeout(closePasswordModal, 1500);
+          } else {
+            msg.textContent = res.data.error || 'Hata oluştu';
+            msg.style.color = '#f87171';
+          }
+        })
+        .catch(function () {
+          msg.textContent = 'Bağlantı hatası';
+          msg.style.color = '#f87171';
+        });
+    }
+  </script>
+</body>
+</html>
