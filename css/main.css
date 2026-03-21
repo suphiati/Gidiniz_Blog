@@ -299,6 +299,23 @@ a {
   color: #95d5db;
 }
 
+/* Sosyal Sorumluluk — özel stil */
+.sosyal-sorumluluk-toggle {
+  background-color: #fff !important;
+  color: #000 !important;
+  border-radius: 6px;
+  padding: 8px 16px;
+}
+
+.sosyal-sorumluluk-toggle:hover {
+  background-color: #e74c3c !important;
+  color: #fff !important;
+}
+
+.sosyal-sorumluluk-dropdown .dropdown-link:hover {
+  color: #e74c3c;
+}
+
 .sub-dropdown {
   position: relative;
 }
@@ -700,6 +717,14 @@ a {
   background-position: center center;
   background-repeat: no-repeat;
   background-color: #2d5a87;
+}
+
+.hero-background.sosyal-sorumluluk {
+  background: url('https://res.cloudinary.com/dllpts1ha/image/upload/v1774117410/kahev_logo_khzr5s.png');
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #fff;
 }
 
 .hero-background.fayadali-bilgiler {

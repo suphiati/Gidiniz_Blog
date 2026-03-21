@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Gidiniz Blog - Seyahat tutkunları için gezi rehberi ve seyahat ipuçları">
-    <meta name="keywords" content="seyahat, gezi, blog, rehber, seyahat ipuçları">
+    <meta name="description" content="Gidiniz Blog - Sosyal Sorumluluk Projelerimiz">
+    <meta name="keywords" content="sosyal sorumluluk, kahev, eğitim, burs, destek">
     <meta name="author" content="Gidiniz Blog">
-    <meta property="og:title" content="Biz Kimiz - Gidiniz Blog">
-    <meta property="og:description" content="Seyahat tutkunları için gezi rehberi ve seyahat ipuçları">
+    <meta property="og:title" content="Sosyal Sorumluluk - Gidiniz Blog">
+    <meta property="og:description" content="Gidiniz Blog olarak desteklediğimiz sosyal sorumluluk projeleri">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://gidiniz.blog/biz-kimiz.html">
-    <meta property="og:image" content="/images/anasayfa/Logo2.jpg">
-    
-    <title>Biz Kimiz - Gidiniz Blog</title>
-    
+    <meta property="og:url" content="https://gidiniz.blog/sosyal-sorumluluk.html">
+    <meta property="og:image" content="https://res.cloudinary.com/dllpts1ha/image/upload/v1771436637/site_logo_um2dfu.png">
+
+    <title>Sosyal Sorumluluk - Gidiniz Blog</title>
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://res.cloudinary.com/dllpts1ha/image/upload/v1771436637/site_logo_um2dfu.png">
     <link rel="apple-touch-icon" href="https://res.cloudinary.com/dllpts1ha/image/upload/v1771436637/site_logo_um2dfu.png">
-    
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- CSS -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/style.css">
@@ -40,6 +40,44 @@
         @keyframes gradient-flow {
             0%, 100% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
+        }
+
+        .disclaimer-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px 25px;
+            border-radius: 0 8px 8px 0;
+            margin-top: 30px;
+        }
+        .disclaimer-box p {
+            margin: 0;
+            color: #856404;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        .disclaimer-box i {
+            color: #ffc107;
+            margin-right: 8px;
+        }
+        .kahev-link-btn {
+            display: inline-block;
+            background: #e74c3c;
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 25px;
+            transition: all 0.3s ease;
+        }
+        .kahev-link-btn:hover {
+            background: #c0392b;
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+        }
+        .kahev-link-btn i {
+            margin-right: 8px;
         }
     </style>
     <!-- Vercel Analytics -->
@@ -90,7 +128,7 @@
           <!-- Navigation Menu -->
           <ul class="nav-menu" id="navMenu">
             <li><a href="index.html" class="nav-link">Anasayfa</a></li>
-            
+
             <!-- Rotalar Dropdown -->
             <li class="dropdown">
               <a href="#" class="nav-link dropdown-toggle">
@@ -113,91 +151,9 @@
                     <li><a href="avusturya/viyana.html">Viyana</a></li>
                   </ul>
                 </li>
-          <!--      <li class="sub-dropdown">
-                  <a href="#" class="dropdown-link">
-                    Gemi Turu <i class="fas fa-caret-right"></i>
-                  </a>
-                  <ul class="sub-dropdown-menu">
-                    <li><a href="gemi_turu/gemi-turu.html">Gemi Turu Rehberi</a></li>
-                  </ul>
-                </li>
-                <li class="sub-dropdown">
-                  <a href="#" class="dropdown-link">
-                    Gürcistan <i class="fas fa-caret-right"></i>
-                  </a>
-                  <ul class="sub-dropdown-menu">
-                    <li><a href="gurcistan/batum.html">Batum</a></li>
-                    <li><a href="gurcistan/tiflis.html">Tiflis</a></li>
-                  </ul>
-                </li>
-                <li class="sub-dropdown">
-                  <a href="#" class="dropdown-link">
-                    İsviçre <i class="fas fa-caret-right"></i>
-                  </a>
-                  <ul class="sub-dropdown-menu">
-                    <li><a href="isvicre/basel.html">Basel</a></li>
-                    <li><a href="isvicre/luzern.html">Luzern</a></li>
-                  </ul>
-                </li>
-                <li class="sub-dropdown">
-                  <a href="#" class="dropdown-link">
-                    İtalya <i class="fas fa-caret-right"></i>
-                  </a>
-                  <ul class="sub-dropdown-menu">
-                    <li><a href="italya/roma.html">Roma</a></li>
-                    <li><a href="italya/milano.html">Milano</a></li>
-                    <li><a href="italya/venedik.html">Venedik</a></li>
-                    <li><a href="italya/pisa.html">Pisa</a></li>
-                    <li><a href="italya/portofino.html">Portofino</a></li>
-                    <li><a href="italya/como.html">Como</a></li>
-                    <li><a href="italya/floransa.html">Floransa</a></li>
-                    <li><a href="italya/genova.html">Genova</a></li>
-                  </ul>
-                </li>
-                <li class="sub-dropdown">
-                  <a href="#" class="dropdown-link">
-                    Kıbrıs <i class="fas fa-caret-right"></i>
-                  </a>
-                  <ul class="sub-dropdown-menu">
-                    <li><a href="kibris/girne.html">Girne</a></li>
-                    <li><a href="kibris/lefkosa.html">Lefkoşa</a></li>
-                  </ul>
-                </li>
-                <li class="sub-dropdown">
-                  <a href="#" class="dropdown-link">
-                    Türkiye <i class="fas fa-caret-right"></i>
-                  </a>
-                  <ul class="sub-dropdown-menu">
-                    <li><a href="turkiye/alanya.html">Alanya</a></li>
-                    <li><a href="turkiye/amasra.html">Amasra</a></li>
-                    <li><a href="turkiye/ankara.html">Ankara</a></li>
-                    <li><a href="turkiye/antalya.html">Antalya</a></li>
-                    <li><a href="turkiye/bursa.html">Bursa</a></li>
-                    <li><a href="turkiye/eskisehir.html">Eskişehir</a></li>
-                    <li><a href="turkiye/istanbul.html">İstanbul</a></li>
-                    <li><a href="turkiye/izmir.html">İzmir</a></li>
-                    <li><a href="turkiye/iznik.html">İznik</a></li>
-<li><a href="turkiye/kastamonu.html">Kastamonu</a></li>
-                            <li><a href="turkiye/mugla.html">Muğla</a></li>
-                            <li><a href="turkiye/safranbolu.html">Safranbolu</a></li>
-                  </ul>
-                </li>
-                <li class="sub-dropdown">
-                  <a href="#" class="dropdown-link">
-                    Yunanistan <i class="fas fa-caret-right"></i>
-                  </a>
-                  <ul class="sub-dropdown-menu">
-                    <li><a href="yunanistan/atina.html">Atina</a></li>
-                    <li><a href="yunanistan/selanik.html">Selanik</a></li>
-                    <li><a href="yunanistan/girit.html">Girit</a></li>
-                    <li><a href="yunanistan/kos.html">Kos</a></li>
-                    <li><a href="yunanistan/mykonos.html">Mykonos</a></li>
-                  </ul>
-                </li>
-                -->
               </ul>
             </li>
-            
+
             <!-- Faydalı Bilgiler Dropdown -->
             <li class="dropdown">
               <a href="#" class="nav-link dropdown-toggle">
@@ -223,7 +179,7 @@
                 <li><a href="kur-hesaplama.html" class="dropdown-link">Kur Hesapla</a></li>
               </ul>
             </li>
-            
+
             <!-- Sosyal Sorumluluk Dropdown -->
             <li class="dropdown sosyal-sorumluluk-dropdown">
               <a href="#" class="nav-link dropdown-toggle sosyal-sorumluluk-toggle">
@@ -243,10 +199,8 @@
 
     <!-- Hero Section -->
     <section class="hero-section">
-        <div class="hero-background biz-kimiz">
-            <div class="hero-content">
-                <h1 class="hero-title">Biz Kimiz</h1>
-            </div>
+        <div class="hero-background sosyal-sorumluluk">
+
         </div>
     </section>
 
@@ -257,47 +211,37 @@
                 <div class="main-content-area">
                     <section class="content-section">
                         <div class="info-card">
-                            <h2 class="section-title">Biz Kimiz</h2>
+                            <h2 class="section-title"><i class="fas fa-heart" style="color: #e74c3c;"></i> KAHEV — Kadın Hekimler Eğitime Destek Vakfı</h2>
                             <p>
-                                Gidiniz Blog, seyahat tutkunları için oluşturulmuş bir gezi rehberi platformudur. 
-                                Amacımız, dünyanın farklı köşelerindeki güzel şehirleri ve ülkeleri keşfetmek 
-                                isteyenlere kapsamlı ve güvenilir bilgiler sunmaktır.
+                                KAHEV, 2017 yılında 5 kadın hekimin öncülüğünde başlayan ve kısa sürede binlerce gönüllüye ulaşan
+                                bir eğitime destek vakfıdır. 31 Aralık 2018'de resmi olarak kurulan vakıf, okumaya istekli ancak
+                                maddi durumu yeterli olmayan öğrencilere burs sağlamaktadır.
                             </p>
                             <p>
-                                Deneyimli seyahat yazarlarımız, her şehir için detaylı rehberler hazırlar ve 
-                                ziyaretçilerin en iyi deneyimi yaşaması için pratik bilgiler paylaşır. 
-                                Fotoğraflarımız ve anlatılarımızla, henüz gitmediğiniz yerleri keşfetmenizi 
-                                sağlarız.
+                                Vakıf, burs desteğinin yanı sıra okullara kütüphane, atölye, özel eğitim sınıfı, robotik ve STEM
+                                laboratuvarları kazandırmaktadır. 5.000'den fazla öğrenciye düzenli burs sağlayan KAHEV, COVID-19
+                                salgını döneminde hayatını kaybeden sağlık çalışanlarının çocuklarına da düzenli burs ve destek
+                                vermektedir.
                             </p>
+                            <p>
+                                5.500'den fazla resmi üyesi ve 26.000'den fazla gönüllüsü bulunan KAHEV, 2024 yılında
+                                prestijli <strong>Vehbi Koç Ödülü</strong>'nün sahibi olmuştur.
+                            </p>
+
+                            <a href="https://kahev.org.tr/" target="_blank" rel="noopener noreferrer" class="kahev-link-btn">
+                                <i class="fas fa-external-link-alt"></i> KAHEV Resmi Sitesi
+                            </a>
                         </div>
                     </section>
 
                     <section class="content-section">
-                        <h2 class="section-title">Misyonumuz</h2>
-                        <div class="gallery-grid">
-                            <div class="info-card">
-                                <h3><i class="fas fa-compass"></i> Rehberlik</h3>
-                                <p>Seyahat tutkunlarına güvenilir ve detaylı rehberlik hizmeti sunmak.</p>
-                            </div>
-                            <div class="info-card">
-                                <h3><i class="fas fa-globe"></i> Keşif</h3>
-                                <p>Dünyanın farklı kültürlerini ve güzelliklerini keşfetmek.</p>
-                            </div>
-                            <div class="info-card">
-                                <h3><i class="fas fa-share-alt"></i> Paylaşım</h3>
-                                <p>Seyahat deneyimlerini ve bilgilerini paylaşmak.</p>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section class="content-section">
-                        <div class="highlight-box">
-                            <h3><i class="fas fa-heart"></i> Seyahat Tutkumuz</h3>
+                        <div class="disclaimer-box">
                             <p>
-                                Biz, seyahat etmeyi seven, yeni yerler keşfetmeyi seven ve bu deneyimleri 
-                                başkalarıyla paylaşmayı seven bir ekibiz. Her seyahatimizde, o yerin 
-                                kültürünü, tarihini ve güzelliklerini anlamaya çalışır, bu bilgileri 
-                                sizlerle paylaşırız.
+                                <i class="fas fa-info-circle"></i>
+                                <strong>Bilgilendirme:</strong> Gidiniz Blog olarak KAHEV ile herhangi bir ticari ilişkimiz,
+                                sponsorluk anlaşmamız veya gelir ortaklığımız bulunmamaktadır. Bu sayfada yer alan bilgiler
+                                tamamen bilgilendirme amaçlıdır. KAHEV'i, eğitime verdikleri değerli katkılardan dolayı
+                                gönüllü olarak destekliyor ve tanıtıyoruz.
                             </p>
                         </div>
                     </section>
@@ -305,13 +249,6 @@
 
                 <!-- Sidebar -->
                 <aside class="sidebar">
-                    <div class="sidebar-widget">
-                        <h3 class="widget-title">Biz Kimiz</h3>
-                        <p class="widget-content">
-                            Seyahat tutkunları için gezi rehberi platformu.
-                        </p>
-                    </div>
-
                     <div class="sidebar-widget">
                         <div class="profile-image">
                             <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770234890/IMG_20250531_095555_tqygvg.jpg" alt="Blog Yazarı" loading="lazy">
@@ -321,10 +258,10 @@
                     <div class="sidebar-widget">
                         <h4 class="widget-title">Bizi Takip Edin</h4>
                         <div class="social-links">
-                            <a href="#" class="social-link" aria-label="Instagram">
+                            <a href="https://www.instagram.com/gidiniz.blog/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
                                 <i class="fab fa-instagram"></i> Instagram
                             </a>
-                            <a href="#" class="social-link" aria-label="YouTube">
+                            <a href="https://www.youtube.com/@gidinizblog" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
                                 <i class="fab fa-youtube"></i> YouTube
                             </a>
                         </div>
