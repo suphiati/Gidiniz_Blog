@@ -575,7 +575,7 @@ a {
                 rgba(0, 0, 0, 0.3), 
                 rgba(0, 0, 0, 0.6)
               ), 
-              url('../images/Roma/Roma%201.jpg');
+              url('https://res.cloudinary.com/dllpts1ha/image/upload/f_auto,q_auto/v1770238335/Roma-60_ja5mvn.jpg');
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;

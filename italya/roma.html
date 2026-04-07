@@ -3,191 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Roma seyahat rehberi - İtalya'da gezilecek yerler, tarihi mekanlar ve seyahat ipuçları.">
-    <meta name="keywords" content="roma, italya, seyahat, gezi">
+    <meta name="description" content="Roma seyahat rehberi - İtalya'nın başkentinde gezilecek yerler, tarihi mekanlar ve seyahat ipuçları.">
+    <meta name="keywords" content="roma, italya, colosseum, pantheon, vatikan, trevi çeşmesi, seyahat rehberi, gezi, roma gezilecek yerler">
     <meta name="author" content="Gidiniz Blog">
     <meta property="og:title" content="Roma Seyahat Rehberi - Gidiniz Blog">
-    <meta property="og:description" content="Italya'da Roma şehrinde gezilecek yerler ve seyahat ipuçları">
+    <meta property="og:description" content="İtalya'nın başkenti Roma'da gezilecek yerler ve seyahat ipuçları">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://gidiniz.blog/italya/roma.html">
-    <meta property="og:image" content="/images/Roma/Roma%201.jpg">
-    
+    <meta property="og:image" content="https://res.cloudinary.com/dllpts1ha/image/upload/v1770238335/Roma-60_ja5mvn.jpg">
+
     <title>Roma Seyahat Rehberi - Gidiniz Blog</title>
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://res.cloudinary.com/dllpts1ha/image/upload/v1771436637/site_logo_um2dfu.png">
     <link rel="apple-touch-icon" href="https://res.cloudinary.com/dllpts1ha/image/upload/v1771436637/site_logo_um2dfu.png">
-    
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- CSS -->
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/style.css">
-    
+
     <style>
         /* Roma specific styles */
-        .hero-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-                        url('/images/Roma/Roma%201.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-        
-        .page-content {
-            padding: 60px 0;
-        }
-        
-        .content-section {
-            margin-bottom: 60px;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 40px;
-            color: #333;
-            position: relative;
-        }
-        
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background: #95d5db;
-            border-radius: 2px;
-        }
-        
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 30px;
-        }
-        
-        .gallery-item {
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-            background: #fff;
-        }
-        
-        .gallery-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-        }
-        
-        .gallery-item img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-        
-        .gallery-item:hover img {
-            transform: scale(1.05);
-        }
-        
-        .gallery-caption {
-            padding: 20px;
-            text-align: center;
-        }
-        
-        .gallery-caption h3 {
-            margin-bottom: 10px;
-            color: #333;
-        }
-        
-        .gallery-caption p {
-            color: #666;
-            line-height: 1.6;
-        }
-        
-        .info-card {
-            background: #fff;
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
-        }
-        
-        .info-card h3 {
-            color: #95d5db;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .info-card h3 i {
-            font-size: 1.2em;
-        }
-        
-        .info-list {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .info-list li {
-            padding: 10px 0;
-            border-bottom: 1px solid #eee;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .info-list li:last-child {
-            border-bottom: none;
-        }
-        
-        .info-list li i {
-            color: #95d5db;
-            width: 20px;
-        }
-        
-        .highlight-box {
-            background: linear-gradient(135deg, #95d5db, #7bc3c9);
-            color: #fff;
-            padding: 30px;
-            border-radius: 15px;
-            text-align: center;
-            margin: 40px 0;
-        }
-        
-        .highlight-box h3 {
-            color: #fff;
-            margin-bottom: 15px;
-        }
-        
-        .highlight-box p {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 1.1rem;
-        }
-        
         @media (max-width: 768px) {
-            .gallery-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            
-            .info-card {
-                padding: 20px;
-            }
-            
-            .highlight-box {
-                padding: 20px;
-            }
+            .hero-section .hero-background.roma { background-attachment: scroll; }
         }
-        /* Logo text gradient animation */
-        .header .logo-section .logo-text {
+        /* Hero title gradient animation */
+        .hero-background.roma .hero-title {
             background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3, #ff6b6b);
             background-size: 300% 100%;
             -webkit-background-clip: text;
@@ -199,6 +46,93 @@
             0%, 100% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
         }
+
+        /* Thumbnail Grid */
+        .thumb-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 12px;
+            margin-top: 15px;
+        }
+        .thumb-grid img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .thumb-grid img:hover {
+            transform: scale(1.08);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+        }
+
+        @media (max-width: 480px) {
+            .thumb-grid {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                gap: 8px;
+            }
+            .thumb-grid img {
+                height: 110px;
+            }
+        }
+
+        /* Lightbox */
+        .lightbox-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        .lightbox-overlay.active {
+            display: flex;
+        }
+        .lightbox-content {
+            max-width: 95%;
+            max-height: 95%;
+            object-fit: contain;
+            cursor: default;
+            pointer-events: none;
+        }
+        .lightbox-close {
+            position: fixed;
+            top: 20px;
+            right: 30px;
+            color: #fff;
+            font-size: 36px;
+            cursor: pointer;
+            z-index: 10000;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.15);
+            transition: background 0.2s;
+        }
+        .lightbox-close:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        /* Logo text gradient animation */
+        .header .logo-section .logo-text {
+            background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3, #ff6b6b);
+            background-size: 300% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: gradient-flow 4s ease-in-out infinite;
+        }
+
     </style>
     <!-- Vercel Analytics -->
     <script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script>
@@ -211,6 +145,12 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
+    <!-- Lightbox -->
+    <div id="lightboxOverlay" class="lightbox-overlay" aria-hidden="true">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Tam ekrandan çık">×</button>
+        <img id="lightboxImage" class="lightbox-content" src="" alt="">
+    </div>
+
     <!-- Header -->
     <header class="header">
         <div class="container">
@@ -218,7 +158,7 @@
             <div class="logo-section">
                 <div class="logo-text">Gidiniz</div>
                 <div class="logo-image">
-                    <a href="/index.html"><img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770234886/Logo2_lthdlu.jpg" alt="Gidiniz Blog Logo" loading="eager"></a>
+                    <a href="/index.html"><img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770234890/Logo2_lthdlu.jpg" alt="Gidiniz Blog Logo" loading="eager" /></a>
                 </div>
                 <div class="logo-text">Blog</div>
             </div>
@@ -248,7 +188,7 @@
                 <!-- Navigation Menu -->
                 <ul class="nav-menu" id="navMenu">
                     <li><a href="/index.html" class="nav-link">Anasayfa</a></li>
-                    
+
                     <!-- Rotalar Dropdown -->
                     <li class="dropdown">
                         <a href="#" class="nav-link dropdown-toggle">
@@ -273,6 +213,21 @@
                             </li>
                             <li class="sub-dropdown">
                                 <a href="#" class="dropdown-link">
+                                    İtalya <i class="fas fa-caret-right"></i>
+                                </a>
+                                <ul class="sub-dropdown-menu">
+                                    <li><a href="/italya/roma.html">Roma</a></li>
+                                    <!--<li><a href="/italya/milano.html">Milano</a></li>
+                                    <li><a href="/italya/venedik.html">Venedik</a></li>
+                                    <li><a href="/italya/pisa.html">Pisa</a></li>
+                                    <li><a href="/italya/portofino.html">Portofino</a></li>
+                                    <li><a href="/italya/como.html">Como</a></li>
+                                    <li><a href="/italya/floransa.html">Floransa</a></li>
+                                    <li><a href="/italya/genova.html">Genova</a></li>-->
+                                </ul>
+                            </li>
+                    <!--        <li class="sub-dropdown">
+                                <a href="#" class="dropdown-link">
                                     Gemi Turu <i class="fas fa-caret-right"></i>
                                 </a>
                                 <ul class="sub-dropdown-menu">
@@ -295,21 +250,6 @@
                                 <ul class="sub-dropdown-menu">
                                     <li><a href="/isvicre/basel.html">Basel</a></li>
                                     <li><a href="/isvicre/luzern.html">Luzern</a></li>
-                                </ul>
-                            </li>
-                            <li class="sub-dropdown">
-                                <a href="#" class="dropdown-link">
-                                    İtalya <i class="fas fa-caret-right"></i>
-                                </a>
-                                <ul class="sub-dropdown-menu">
-                                    <li><a href="/italya/roma.html">Roma</a></li>
-                                    <li><a href="/italya/milano.html">Milano</a></li>
-                                    <li><a href="/italya/venedik.html">Venedik</a></li>
-                                    <li><a href="/italya/pisa.html">Pisa</a></li>
-                                    <li><a href="/italya/portofino.html">Portofino</a></li>
-                                    <li><a href="/italya/como.html">Como</a></li>
-                                    <li><a href="/italya/floransa.html">Floransa</a></li>
-                                    <li><a href="/italya/genova.html">Genova</a></li>
                                 </ul>
                             </li>
                             <li class="sub-dropdown">
@@ -352,9 +292,10 @@
                                     <li><a href="/yunanistan/mykonos.html">Mykonos</a></li>
                                 </ul>
                             </li>
+                            -->
                         </ul>
                     </li>
-                    
+
                     <!-- Faydalı Bilgiler Dropdown -->
                     <li class="dropdown">
                         <a href="#" class="nav-link dropdown-toggle">
@@ -363,10 +304,10 @@
                         <ul class="dropdown-menu">
                             <li class="sub-dropdown">
                                 <a href="#" class="dropdown-link">
-                                    Pasaportlar <i class="fas fa-caret-right"></i>
+                                    Pasaport <i class="fas fa-caret-right"></i>
                                 </a>
                                 <ul class="sub-dropdown-menu">
-                                    <li><a href="#">Pasaport Bilgileri</a></li>
+                                    <li><a href="/pasaport.html">Pasaport Bilgileri</a></li>
                                 </ul>
                             </li>
                             <li class="sub-dropdown">
@@ -374,20 +315,20 @@
                                     Vizesiz Ülkeler <i class="fas fa-caret-right"></i>
                                 </a>
                                 <ul class="sub-dropdown-menu">
-                                    <li><a href="#">Vizesiz Ülke Listesi</a></li>
+                                    <li><a href="/vizesiz-ulkeler.html">Vizesiz Ülkeler Listesi</a></li>
                                 </ul>
                             </li>
                             <li class="sub-dropdown">
                                 <a href="#" class="dropdown-link">
-                                    D�viz Kuru Hesaplama <i class="fas fa-caret-right"></i>
+                                    Kur Hesapla <i class="fas fa-caret-right"></i>
                                 </a>
                                 <ul class="sub-dropdown-menu">
-                                    <li><a href="#">Döviz Kuru Hesaplayıcı</a></li>
+                                    <li><a href="/kur-hesaplama.html">Kur Hesapla</a></li>
                                 </ul>
                             </li>
                         </ul>
                     </li>
-                    
+
                     <!-- Sosyal Sorumluluk Dropdown -->
                     <li class="dropdown sosyal-sorumluluk-dropdown">
                       <a href="#" class="nav-link dropdown-toggle sosyal-sorumluluk-toggle">
@@ -410,7 +351,6 @@
         <div class="hero-background roma">
             <div class="hero-content">
                 <h1 class="hero-title">Roma</h1>
-                <p class="hero-subtitle">Roma'nın Güzellikleri</p>
             </div>
         </div>
     </section>
@@ -425,55 +365,70 @@
                         <div class="info-card">
                             <h2 class="section-title">Roma Hakkında</h2>
                             <p>
-                                Roma (İtalyanca: Rome), İtalya'nın başkenti ve en büyük şehridir. 2.900 yıllık tarihi ile dünyanın en önemli kültürel ve tarihi merkezlerinden biri olan Roma; Vatikan Şehri, Kolezyum, Pantheon ve sayısız antik eser ile her yıl milyonlarca ziyaretçi çekmektedir. "Ebedi Şehir" (La Città Eterna) olarak anılan Roma, Antik Roma İmparatorluğu'nun başkenti olarak Batı medeniyetine yön vermiş, Rönesans döneminde ise sanat ve mimarinin kalbi olmuştur.
+                                Roma şehri İtalya'nın başkenti ve en kalabalık şehri olup, 2.7 milyon nüfusu ile Avrupa Birliği'nin de 3. en kalabalık şehridir. Vatikan Şehri, Roma sınırları içinde bulunan bağımsız bir ülke olup, dünyada bir şehir içindeki ülkenin tek mevcut örneğidir.
                             </p>
                         </div>
                     </section>
 
-                    <!-- Must Visit Places -->
+                    <!-- Photo Gallery -->
                     <section class="content-section">
-                        <h2 class="section-title"><a href="#mutlaka-gorulmesi-gereken">Mutlaka Görülmesi Gereken Yerler</a></h2>
+                        <h2 class="section-title"><a href="#mutlaka-gorulmesi-gereken">Fotoğraf Galerisi</a></h2>
+
                         <div class="gallery-grid">
                             <div class="gallery-item">
-                                <a href="#kolezyum"><img src="/images/Roma/Roma-2.jpg" alt="Kolezyum" loading="lazy"></a>
+                                <a href="#colosseum"><img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770238335/Roma-60_ja5mvn.jpg" alt="Colosseum" loading="lazy"></a>
                                 <div class="gallery-caption">
-                                    <h3><i class="fas fa-landmark"></i> Kolezyum (Colosseo)</h3>
-                                    <p>Roma'nın simgesi antik amfitiyatro.</p>
+                                    <h3><i class="fas fa-landmark"></i> Colosseum</h3>
+                                    <p>Antik dünyanın en büyük amfitiyatrosu.</p>
                                 </div>
                             </div>
                             <div class="gallery-item">
-                                <a href="#vatikan"><img src="/images/Roma/Roma-3.jpg" alt="Vatikan" loading="lazy"></a>
+                                <a href="#pantheon"><img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770238376/Roma-186_ustthr.jpg" alt="Pantheon" loading="lazy"></a>
                                 <div class="gallery-caption">
-                                    <h3><i class="fas fa-church"></i> Vatikan & Sistine Şapeli</h3>
-                                    <p>Dünyanın en küçük devleti ve sanat hazinesi.</p>
+                                    <h3><i class="fas fa-place-of-worship"></i> Pantheon</h3>
+                                    <p>Roma betonuyla yapılmış en büyük kubbe.</p>
                                 </div>
                             </div>
                             <div class="gallery-item">
-                                <a href="#trevi-cesmesi"><img src="/images/Roma/Roma-4.jpg" alt="Trevi Çeşmesi" loading="lazy"></a>
+                                <a href="#roma-forumu"><img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1775582599/roma_forum_sp4cy6.jpg" alt="Roma Forumu" loading="lazy"></a>
+                                <div class="gallery-caption">
+                                    <h3><i class="fas fa-archway"></i> Roma Forumu</h3>
+                                    <p>Antik Roma'nın geliştiği merkez bölge.</p>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <a href="#trevi-cesmesi"><img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770238376/Roma-213_jfl7pe.jpg" alt="Trevi Çeşmesi" loading="lazy"></a>
                                 <div class="gallery-caption">
                                     <h3><i class="fas fa-water"></i> Trevi Çeşmesi</h3>
-                                    <p>Barok dönemin ikonik çeşmesi.</p>
+                                    <p>Roma'nın en büyük ve ünlü barok yapısı.</p>
                                 </div>
                             </div>
                             <div class="gallery-item">
-                                <a href="#pantheon"><img src="/images/Roma/Roma-5.jpg" alt="Pantheon" loading="lazy"></a>
+                                <a href="#vatikan"><img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770238365/Roma-126_uvozpt.jpg" alt="Vatikan" loading="lazy"></a>
                                 <div class="gallery-caption">
-                                    <h3><i class="fas fa-monument"></i> Pantheon</h3>
-                                    <p>Antik dünyanın en iyi korunmuş tapınağı.</p>
+                                    <h3><i class="fas fa-church"></i> Vatikan</h3>
+                                    <p>Roma sınırları içindeki bağımsız ülke.</p>
                                 </div>
                             </div>
                             <div class="gallery-item">
-                                <a href="#roma-forumu"><img src="/images/Roma/Roma-6.jpg" alt="Roma Forumu" loading="lazy"></a>
+                                <a href="#ispanyol-merdivenleri"><img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770238379/Roma-247_lujl03.jpg" alt="İspanyol Merdivenleri" loading="lazy"></a>
                                 <div class="gallery-caption">
-                                    <h3><i class="fas fa-columns"></i> Roma Forumu & Palatine</h3>
-                                    <p>Antik şehrin kalbi; imparatorluk kalıntıları.</p>
+                                    <h3><i class="fas fa-stairs"></i> İspanyol Merdivenleri</h3>
+                                    <p>18. yy barok mimarisinin zarif örneği.</p>
                                 </div>
                             </div>
                             <div class="gallery-item">
-                                <a href="#borghese-galerisi"><img src="/images/Roma/Roma-7.jpg" alt="Borghese Galerisi" loading="lazy"></a>
+                                <a href="#kutsal-melek-kalesi"><img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770238369/Roma-144_yoxpqp.jpg" alt="Kutsal Melek Kalesi" loading="lazy"></a>
                                 <div class="gallery-caption">
-                                    <h3><i class="fas fa-palette"></i> Borghese Galerisi</h3>
-                                    <p>Bernini heykelleri ve Caravaggio tabloları.</p>
+                                    <h3><i class="fas fa-chess-rook"></i> Kutsal Melek Kalesi</h3>
+                                    <p>İmparator Hadrianus'un anıt mezarı.</p>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <a href="#aynali-kilise"><img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1775582598/1692475770431_ybwdu7.jpg" alt="Sant'Ignazio Kilisesi" loading="lazy"></a>
+                                <div class="gallery-caption">
+                                    <h3><i class="fas fa-eye"></i> Aynalı Kilise</h3>
+                                    <p>Göz alıcı sahte kubbe freskiyle ünlü kilise.</p>
                                 </div>
                             </div>
                         </div>
@@ -483,58 +438,61 @@
                     <section class="content-section">
                         <div class="highlight-box">
                             <h3><i class="fas fa-star"></i> Roma'nın Öne Çıkan Özellikleri</h3>
-                            <p>Roma, "Ebedi Şehir" (Città Eterna) olarak bilinir; antik, Ortaçağ ve Rönesans dönemi eserleriyle eşsiz bir açık hava müzesidir.</p>
+                            <p>
+                                Roma, her köşesinden tarih fışkıran, antik medeniyetin izlerini modern yaşamla harmanlayan eşsiz bir şehirdir. "Ebedi Şehir" unvanıyla tanınan Roma; Colosseum, Pantheon ve Vatikan gibi dünya miraslarına ev sahipliği yapar.
+                            </p>
                             <ul>
-                                <li><i class="fas fa-landmark"></i> <b>Antik Roma Mirası:</b> Kolezyum, Forum Romanum ve Palatine Tepesi gibi eserler Roma İmparatorluğu'nun ihtişamını bugüne taşır.</li>
-                                <li><i class="fas fa-church"></i> <b>Vatikan:</b> Dünyanın en küçük bağımsız devleti; St. Peter Bazilikası ve Sistine Şapeli, insanlığın en büyük sanat hazineleri arasındadır.</li>
-                                <li><i class="fas fa-water"></i> <b>Çeşmeler ve Meydanlar:</b> Trevi Çeşmesi, Piazza Navona ve Campo de' Fiori gibi ikonik meydanlar şehir hayatının tam merkezindedir.</li>
-                                <li><i class="fas fa-utensils"></i> <b>Dünya Mutfağı:</b> Carbonara, Cacio e Pepe, Pizza al Taglio ve taze gelato gibi lezzetler için Roma vazgeçilmez bir destinasyondur.</li>
-                                <li><i class="fas fa-shopping-bag"></i> <b>Alışveriş:</b> Via Condotti'den Porta Portese'ye kadar her bütçeye uygun alışveriş seçeneği sunar.</li>
+                                <li><i class="fas fa-utensils"></i> <b>Lokanta Kültürü:</b> İtalya'da küçük ve samimi lokantalar "Osteria", orta büyüklükte olanlar "Trattoria", en büyük ve şık olanlar "Ristorante" olarak geçer. Hızlı bir atıştırma için osteriaları, geleneksel ve bütçe dostu yemekler için trattoriaları, özel günleriniz için ristoranteleri tercih edebilirsiniz.</li>
+                                <li><i class="fas fa-tint"></i> <b>İçme Suyu Çeşmeleri:</b> Roma'da her köşe başında bir içme suyu çeşmesi karşınıza çıkar. Yanınızda mutlaka termos götürün, marketten su almanıza gerek yoktur.</li>
+                                <li><i class="fas fa-map-signs"></i> <b>Ara Sokaklar:</b> Meydanları gören mekanlar genellikle pahalı olur. Ara sokaklardaki sıcak mekanlarda da çok lezzetli yemekler yiyebilirsiniz.</li>
+                                <li><i class="fas fa-walking"></i> <b>Kaybolun:</b> Roma her köşesinden tarih fışkıran bir şehirdir. "Bu yol güzel bir yere çıkmaz" diye düşünüp geri dönmeyin; az ilerde çok güzel bir bina veya sürpriz bir sokak sizi bekliyor olabilir. Kendinize küçük kaybolmalar yaşatın.</li>
                             </ul>
                         </div>
                     </section>
 
-                    <!-- Practical Information -->
+                    <!-- Practical Information Cards -->
                     <section class="content-section">
                         <h2 class="section-title">Pratik Bilgiler</h2>
+
                         <div class="gallery-grid">
+
                             <div class="info-card"><a href="#ulasim" class="info-card-link">
                                 <h3><i class="fas fa-plane"></i> Ulaşım</h3>
                                 <ul class="info-list">
-                                    <li><i class="fas fa-check"></i> Fiumicino (FCO) Havalimanı</li>
-                                    <li><i class="fas fa-check"></i> Leonardo Express treni (30dk)</li>
-                                    <li><i class="fas fa-check"></i> Metro A ve B hatları</li>
-                                    <li><i class="fas fa-check"></i> Roma Pass ile sınırsız ulaşım</li>
+                                    <li><i class="fas fa-check"></i> Direkt uçuşlar</li>
+                                    <li><i class="fas fa-check"></i> Şehir içi ulaşım ağı</li>
+                                    <li><i class="fas fa-check"></i> Metro ve otobüs</li>
+                                    <li><i class="fas fa-check"></i> Cruise limanı bağlantısı</li>
                                 </ul>
                                 </a>
                             </div>
                             <div class="info-card"><a href="#konaklama" class="info-card-link">
                                 <h3><i class="fas fa-bed"></i> Konaklama</h3>
                                 <ul class="info-list">
-                                    <li><i class="fas fa-check"></i> Trastevere (otantik atmosfer)</li>
-                                    <li><i class="fas fa-check"></i> Campo de' Fiori bölgesi</li>
-                                    <li><i class="fas fa-check"></i> Termini çevresi (bütçe dostu)</li>
-                                    <li><i class="fas fa-check"></i> Prati (Vatikan yakını)</li>
+                                    <li><i class="fas fa-check"></i> Otel seçenekleri</li>
+                                    <li><i class="fas fa-check"></i> Pansiyon ve hostel</li>
+                                    <li><i class="fas fa-check"></i> Merkezi konumda konaklama</li>
+                                    <li><i class="fas fa-check"></i> Butik otel seçenekleri</li>
                                 </ul>
                                 </a>
                             </div>
                             <div class="info-card"><a href="#mutfak" class="info-card-link">
                                 <h3><i class="fas fa-utensils"></i> Mutfak</h3>
                                 <ul class="info-list">
-                                    <li><i class="fas fa-check"></i> Carbonara & Cacio e Pepe</li>
-                                    <li><i class="fas fa-check"></i> Pizza al Taglio</li>
-                                    <li><i class="fas fa-check"></i> Supplì (kızartılmış pirinç top)</li>
-                                    <li><i class="fas fa-check"></i> Taze gelato</li>
+                                    <li><i class="fas fa-check"></i> Yerel lezzetler</li>
+                                    <li><i class="fas fa-check"></i> Geleneksel yemekler</li>
+                                    <li><i class="fas fa-check"></i> Restoran seçenekleri</li>
+                                    <li><i class="fas fa-check"></i> Kafe ve bar</li>
                                 </ul>
                                 </a>
                             </div>
                             <div class="info-card"><a href="#alisveris" class="info-card-link">
                                 <h3><i class="fas fa-shopping-bag"></i> Alışveriş</h3>
                                 <ul class="info-list">
-                                    <li><i class="fas fa-check"></i> Via Condotti (lüks moda)</li>
-                                    <li><i class="fas fa-check"></i> Campo de' Fiori Pazarı</li>
-                                    <li><i class="fas fa-check"></i> Porta Portese (antika pazar)</li>
-                                    <li><i class="fas fa-check"></i> El yapımı deri ürünler</li>
+                                    <li><i class="fas fa-check"></i> Alışveriş merkezleri</li>
+                                    <li><i class="fas fa-check"></i> Hediyelik eşya dükkanları</li>
+                                    <li><i class="fas fa-check"></i> Yerel pazarlar</li>
+                                    <li><i class="fas fa-check"></i> Butik mağazalar</li>
                                 </ul>
                                 </a>
                             </div>
@@ -545,71 +503,81 @@
                         <div>
                             <h2 class="section-title">Ulaşım</h2>
                             <h3>Nasıl Gidilir?</h3>
-                            <p>Türkiye'den Roma'ya direkt uçuşlar mevcuttur. İstanbul–Roma arası uçuş süresi yaklaşık 2,5–3 saattir. THY, Pegasus ve İtalyan havayolları (ITA Airways, Ryanair) başlıca seçeneklerdir.</p>
+                            <p>Türkiye'den direkt uçuşlar mevcut. İstanbul – Roma arası uçuş süresi yaklaşık 2 saat 45 dakikadır. En sık kullanılan Fiumicino Leonardo Da Vinci Havalimanı'dır.</p>
+
                             <h3>Havalimanından Şehre</h3>
+                            <p>Fiumicino Havalimanı'ndan şehir merkezine (Roma Termini istasyonu) ulaşım seçenekleri:</p>
                             <ul>
-                                <li><b>Roma Fiumicino (FCO):</b> Ana uluslararası havalimanı. <b>Leonardo Express</b> treni ile Roma Termini'ye 30 dakikada (~14€). Daha uygun seçenek FL1 bölgesel treni (~8€, 45dk). Servis otobüsü ve taksi (~50–60€) alternatifleri de mevcut.</li>
-                                <li><b>Roma Ciampino (CIA):</b> Düşük maliyetli havayolları kullanır. Terravision veya SIT Bus servislerle Termini'ye 40 dakikada ulaşım.</li>
+                                <li><b>Tren (Trenitalia):</b> 30 dakikada şehir merkezine ulaşım mümkündür (8-14€). <a href="https://www.trenitalia.com" target="_blank" rel="noopener noreferrer">trenitalia.com</a></li>
+                                <li><b>Otobüs (Terravision):</b> Havalimanından Termini istasyonuna otobüs seçeneği (7€).</li>
                             </ul>
+
+                            <h3>Cruise Limanı</h3>
+                            <p>Roma Civitavecchia Limanı pek çok cruise gemisinin uğrak noktasıdır. Limandan şehir merkezine tren ile 1 saatte ulaşmak mümkündür (4.60€).</p>
+
                             <h3>Şehir İçi Ulaşım</h3>
-                            <p>Roma'da toplu taşıma ATAC tarafından işletilmektedir. Metro (A ve B hatları), tramvay ve yoğun otobüs ağı mevcuttur.</p>
+                            <p>Roma'da toplu taşıma; metro, otobüs, tramvay ve banliyö trenlerini kapsar. Toplu taşıma için biletler online olarak veya istasyonlardaki otomatlardan alınabilir.</p>
                             <ul>
-                                <li><b>Roma Pass:</b> 48 veya 72 saatlik seçenekleriyle sınırsız toplu taşıma ve ücretsiz/indirimli müze girişi sağlar.</li>
-                                <li><b>Tekil Bilet:</b> 1,50€; 100 dakika geçerlidir (metro dahil).</li>
-                                <li><b>Not:</b> Tarihi merkezdeki pek çok eser (Kolezyum, Forum, Pantheon, Navona) birbirine yürüme mesafesindedir.</li>
+                                <li><b>BIT (100 Dakika):</b> 1.50€ - Tek yönlü, tek metro girişi ve aktarmalı otobüs/tramvay.</li>
+                                <li><b>ROMA 24H / 48H / 72H:</b> 7€ / 12.50€ / 18€ - Süre sınırı içinde sınırsız ulaşım.</li>
+                                <li><b>CIS (Haftalık Bilet):</b> 24€ - 7 gün geçerli.</li>
                             </ul>
-                            <p><i class="fas fa-info-circle"></i> Toplu taşıma bilgi: <a href="https://www.atac.roma.it" target="_blank" rel="noopener noreferrer">atac.roma.it</a></p>
                         </div>
                     </section>
 
                     <section id="konaklama" class="content-section">
                         <h2 class="section-title">Konaklama</h2>
-                        <p>Roma'da konaklama bölgesi seçimi şehir içi ulaşımı büyük ölçüde etkiler. Yüksek sezonda (Nisan–Ekim ve yılbaşı) erken rezervasyon yapılması önerilir.</p>
+                        <p>Roma'da konaklama için en ideal bölgeler Pantheon, Piazza Navona, Termini ve Trastevere'dir. Bunların içerisinde en bütçe dostu Termini bölgesidir.</p>
+
                         <h3>Konum Seçimi</h3>
                         <ul>
-                            <li><b>Trastevere:</b> Arnavut kaldırımlı sokaklarda otantik Roma atmosferi; lezzetli restoranlar ve canlı gece hayatı. Vatikan'a yürüyüş mesafesinde.</li>
-                            <li><b>Campo de' Fiori & Navona:</b> Tarihi merkez; günlük pazar ve gece hayatıyla canlı bir bölge. Fiyatlar görece yüksek.</li>
-                            <li><b>Prati:</b> Vatikan'ın hemen karşısında; daha sakin, yerel mahalle atmosferi ve uygun fiyatlı seçenekler.</li>
-                            <li><b>Termini çevresi:</b> Metro bağlantısı için ideal; her bütçeye hitap eden otel ve hostel bolluğu.</li>
+                            <li><b>Pantheon / Piazza Navona:</b> Şehrin tarihi kalbinde, gezilecek yerlere yürüme mesafesinde. Turistik ve nispeten pahalı bölge.</li>
+                            <li><b>Termini:</b> Roma'nın merkez tren istasyonu çevresinde; ulaşım açısından pratik, en bütçe dostu bölge.</li>
+                            <li><b>Trastevere:</b> Dar sokakları, renkli binaları ve yerel atmosferiyle Roma'nın en otantik mahallesi. Akşamları canlı restoran ve bar hayatı sunar.</li>
                         </ul>
+                        <p><i class="fas fa-lightbulb"></i> <b>İpucu:</b> Temmuz ve Ağustos ayları Roma'da oldukça sıcak geçmekte olup, zaman zaman yüksek sıcaklık ve sıcak çarpması uyarı anonsları yapılmaktadır. Daha rahat gezebilmek için seyahatinizi bu aylar dışında yapmayı tercih edebilirsiniz.</p>
                     </section>
 
                     <section id="mutfak" class="content-section">
                         <h2 class="section-title">Mutfak</h2>
-                        <p>Roma mutfağı sade, güçlü ve özgün lezzetleriyle dünya mutfakları arasında kendine sağlam bir yer edinmiştir. "Cucina Romana" olarak bilinen geleneksel mutfak; birkaç kaliteli malzemeyle harikalar yaratır.</p>
-                        <h3>Mutlaka Denenmesi Gereken Yemekler</h3>
+                        <p>Roma mutfağı İtalya'nın en zengin ve lezzetli geleneklerinden birine sahiptir. Taze malzemeler, basit ama etkili tarifler ve yüzyıllık gelenekler Roma'yı bir gurme cenneti yapar.</p>
+
+                        <h3>Mutlaka Denenmesi Gereken Lezzetler</h3>
                         <ul>
-                            <li><b>Cacio e Pepe:</b> Sadece Pecorino Romano peyniri ve karabiberle hazırlanan makarna; görünüşte sade ama tekniği çok ince. Roma'nın en ikonik yemeği.</li>
-                            <li><b>Carbonara:</b> Yumurta, guanciale (yanaktan domuz yağı) ve Pecorino ile yapılan kremamsı makarna – doğrusu <em>kesinlikle kremasız!</em></li>
-                            <li><b>Amatriciana:</b> Domates sosu, guanciale ve Pecorino Romano ile hazırlanan pikant makarna sosu.</li>
-                            <li><b>Pizza al Taglio:</b> Dilim satılan Roma pizzası; kalın ve çıtır dip. Tartışmasız en iyi sokak yiyeceği.</li>
-                            <li><b>Supplì:</b> Domates soslu pilavdan yapılan, içi mozzarellalı kızartılmış top; Roma'nın klasik sokak lezzeti.</li>
-                            <li><b>Gelato:</b> Giolitti (Via degli Uffici del Vicario) ve Fatamorgana tavsiye edilir.</li>
+                            <li><b>Makarna:</b> Roma'da hemen her yerde el yapımı çok lezzetli makarnalar yiyebilirsiniz. Carbonara ve Lazanya mutlaka denenmeli. <b>Mekan tavsiyesi:</b> Tonnarello</li>
+                            <li><b>Pizza:</b> Pizza boyutları oldukça büyüktür. Çok aç değilseniz dilim pizza veya paylaşımlı sipariş etmeyi unutmayın. Mozzarella toplarını mutlaka deneyin. Google Haritalar'da 4.5 puan üstü mekanları güvenle tercih edebilirsiniz.</li>
+                            <li><b>Tiramisu:</b> İtalya'daki tiramisu Türkiye'de yediklerinizden çok daha hafif ve lezzetlidir. <b>Mekan tavsiyesi:</b> Pompi</li>
+                            <li><b>Dondurma:</b> Colosseum'a giden ana caddede çok lezzetli dondurmacılar var. Kuyrukları takip edin :)</li>
                         </ul>
-                        <h3>Nerede Yenir?</h3>
-                        <ul>
-                            <li><b>Trattoria:</b> Geleneksel aile işletmeleri; günlük menü ile uygun fiyatlı, samimi Roma yemekleri.</li>
-                            <li><b>Bar (İtalyan Kafesi):</b> Tezgâhta ayakta içilen espresso çok daha ucuz ve lezzetli. Cappuccino geleneksel olarak sadece sabah içilir.</li>
-                            <li><b>Campo de' Fiori Pazarı:</b> Sabahları taze malzeme, öğle vakti kafeler, akşamları aperitivo zamanı.</li>
-                        </ul>
+                        <p><i class="fas fa-lightbulb"></i> <b>Tavsiye:</b> Pizza, makarna, lazanya ve tiramisunun hepsini aynı yerde bulabileceğiniz, bütçe dostu, sakin ve lezzetli yemekleri olan <b>Margherita Osteria Pizzeria (Alla Scrofa)</b>'yı denemenizi tavsiye ederiz.</p>
+                        <p><i class="fas fa-suitcase-rolling"></i> <b>İpucu:</b> Marketlerde uygun fiyata valize atıp getirmelik çok kaliteli makarnalar bulabilirsiniz.</p>
+
+                        <div class="thumb-grid">
+                            <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1775582592/roma_pizza_1_zcppqb.jpg" alt="Roma pizza" loading="lazy">
+                            <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1775582595/roma_pizza_2_tzdgji.jpg" alt="Roma pizza detay" loading="lazy">
+                            <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1775582599/roma_lazanya_tzt7ba.jpg" alt="Roma lazanya" loading="lazy">
+                            <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1775582594/roma_tiramisu_iwlhgb.jpg" alt="Roma tiramisu" loading="lazy">
+                        </div>
                     </section>
 
                     <section id="alisveris" class="content-section">
                         <h2 class="section-title">Alışveriş</h2>
-                        <p>Roma, moda ve zanaatten antikalara kadar geniş bir yelpazede alışveriş sunar.</p>
+                        <p>Roma alışveriş açısından hem lüks hem de yerel seçenekler sunar.</p>
+
                         <h3>Alışveriş Bölgeleri</h3>
                         <ul>
-                            <li><b>Via Condotti & Via Borgognona:</b> Gucci, Fendi, Prada, Valentino gibi İtalyan lüks markalar; Piazza di Spagna çevresi.</li>
-                            <li><b>Via del Corso:</b> Zara, H&M ve İtalyan zincir mağazaları; her bütçeye uygun alışveriş.</li>
-                            <li><b>Trastevere & Monti:</b> Butik tasarım dükkanları, vintage giyim, yerel mücevherci atölyeleri.</li>
-                            <li><b>Porta Portese:</b> Her Pazar sabahı kurulan devasa antika ve ikinci el pazarı; geniş alanda her şey bulunabilir.</li>
+                            <li><b>Via del Corso:</b> Roma'nın ana alışveriş caddesi; zincir mağazalar ve popüler markalar.</li>
+                            <li><b>Via Condotti:</b> İspanyol Merdivenleri yakınında, lüks mağazalar ve tasarımcı markalar.</li>
+                            <li><b>Trastevere:</b> Yerel dükkanlar, el yapımı ürünler ve vintage mağazalar.</li>
+                            <li><b>Porta Portese Pazarı (Pazar günleri):</b> Roma'nın en büyük açık hava bit pazarı; antikalar, kıyafetler ve hediyelikler.</li>
                         </ul>
+
                         <h3>Popüler Hediyelikler</h3>
                         <ul>
-                            <li><b>El Yapımı Deri:</b> Cüzdan, çanta ve kemer; özellikle San Lorenzo Pazarı çevresinden.</li>
-                            <li><b>Limoncello:</b> Limon likörü; tüm Roma'da bulunur.</li>
-                            <li><b>Pasta Malzemeleri:</b> Artisan makarna ve İtalyan baharat-sos setleri.</li>
-                            <li><b>Koleksiyon Madalyonları:</b> Vatikan mağazalarından kilise motifli hediyelikler.</li>
+                            <li><b>İtalyan Makarna ve Zeytinyağı:</b> Marketlerde çok kaliteli ve uygun fiyatlı seçenekler bulunur.</li>
+                            <li><b>Deri Ürünler:</b> İtalyan deri çantalar, kemerler ve cüzdanlar.</li>
+                            <li><b>Limoncello:</b> İtalya'ya özgü limon likörü.</li>
+                            <li><b>Murano Camı:</b> El yapımı cam takılar ve dekoratif objeler.</li>
                         </ul>
                     </section>
 
@@ -617,117 +585,136 @@
                         <div>
                             <h2 class="section-title">Gezilecek Yerler</h2>
 
-                            <div id="kolezyum">
-                                <h3>Kolezyum (Colosseo)</h3>
-                                <p>MS 72–80 yılları arasında inşa edilmiş, yaklaşık 50.000 seyirci kapasiteli dev amfitiyatro. Antik dönemde gladyatör dövüşleri ve vahşi hayvan avları düzenlenirdi. Günümüzde Roma'nın ve İtalya'nın en çok ziyaret edilen anıtıdır.</p>
-                                <ul>
-                                    <li><b>Palatine Tepesi ile Birleşik Bilet:</b> Kolezyum, Forum Romanum ve Palatine Tepesi için ortak bilet alınması hem ekonomik hem zaman kazandırıcıdır.</li>
-                                    <li><b>Yer Altı Turu:</b> Gladyatörlerin bekletildiği alanları görmek için ek ücretli özel tur mevcuttur.</li>
-                                    <li><b>En İyi Ziyaret Saati:</b> Sabahın erken saatleri veya geç öğleden sonra; 10:00–14:00 arası en kalabalık.</li>
-                                </ul>
-                                <p><i class="fas fa-info-circle"></i> Resmi web sitesi: <a href="https://www.colosseo.it" target="_blank" rel="noopener noreferrer">colosseo.it</a></p>
-                                <img src="/images/Roma/Roma-3.jpg" alt="Kolezyum Roma" loading="lazy">
-                            </div>
-
-                            <div id="vatikan">
-                                <h3>Vatikan & Sistine Şapeli</h3>
-                                <p>Dünya'nın en küçük egemen devleti olan Vatikan Şehri (0,44 km²), Roma'nın içinde konumlanmıştır. Vatikan Müzeleri bünyesindeki Sistine Şapeli'nde Michelangelo'nun olağanüstü tavan freskleri ve "Son Yargı" eseri sergilenmektedir.</p>
-                                <ul>
-                                    <li><b>Sistine Şapeli:</b> 1508–1512 yılları arasında Michelangelo tarafından boyanmış tavan freskleri; "Âdem'in Yaratılışı" en tanınmış sahnedir.</li>
-                                    <li><b>St. Peter Bazilikası:</b> Dünyanın en büyük kiliselerinden biri; Michelangelo'nun Pietà heykeli içeridedir. Çatıya çıkarak Roma panoraması izlenebilir.</li>
-                                    <li><b>Rezervasyon:</b> Vatikan Müzeleri için bilet kesinlikle önceden alınmalıdır; aksi takdirde saatlerce kuyruk beklenir.</li>
-                                </ul>
-                                <p><i class="fas fa-info-circle"></i> Resmi web sitesi: <a href="https://www.museivaticani.va" target="_blank" rel="noopener noreferrer">museivaticani.va</a></p>
-                                <img src="/images/Roma/Roma-5.jpg" alt="Vatikan Roma" loading="lazy">
-                            </div>
-
-                            <div id="trevi-cesmesi">
-                                <h3>Trevi Çeşmesi (Fontana di Trevi)</h3>
-                                <p>1762'de tamamlanan Barok şaheser; Aqua Virgo su kanalının son noktasında konumlanmaktadır. Yüksekliği 26 metre, genişliği 49 metredir. Efsaneye göre çeşmeye sırtı dönük para atanlar Roma'ya geri döner.</p>
-                                <ul>
-                                    <li><b>En İyi Ziyaret Zamanı:</b> Sabahın çok erken saatleri (07:00–08:00) veya gece ışıklandırmasıyla. Öğle vakti son derece kalabalıktır.</li>
-                                    <li><b>Yakında:</b> Giolitti dondurma dükkanı burada; Trevi'ye giderken çeşme ile birlikte planlanabilir.</li>
-                                </ul>
-                                <img src="/images/Roma/Roma-7.jpg" alt="Trevi Çeşmesi Roma" loading="lazy">
-                            </div>
-
-                            <div id="pantheon">
-                                <h3>Pantheon</h3>
-                                <p>MS 125'te İmparator Hadrian döneminde yeniden inşa edilmiş, beton kubbesiyle antik dünyanın en iyi korunmuş yapısıdır. Çapı 43 metre olan açık kubbe (oculus) iç mekânı doğal ışıkla aydınlatır. Daha önce tüm tanrılara adanmış tapınak olarak kullanılan yapı, günümüzde kilise olarak hizmet vermektedir. Ressam Raphael ve İtalya Kral'larının mezarları burada yer alır.</p>
-                                <p><i class="fas fa-info-circle"></i> Resmi web sitesi: <a href="https://www.pantheonroma.com" target="_blank" rel="noopener noreferrer">pantheonroma.com</a></p>
-                                <img src="/images/Roma/Roma-8.jpg" alt="Pantheon Roma" loading="lazy">
-                            </div>
-
-                            <div id="roma-forumu">
-                                <h3>Roma Forumu & Palatine Tepesi</h3>
-                                <p>Antik Roma'nın siyasi, dinî ve ticaret merkezi olan Forum Romanum; imparatorluk döneminin kalıntılarıyla günümüze ulaşmaktadır. Rostra kürsüsü, Vestal Kızları Tapınağı, Titus Zafer Takı ve Septimius Severus Kemeri öne çıkan yapılardandır.</p>
-                                <ul>
-                                    <li><b>Palatine Tepesi:</b> Roma'nın 7 tepesinden biri; imparatorluk saraylarının kalıntıları ve şehrin panoramik manzarası.</li>
-                                    <li><b>Birleşik Bilet:</b> Forum, Palatine ve Kolezyum için ortak bilet tavsiye edilir.</li>
-                                </ul>
-                                <img src="/images/Roma/Roma-9.jpg" alt="Roma Forumu" loading="lazy">
-                            </div>
-
-                            <div id="borghese-galerisi">
-                                <h3>Borghese Galerisi (Galleria Borghese)</h3>
-                                <p>17. yüzyılda Kardinal Borghese tarafından toplanan koleksiyonu barındıran bu müze; Bernini'nin mermeri sanki diri gibi işlediği heykellerinin (Apollon ve Daphne, Proserpina'nın Kaçırılışı) ve Caravaggio tablolarının bulunduğu dünyanın en seçkin sanat müzelerinden biridir. Villa Borghese parkı içindedir.</p>
-                                <ul>
-                                    <li><b>Rezervasyon Şart:</b> Ziyaretçi sayısı sınırlı (2 saatlik seans); bilet kesinlikle önceden alınmalıdır.</li>
-                                    <li><b>Park:</b> Villa Borghese parkı ücretsiz; piknik ve bisiklet için mükemmel bir alan.</li>
-                                </ul>
-                                <p><i class="fas fa-info-circle"></i> Resmi web sitesi: <a href="https://www.galleriaborghese.it" target="_blank" rel="noopener noreferrer">galleriaborghese.it</a></p>
-                                <img src="/images/Roma/Roma-10.jpg" alt="Borghese Galerisi Roma" loading="lazy">
+                        <div id="colosseum">
+                            <h3>Colosseum</h3>
+                            <p>
+                                M.S 72-80 yılları arasında inşa edilen, gladyatör dövüşlerine, infazlara ve dramatik gösterilere ev sahipliği yapan antik dünyanın en büyük amfitiyatrosudur. Roma'nın en ikonik yapısı olarak kabul edilir.
+                            </p>
+                            <div class="thumb-grid">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770238335/Roma-60_ja5mvn.jpg" alt="Colosseum yakın görünüm" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770238316/Roma_4_r6ybsb.jpg" alt="Colosseum genel görünüm" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770238313/Roma_3_kd16bk.jpg" alt="Colosseum detay" loading="lazy">
                             </div>
                         </div>
+
+                        <div id="pantheon">
+                            <h3>Pantheon</h3>
+                            <p>
+                                Pantheon (Yunanca "tüm Tanrılar"); temelleri M.Ö. 27 yılında atılan, 2 kez yangında zarar görünce M.S 120 yılında Hadrian tarafından yeniden inşa edilen tapınaktır. Bugün Hristiyan bazilikası olarak hizmet vermektedir. Roma betonuyla yapılmış en büyük kubbe ve kubbenin en üst kısmında gökyüzünden ışık alan okülus ile Roma'nın en ikonik yapılarından biridir.
+                            </p>
+                            <p><i class="fas fa-lightbulb"></i> <b>İpucu:</b> Pantheon çok yoğun bir tapınaktır. Nakit kuyruğu uzun olmakta, zaman zaman online ödeme yöntemleriyle ilgili de problem yaşanmaktadır. Gitmeden önce biletinizi almayı düşünebilirsiniz.</p>
+                            <div class="thumb-grid">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1775582605/roma_pantheon_2_pcgbua.jpg" alt="Pantheon kubbe" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770238376/Roma-186_ustthr.jpg" alt="Pantheon cephesi" loading="lazy">
+                            </div>
+                        </div>
+
+                        <div id="roma-forumu">
+                            <h3>Roma Forumu</h3>
+                            <p>
+                                Antik Roma'nın geliştiği merkez bölgesidir. Roma çağında kentsel alanların nasıl kullanıldığını açık bir şekilde göstermesi nedeniyle kalıntılar ünlü olmuştur.
+                            </p>
+                            <div class="thumb-grid">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1775582599/roma_forum_sp4cy6.jpg" alt="Roma Forumu kalıntıları" loading="lazy">
+                            </div>
+                        </div>
+
+                        <div id="trevi-cesmesi">
+                            <h3>Trevi Çeşmesi</h3>
+                            <p>
+                                Roma'nın en büyük ve ünlü barok yapısı üç yolun kesişiminde yer alır, bu sebeple "üç yol (trevi)" ismini almıştır. Deniz tanrısı Neptün'ün devasa heykeli ile süslüdür.
+                            </p>
+                            <div class="thumb-grid">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770238376/Roma-213_jfl7pe.jpg" alt="Trevi Çeşmesi" loading="lazy">
+                            </div>
+                        </div>
+
+                        <div id="ispanyol-merdivenleri">
+                            <h3>İspanyol Merdivenleri</h3>
+                            <p>
+                                Piazza di Spagna ile Piazza Trinità dei Monti arasında bulunan bir dik yamaç merdivenidir. Merdiven üzerinde Trinità dei Monti kilisesi bulunmaktadır. 18. yüzyıl barok mimarisinin en zarif örneklerinden olan merdivenler 135 basamaktan oluşmaktadır.
+                            </p>
+                            <div class="thumb-grid">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770238379/Roma-247_lujl03.jpg" alt="İspanyol Merdivenleri" loading="lazy">
+                            </div>
+                        </div>
+
+                        <div id="kutsal-melek-kalesi">
+                            <h3>Kutsal Melek Kalesi (Castel Sant'Angelo)</h3>
+                            <p>
+                                İmparator Hadrianus tarafından MS 123-135 yılları arasında anıt mezar olarak yaptırılan, daha sonra papalık kalesi ve hapishane olarak kullanılan ikonik bir müzedir.
+                            </p>
+                            <p>
+                                Adını MS 590 yılında Papa I. Gregory'nin veba salgını sırasında kalenin tepesinde kılıcını kınına sokan Başmelek Mikail'i gördüğüne dair efsaneden alır. Bu vizyon, salgının sona erdiğinin bir işareti sayılmış ve kalenin tepesine bir melek heykeli yerleştirilerek yapı bu isimle anılmıştır.
+                            </p>
+                            <div class="thumb-grid">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770238369/Roma-144_yoxpqp.jpg" alt="Kutsal Melek Kalesi" loading="lazy">
+                            </div>
+                        </div>
+
+                        <div id="aynali-kilise">
+                            <h3>Sant'Ignazio Kilisesi (Aynalı Kilise)</h3>
+                            <p>
+                                17. yüzyılda bütçe yetersizliği nedeniyle yapılamayan gerçek bir kubbenin yerine, sanatçı Andrea Pozzo tarafından yapılan göz alıcı bir "sahte kubbe" freskini yansıtır. Yere yerleştirilen ayna, ziyaretçilerin bu ustaca perspektif oyununu en doğru açıyla görmelerini ve fotoğraf çekmelerini sağlar.
+                            </p>
+                            <div class="thumb-grid">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1775582598/1692475770431_ybwdu7.jpg" alt="Sant'Ignazio Kilisesi aynalı kubbe" loading="lazy">
+                            </div>
+                        </div>
+
+                        <div id="st-john-lateran">
+                            <h3>St. John Lateran Baş Bazilikası</h3>
+                            <p>
+                                Roma piskoposunun ve dünya çapındaki Katolik Kilisesi'nin başı olan Papa'nın makamı olarak hizmet vermektedir. Dünyadaki tek "başbazilika" olan bu yapı, yaklaşık dört kilometre uzaklıkta bulunan Vatikan Şehri'nin dışında yer almaktadır. İçerisinde büyük boyutlarda 12 havarinin heykelleri bulunmaktadır.
+                            </p>
+                            <div class="thumb-grid">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770238311/Roma_2_byluxe.jpg" alt="St. John Lateran Bazilikası" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770238319/Roma-5_tgdkrb.jpg" alt="St. John Lateran iç mekan" loading="lazy">
+                            </div>
+                        </div>
+
+                        <div id="vatikan">
+                            <h3>Vatikan</h3>
+                            <p>
+                                Vatikan Şehri, Roma sınırları içinde bulunan bağımsız bir ülke olup, dünyada bir şehir içindeki ülkenin tek mevcut örneğidir. Aziz Petrus Bazilikası, Sistina Şapeli ve Vatikan Müzeleri dünyanın en önemli sanat ve mimari eserlerini barındırır.
+                            </p>
+                            <p><i class="fas fa-lightbulb"></i> <b>İpucu:</b> Vatikan'a girmeyi düşünüyorsanız biletinizi önceden alın.</p>
+                            <div class="thumb-grid">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770238365/Roma-126_uvozpt.jpg" alt="Vatikan Aziz Petrus Meydanı" loading="lazy">
+                                <img src="https://res.cloudinary.com/dllpts1ha/image/upload/v1770238362/Roma-125_jfybmt.jpg" alt="Vatikan detay" loading="lazy">
+                            </div>
+                        </div>
+
+                    </div>
                     </section>
 
-                    <!-- Photo Gallery -->
+                    <!-- Practical Tips -->
                     <section class="content-section">
-                        <h2 class="section-title">Fotoğraf Galerisi</h2>
-                        <div class="gallery-grid">
-                            <div class="gallery-item">
-                                <img src="/images/Roma/Roma-2.jpg" alt="Roma Manzarası" loading="lazy">
-                                <div class="gallery-caption"><h3>Roma Manzarası</h3></div>
-                            </div>
-                            <div class="gallery-item">
-                                <img src="/images/Roma/Roma-4.jpg" alt="Tarihi Sokaklar" loading="lazy">
-                                <div class="gallery-caption"><h3>Tarihi Sokaklar</h3></div>
-                            </div>
-                            <div class="gallery-item">
-                                <img src="/images/Roma/Roma-6.jpg" alt="Roma'dan Kareler" loading="lazy">
-                                <div class="gallery-caption"><h3>Roma'dan Kareler</h3></div>
-                            </div>
-                            <div class="gallery-item">
-                                <img src="/images/Roma/Roma-11.jpg" alt="Gece Manzarası" loading="lazy">
-                                <div class="gallery-caption"><h3>Gece Manzarası</h3></div>
-                            </div>
-                            <div class="gallery-item">
-                                <img src="/images/Roma/Roma-12.jpg" alt="Roma'da Gezinti" loading="lazy">
-                                <div class="gallery-caption"><h3>Roma'da Gezinti</h3></div>
-                            </div>
-                            <div class="gallery-item">
-                                <img src="/images/Roma/Roma-13.jpg" alt="Roma'nın Güzellikleri" loading="lazy">
-                                <div class="gallery-caption"><h3>Roma'nın Güzellikleri</h3></div>
-                            </div>
+                        <div class="highlight-box">
+                            <h3><i class="fas fa-info-circle"></i> Pratik Bilgiler ve İpuçları</h3>
+                            <ul>
+                                <li><i class="fas fa-tint"></i> Roma'da her köşe başında bir içme suyu çeşmesi karşınıza çıkar. Yanınızda mutlaka termos götürün. Marketten su almanıza gerek yoktur.</li>
+                                <li><i class="fas fa-calendar-times"></i> Ağustos ayı Hristiyanlar için çokça özel gün içerdiğinden bu ayda Roma çok kalabalık olur. Otellerin rezervasyon iptalleri, kaos, kalabalık ve ayrıca sıcak hava ile uğraşmamak için bu ayda gitmemeyi tercih edebilirsiniz.</li>
+                                <li><i class="fas fa-shield-alt"></i> Roma her ülkeden ziyaretçi akınına uğrayan turistik bir cazibe merkezidir. Bu kalabalık ve kargaşadan faydalanmak isteyen hırsızlar bulunmaktadır. Çantanızın kapalı ve elinizle ulaşabildiğiniz bir yerde olduğundan sürekli emin olun.</li>
+                                <li><i class="fas fa-ticket-alt"></i> Pantheon çok yoğun bir tapınaktır. Nakit kuyruğu uzun olmakta, zaman zaman online ödeme yöntemleriyle ilgili de problem yaşanmaktadır. Gitmeden önce biletinizi almayı düşünebilirsiniz.</li>
+                                <li><i class="fas fa-ticket-alt"></i> Vatikan'a girmeyi düşünüyorsanız biletinizi önceden alın.</li>
+                                <li><i class="fas fa-suitcase-rolling"></i> Marketlerde uygun fiyata valize atıp getirmelik çok kaliteli makarnalar bulabilirsiniz.</li>
+                                <li><i class="fas fa-walking"></i> Roma her köşesinden tarih fışkıran bir şehirdir. "Bu yol güzel bir yere çıkmaz" diye düşünüp geri dönmeyin, az ilerde çok güzel bir bina veya sürpriz bir sokak sizi bekliyor olabilir. Kendinize küçük kaybolmalar yaşatın.</li>
+                            </ul>
                         </div>
                     </section>
 
                     <!-- Map Section -->
                     <section class="content-section">
                         <h2 class="section-title">Harita</h2>
-                        <div class="map-container">
-                            <iframe
-                                title="Roma haritası"
-                                src="https://www.google.com/maps/d/u/0/embed?mid=1IQ0ZFO1OOotm_VS0o3_3KrIH4adp4hk&ehbc=2E312F"
-                                width="100%"
-                                height="450"
-                                style="border:0;"
-                                allowfullscreen=""
-                                loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade">
+                        <div class="map-container" style="text-align: center;">
+                            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1IQ0ZFO1OOotm_VS0o3_3KrIH4adp4hk&ehbc=2E312F"
+                            width="100%" height="450" title="Roma haritası">
                             </iframe>
                         </div>
-                    </section></div>
+                    </section>
+
+                </div>
 
                 <!-- Sidebar -->
                 <aside class="sidebar">
@@ -764,7 +751,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2025 Tüm hakları saklıdır. | Gidiniz Blog</p>
+                <p>&copy; 2026 Tüm hakları saklıdır. | Gidiniz Blog</p>
                 <div class="footer-links">
                     <a href="/kullanim-sartlari.html">Kullanım Şartları</a>
                     <a href="/gizlilik.html">Gizlilik Politikası</a>
@@ -775,5 +762,42 @@
 
     <!-- JavaScript -->
     <script src="/js/main.js"></script>
+    <script>
+        (function() {
+            var overlay = document.getElementById('lightboxOverlay');
+            var lightboxImg = document.getElementById('lightboxImage');
+            var closeBtn = document.getElementById('lightboxClose');
+
+            function openLightbox(src) {
+                lightboxImg.src = src;
+                overlay.classList.add('active');
+                overlay.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeLightbox() {
+                overlay.classList.remove('active');
+                overlay.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+            }
+
+            document.querySelectorAll('.thumb-grid img').forEach(function(img) {
+                img.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    openLightbox(this.src);
+                });
+            });
+
+            overlay.addEventListener('click', function(e) {
+                if (e.target === overlay) closeLightbox();
+            });
+            closeBtn.addEventListener('click', closeLightbox);
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && overlay.classList.contains('active')) closeLightbox();
+            });
+        })();
+    </script>
 </body>
 </html>

@@ -6,7 +6,22 @@
       "WebFetch(domain:visaindex.com)",
       "mcp__Claude_Preview__preview_start",
       "Bash(netstat -ano)",
-      "Bash(where npx:*)"
+      "Bash(where npx:*)",
+      "WebFetch(domain:cdnjs.cloudflare.com)",
+      "Bash(curl -s \"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css\")",
+      "Bash(openssl dgst:*)",
+      "Bash(openssl base64:*)",
+      "Bash(find . -name \"*.html\" -exec sed -i 's|<link rel=\"\"stylesheet\"\" href=\"\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css\"\">|<link rel=\"\"stylesheet\"\" href=\"\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css\"\" integrity=\"\"sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==\"\" crossorigin=\"\"anonymous\"\" referrerpolicy=\"\"no-referrer\"\">|g' {} +)",
+      "Bash(find . -name \"*.html\" -exec sed -i 's|<link rel=\"\"stylesheet\"\" href=\"\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css\"\" />|<link rel=\"\"stylesheet\"\" href=\"\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css\"\" integrity=\"\"sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==\"\" crossorigin=\"\"anonymous\"\" referrerpolicy=\"\"no-referrer\"\" />|g' {} +)",
+      "Bash(xargs grep:*)",
+      "Bash(node -e \":*)",
+      "Bash(npx vercel:*)",
+      "Bash(vercel env:*)",
+      "WebFetch(domain:kahev.org.tr)",
+      "Bash(for f:*)",
+      "Bash(do sed:*)",
+      "Bash(echo \"Updated: $f\")",
+      "Bash(done)"
     ]
   }
 }
