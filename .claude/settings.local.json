@@ -21,7 +21,10 @@
       "Bash(for f:*)",
       "Bash(do sed:*)",
       "Bash(echo \"Updated: $f\")",
-      "Bash(done)"
+      "Bash(done)",
+      "WebFetch(domain:www.google.com)",
+      "WebFetch(domain:gidiniz.blog)",
+      "Bash(curl -sI https://gidiniz.blog/italya/roma)"
     ]
   }
 }
